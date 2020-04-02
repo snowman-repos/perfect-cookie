@@ -1,5 +1,6 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	import Button from "@smui/button";
 
 	export let segment;
 </script>
@@ -19,4 +20,5 @@
 
 <main>
 	<slot></slot>
+	<Button>button</Button>
 </main>
