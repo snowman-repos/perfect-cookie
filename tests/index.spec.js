@@ -1,5 +1,5 @@
 import { render } from "@testing-library/svelte";
-import Index from "./index.svelte";
+import Index from "../src/routes/index.svelte";
 
 describe("index component", () => {
   test("should render component correctly", () => {
