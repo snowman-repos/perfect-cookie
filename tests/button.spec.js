@@ -6,12 +6,14 @@ describe("button component", () => {
     cleanup();
   }); // Default on import: runs it after each test.
   test("should render component correctly", () => {
+    const test = "testing";
+
     const { container } = render(Button, {
       props: {
-        text: "testing",
+        text: test,
       },
     });
 
-    expect(container).toContainHTML("<button>testing</button>");
+    expect(container).toContainHTML(`<button>${test}</button>`);
   });
 });
