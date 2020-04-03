@@ -5,6 +5,7 @@ describe("button component", () => {
   afterEach(() => {
     cleanup();
   }); // Default on import: runs it after each test.
+
   test("should render component correctly", () => {
     const test = "testing";
 

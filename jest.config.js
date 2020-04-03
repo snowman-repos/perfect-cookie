@@ -4,9 +4,12 @@ module.exports = {
     "^.+\\.js$": "babel-jest",
   },
   moduleFileExtensions: ["js", "svelte"],
+  moduleNameMapper: {
+    "^.+\\.(css|less|scss)$": "babel-jest",
+  },
   testPathIgnorePatterns: ["node_modules"],
   bail: false,
   verbose: true,
-  transformIgnorePatterns: ["node_modules"],
+  transformIgnorePatterns: ["/node_modules/(?!@smui).+\\.js$"],
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
 };
