@@ -15,6 +15,6 @@ describe("button component", () => {
       },
     });
 
-    expect(container).toContainHTML(`<button>${test}</button>`);
+    expect(container).toHaveTextContent(test);
   });
 });

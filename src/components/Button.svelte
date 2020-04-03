@@ -3,4 +3,4 @@
   export let text;
 </script>
 
-<button>{text}</button>
+<Button>{text}</Button>
