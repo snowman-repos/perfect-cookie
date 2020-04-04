@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "the-perfect-cookie",
+  "description": "Generate the recipe for your perfect cookie",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
@@ -13,6 +13,9 @@
     "test:unit": "jest tests",
     "test:unit:watch": "npm run test:unit -- --watch"
   },
+  "pre-push": [
+    "test:unit"
+  ],
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
@@ -24,13 +27,19 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/runtime": "^7.0.0",
+    "@material/layout-grid": "^5.1.0",
+    "@material/typography": "^5.1.0",
     "@rollup/plugin-commonjs": "^11.0.0",
     "@rollup/plugin-node-resolve": "^7.0.0",
     "@rollup/plugin-replace": "^2.2.0",
     "@smui/button": "^1.0.0-beta.20",
+    "@smui/slider": "^1.0.0-beta.20",
     "@testing-library/jest-dom": "^5.3.0",
     "@testing-library/svelte": "^3.0.0",
     "babel-jest": "^25.2.6",
+    "eslint": "^6.8.0",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "git-pre-push": "0.0.5",
     "jest": "^25.2.6",
     "jest-transform-svelte": "^2.1.1",
     "node-sass": "^4.13.1",
@@ -43,6 +52,10 @@
     "rollup-plugin-svelte": "^5.0.1",
     "rollup-plugin-terser": "^5.3.0",
     "sapper": "^0.27.0",
+    "stylelint": "^13.3.0",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.16.0",
     "svelte": "^3.0.0"
   }
 }

@@ -1,53 +1,51 @@
 <script>
-	import Button from '../components/Button.svelte';
-	let text = "testing";
+  import { properties } from '../store.js'
+  import Slider from '../components/Slider.svelte'
+  import '../theme/_smui-theme.scss'
+
+  let property_values
+
+  properties.subscribe((properties) => {
+    property_values = properties
+  })
 </script>
 
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-</style>
-
 <svelte:head>
-	<title>Sapper project template</title>
+  <title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<section class="hero">
+  <h1 class="title mdc-typography--headline1">The Perfect Cookie</h1>
+</section>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
+<!-- <Button>button</Button> -->
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<div class="controls">
+  <Slider from="Smooth" to="Craggy" property="cragginess" />
+  <Slider from="Soft" to="Crispy" property="crispiness" />
+  <Slider from="Light" to="Dark" property="darkness" />
+  <Slider from="Fluffy" to="Dense" property="density" />
+  <Slider from="Thin" to="Thick" property="thickness" />
+  <Slider from="Crisp Edges" to="Uniform Texture" property="uniformity" />
+</div>
 
-<Button text={text} />
+<p>cragginess: {property_values.cragginess}</p>
+<p>crispiness: {property_values.crispiness}</p>
+<p>darkness: {property_values.darkness}</p>
+<p>density: {property_values.density}</p>
+<p>thickness: {property_values.thickness}</p>
+<p>uniformity: {property_values.uniformity}</p>
+
+<style>
+  .hero {
+    background: white;
+    position: relative;
+    padding: 2rem;
+  }
+  .title {
+    margin-bottom: 0;
+  }
+  .controls {
+    background: var(--darryl-theme-background);
+  }
+</style>
