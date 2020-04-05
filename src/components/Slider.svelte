@@ -29,13 +29,13 @@
 
 <div class="mdc-layout-grid">
   <div class="grid mdc-layout-grid__inner">
-    <div class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+    <div class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
       <span>{from}</span>
     </div>
-    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
       <Slider bind:value={property_values[property]} min={0} max={100} step={20} on:click={update} />
     </div>
-    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
       <span>{to}</span>
     </div>
   </div>

@@ -10,32 +10,6 @@
   })
 </script>
 
-<svelte:head>
-  <title>Sapper project template</title>
-</svelte:head>
-
-<section class="hero">
-  <h1 class="title mdc-typography--headline1">The Perfect Cookie</h1>
-</section>
-
-<!-- <Button>button</Button> -->
-
-<div class="controls">
-  <Slider from="Smooth" to="Craggy" property="cragginess" />
-  <Slider from="Soft" to="Crispy" property="crispiness" />
-  <Slider from="Light" to="Dark" property="darkness" />
-  <Slider from="Fluffy" to="Dense" property="density" />
-  <Slider from="Thin" to="Thick" property="thickness" />
-  <Slider from="Crisp Edges" to="Uniform Texture" property="uniformity" />
-</div>
-
-<p>cragginess: {property_values.cragginess}</p>
-<p>crispiness: {property_values.crispiness}</p>
-<p>darkness: {property_values.darkness}</p>
-<p>density: {property_values.density}</p>
-<p>thickness: {property_values.thickness}</p>
-<p>uniformity: {property_values.uniformity}</p>
-
 <style>
   .hero {
     background: white;
@@ -49,3 +23,37 @@
     background: var(--darryl-theme-background);
   }
 </style>
+
+<svelte:head>
+  <title>The Perfect Cookie</title>
+</svelte:head>
+
+<section class="hero">
+  <h1 class="title mdc-typography--headline1 u-centered">The Perfect Cookie</h1>
+</section>
+
+<section class="controls">
+  <Slider from="Smooth" to="Craggy" property="cragginess" />
+  <Slider from="Soft" to="Crispy" property="crispiness" />
+  <Slider from="Light" to="Dark" property="darkness" />
+  <Slider from="Fluffy" to="Dense" property="density" />
+  <Slider from="Thin" to="Thick" property="thickness" />
+  <Slider from="Crisp Edges" to="Uniform Texture" property="uniformity" />
+</section>
+
+<section>
+  <h2 class="mdc-typography--headline1 u-centered">Recipe</h2>
+</section>
+
+<section>
+  <h2 class="mdc-typography--headline1 u-centered">Method</h2>
+</section>
+
+<footer />
+
+<p>cragginess: {property_values.cragginess}</p>
+<p>crispiness: {property_values.crispiness}</p>
+<p>darkness: {property_values.darkness}</p>
+<p>density: {property_values.density}</p>
+<p>thickness: {property_values.thickness}</p>
+<p>uniformity: {property_values.uniformity}</p>
