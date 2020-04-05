@@ -12,6 +12,7 @@
     "prettify": "npx prettier --write \"{,!(node_modules)/**/}*.{js,jsx}\"",
     "test:integration": "run-p --race dev cy:run",
     "test:unit": "jest tests",
+    "test:unit:update": "jest --updateSnapshot",
     "test:unit:watch": "npm run test:unit -- --watch"
   },
   "pre-commit": [

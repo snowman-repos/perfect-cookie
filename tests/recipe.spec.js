@@ -1,5 +1,5 @@
 import { render, cleanup } from '@testing-library/svelte'
-import Recipe from '../src/components/Recipe.svelte'
+import Ingredients from '../src/components/Ingredients.svelte'
 import { ingredients } from '../src/store.js'
 
 let ingredient_values
@@ -18,13 +18,13 @@ describe('recipe component', () => {
   })
 
   test('it should render the table', () => {
-    const { container } = render(Recipe)
+    const { container } = render(Ingredients)
     expect(container.querySelector('.mdc-data-table')).toBeInTheDocument()
     expect(container.querySelector('table')).toBeInTheDocument()
   })
 
   test('it should render a row for each required ingredient', () => {
-    const { container } = render(Recipe)
+    const { container } = render(Ingredients)
 
     let nonZeroIngredients = []
 
@@ -38,7 +38,7 @@ describe('recipe component', () => {
   })
 
   test('it should list each required ingredient', () => {
-    const { getByText } = render(Recipe)
+    const { getByText } = render(Ingredients)
 
     let nonZeroIngredients = []
 

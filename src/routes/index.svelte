@@ -16,7 +16,7 @@
 </section>
 
 <section>
-  <h2 class="mdc-typography--headline1 u-centered">Recipe</h2>
+  <h2 class="mdc-typography--headline1 u-centered">Ingredients</h2>
 </section>
 
 <section>
