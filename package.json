@@ -9,6 +9,7 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
+    "prettify": "npx prettier --write \"{,!(node_modules)/**/}*.{js,jsx}\"",
     "test:integration": "run-p --race dev cy:run",
     "test:unit": "jest tests",
     "test:unit:watch": "npm run test:unit -- --watch"
@@ -33,6 +34,7 @@
     "@rollup/plugin-node-resolve": "^7.0.0",
     "@rollup/plugin-replace": "^2.2.0",
     "@smui/button": "^1.0.0-beta.20",
+    "@smui/data-table": "^1.0.0-beta.20",
     "@smui/slider": "^1.0.0-beta.20",
     "@testing-library/jest-dom": "^5.3.0",
     "@testing-library/svelte": "^3.0.0",

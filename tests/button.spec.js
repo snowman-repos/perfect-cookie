@@ -4,7 +4,7 @@ import Button from '../src/components/Button.svelte'
 describe('button component', () => {
   afterEach(() => {
     cleanup()
-  }) // Default on import: runs it after each test.
+  })
 
   test('it should render component correctly', () => {
     const test = 'testing'

@@ -3,9 +3,10 @@ import Index from '../src/routes/index.svelte'
 
 describe('index page', () => {
   test('it should render the page title', () => {
-    const { getByText } = render(Index)
+    const { container, getByText } = render(Index)
 
     expect(getByText('The Perfect Cookie')).toBeInTheDocument()
+    expect(container).toMatchSnapshot()
   })
 
   test('it should render 6 sliders in a configuration section', () => {

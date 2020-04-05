@@ -4,7 +4,7 @@
   "singleQuote": true,
   "trailingComma": "es5",
   "plugins": ["prettier-plugin-svelte"],
-  "svelteSortOrder": "styles-scripts-markup",
+  "svelteSortOrder": "scripts-styles-markup",
   "svelteStrictMode": true,
   "svelteBracketNewLine": true
 }

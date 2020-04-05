@@ -78,4 +78,4 @@ __sapper__/
 # Cypress
 cypress/screenshots/
 
-TODO
+*.todo

@@ -8,9 +8,11 @@ properties.subscribe((properties) => {
   property_values = properties
 })
 
-// updates the store when the slider value is changed
-
 describe('slider component', () => {
+  beforeEach(() => {
+    global.window = {}
+    global.window.fetch = () => ({})
+  })
   afterEach(() => {
     cleanup()
   })

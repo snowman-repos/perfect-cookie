@@ -1,29 +1,3 @@
-<script>
-  import { properties } from '../store.js'
-  import Slider from '../components/Slider.svelte'
-  import '../theme/_smui-theme.scss'
-
-  let property_values
-
-  properties.subscribe((properties) => {
-    property_values = properties
-  })
-</script>
-
-<style>
-  .hero {
-    background: white;
-    position: relative;
-    padding: 2rem;
-  }
-  .title {
-    margin-bottom: 0;
-  }
-  .controls {
-    background: var(--darryl-theme-background);
-  }
-</style>
-
 <svelte:head>
   <title>The Perfect Cookie</title>
 </svelte:head>
@@ -51,9 +25,21 @@
 
 <footer />
 
-<p>cragginess: {property_values.cragginess}</p>
-<p>crispiness: {property_values.crispiness}</p>
-<p>darkness: {property_values.darkness}</p>
-<p>density: {property_values.density}</p>
-<p>thickness: {property_values.thickness}</p>
-<p>uniformity: {property_values.uniformity}</p>
+<script>
+  import Slider from '../components/Slider.svelte'
+  import '../theme/_smui-theme.scss'
+</script>
+
+<style>
+  .hero {
+    background: white;
+    position: relative;
+    padding: 2rem;
+  }
+  .title {
+    margin-bottom: 0;
+  }
+  .controls {
+    background: var(--darryl-theme-background);
+  }
+</style>
