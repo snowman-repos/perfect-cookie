@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { render, cleanup } from '@testing-library/svelte'
 import Button from '../src/components/Button.svelte'
 

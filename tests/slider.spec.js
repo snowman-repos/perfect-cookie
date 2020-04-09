@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { render, cleanup } from '@testing-library/svelte'
 import Slider from '../src/components/Slider.svelte'
 import { properties } from '../src/store.js'

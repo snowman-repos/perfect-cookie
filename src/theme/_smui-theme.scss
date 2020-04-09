@@ -33,3 +33,13 @@
 .u-centered {
   text-align: center;
 }
+
+.u-layout--centered {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.mdc-data-table__header-row {
+  display: none;
+}

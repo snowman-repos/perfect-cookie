@@ -9,6 +9,8 @@ export const properties = writable({
   uniformity: 40,
 })
 
+export const numberOfCookies = writable(25)
+
 export const ingredients = writable({
   flour: {
     amount: 10.0,

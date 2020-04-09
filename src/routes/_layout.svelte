@@ -1,10 +1,10 @@
-<script>
-  export let segment;
-</script>
-
 <main class="mdc-typography">
   <slot />
 </main>
+
+<script>
+  export let segment
+</script>
 
 <style>
   main {

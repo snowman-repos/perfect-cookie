@@ -1,9 +1,15 @@
 <DataTable table$aria-label="Ingredients">
+  <Head>
+    <Row>
+      <Cell>Quantity</Cell>
+      <Cell>Ingredient</Cell>
+    </Row>
+  </Head>
   <Body>
     {#each ingredient_values as ingredient}
       {#if ingredient.amount !== 0}
         <Row>
-          <Cell>{ingredient.amount} {ingredient.unit}</Cell>
+          <Cell>{ingredient.amount * number} {ingredient.unit}</Cell>
           <Cell>{ingredient.name}</Cell>
         </Row>
       {/if}
@@ -12,9 +18,12 @@
 </DataTable>
 
 <script>
-  import { ingredients } from '../store.js'
-  import DataTable, { Body, Row, Cell } from '@smui/data-table/bare.js'
+  import DataTable, { Body, Cell, Head, Row } from '@smui/data-table/bare.js'
   import '@smui/data-table/bare.css'
+  import { numberOfCookies } from '../store.js'
+  import { ingredients } from '../store.js'
+
+  let number
 
   let ingredient_values = []
 
@@ -22,5 +31,9 @@
     for (let [key, value] of Object.entries(ingredients)) {
       ingredient_values.push(value)
     }
+  })
+
+  numberOfCookies.subscribe((value) => {
+    number = value
   })
 </script>
