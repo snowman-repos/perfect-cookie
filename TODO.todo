@@ -3,6 +3,10 @@
 ✔ Round ingredients to 2 decimals @done(2020-04-10 13:06)
 ✔ Refactor store + sliders and ingredients @done(2020-04-10 19:32)
 ☐ Method
+☐   test
+☐   styles
+☐   render baking conditions
+☐   render html
 ☐ Checkboxes alongside ingredients
 ☐ Logic for sliders
 ☐ Footer

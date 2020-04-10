@@ -22,6 +22,7 @@
 
 <section class="mdc-layout-grid">
   <h2 class="mdc-typography--headline1 u-centered">Method</h2>
+  <Method />
 </section>
 
 <footer />
@@ -29,6 +30,7 @@
 <script>
   import { properties } from '../store.js'
   import Ingredients from '../components/Ingredients.svelte'
+  import Method from '../components/Method.svelte'
   import Slider from '../components/Slider.svelte'
   import YieldController from '../components/YieldController.svelte'
   import '../theme/_smui-theme.scss'

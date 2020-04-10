@@ -1,4 +1,4 @@
-<DataTable table$aria-label="Ingredients">
+<DataTable data-testid="ingredients" table$aria-label="Ingredients">
   <Head>
     <Row>
       <Cell>Quantity</Cell>

@@ -81,7 +81,7 @@ export const recipe = writable({
     'Shape your dough into small balls, about 3.5cm in diameter.',
     'Tear each ball in half and smoodge the smooth sides back together before placing on the lined baking sheet. This will help maximize cragginess.',
     'Place the cookies at least 10cm apart on a lined baking sheet.',
-    'Bake at 175 degrees for 13 minutes.',
+    'Bake at [TEMPERATURE] degrees for [TIME] minutes.',
     'Once baked, leave the cookies to cool and solidify on the baking tray for 2 minutes before placing on a wire cooling rack. Leave to cool completely (if you can).',
   ],
   numberOfCookies: 25,

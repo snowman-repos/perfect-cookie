@@ -10,15 +10,14 @@ recipe.subscribe((recipeDetails) => {
   actualRecipe = recipeDetails
 })
 
-describe('recipe component', () => {
+describe('ingredients component', () => {
   afterEach(() => {
     cleanup()
   })
 
   test('it should render the table', () => {
-    const { container } = render(Ingredients)
-    expect(container.querySelector('.mdc-data-table')).toBeInTheDocument()
-    expect(container.querySelector('table')).toBeInTheDocument()
+    const { getByTestId } = render(Ingredients)
+    expect(getByTestId('ingredients')).toBeInTheDocument()
   })
 
   test('it should render a row for each required ingredient', () => {
