@@ -3,6 +3,7 @@ import { render, cleanup } from '@testing-library/svelte'
 import Ingredients from '../src/components/Ingredients.svelte'
 import { numberOfCookies } from '../src/store.js'
 import { ingredients } from '../src/store.js'
+import { roundToTwo } from '../src/utilities.js'
 
 let number
 let ingredient_values
@@ -60,7 +61,7 @@ describe('recipe component', () => {
     for (let [key, value] of Object.entries(ingredient_values)) {
       if (value.amount !== 0) {
         expect(container.querySelectorAll('tbody tr td:first-of-type')[index].innerHTML).toContain(
-          value.amount * number
+          roundToTwo(value.amount * number)
         )
         index += 1
       }
@@ -74,7 +75,7 @@ describe('recipe component', () => {
     for (let [key, value] of Object.entries(ingredient_values)) {
       if (value.amount !== 0) {
         expect(container.querySelectorAll('tbody tr td:first-of-type')[index].innerHTML).toContain(
-          value.amount * newNumber
+          roundToTwo(value.amount * newNumber)
         )
         index += 1
       }

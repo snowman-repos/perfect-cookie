@@ -9,7 +9,7 @@
     {#each ingredient_values as ingredient}
       {#if ingredient.amount !== 0}
         <Row>
-          <Cell>{ingredient.amount * number} {ingredient.unit}</Cell>
+          <Cell>{roundToTwo(ingredient.amount * number)} {ingredient.unit}</Cell>
           <Cell>{ingredient.name}</Cell>
         </Row>
       {/if}
@@ -22,6 +22,7 @@
   import '@smui/data-table/bare.css'
   import { numberOfCookies } from '../store.js'
   import { ingredients } from '../store.js'
+  import { roundToTwo } from '../utilities.js'
 
   let number
 

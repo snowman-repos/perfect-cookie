@@ -83,7 +83,7 @@ export const ingredients = writable({
     unit: 'tsp',
   },
   chocolate: {
-    amount: 200,
+    amount: 6,
     name: 'Chopped dark chocolate',
     unit: 'g',
   },

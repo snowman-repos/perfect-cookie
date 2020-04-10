@@ -641,7 +641,7 @@ exports[`index page it should render 6 sliders in a configuration section 1`] = 
       
     "
                 >
-                  200.99999999999997
+                  201
                    
                   g
                 </td>
@@ -750,7 +750,7 @@ exports[`index page it should render 6 sliders in a configuration section 1`] = 
       
     "
                 >
-                  1.7500000000000002
+                  1.75
                    
                   
                 </td>
@@ -824,7 +824,7 @@ exports[`index page it should render 6 sliders in a configuration section 1`] = 
       
     "
                 >
-                  1.7500000000000002
+                  1.75
                    
                   tsp
                 </td>
@@ -860,7 +860,7 @@ exports[`index page it should render 6 sliders in a configuration section 1`] = 
       
     "
                 >
-                  1.7500000000000002
+                  1.75
                    
                   tsp
                 </td>
@@ -1581,7 +1581,7 @@ exports[`index page it should render the page title 1`] = `
       
     "
                 >
-                  200.99999999999997
+                  201
                    
                   g
                 </td>
@@ -1690,7 +1690,7 @@ exports[`index page it should render the page title 1`] = `
       
     "
                 >
-                  1.7500000000000002
+                  1.75
                    
                   
                 </td>
@@ -1764,7 +1764,7 @@ exports[`index page it should render the page title 1`] = `
       
     "
                 >
-                  1.7500000000000002
+                  1.75
                    
                   tsp
                 </td>
@@ -1800,7 +1800,7 @@ exports[`index page it should render the page title 1`] = `
       
     "
                 >
-                  1.7500000000000002
+                  1.75
                    
                   tsp
                 </td>
@@ -2521,7 +2521,7 @@ exports[`index page it should render the section titles 1`] = `
       
     "
                 >
-                  200.99999999999997
+                  201
                    
                   g
                 </td>
@@ -2630,7 +2630,7 @@ exports[`index page it should render the section titles 1`] = `
       
     "
                 >
-                  1.7500000000000002
+                  1.75
                    
                   
                 </td>
@@ -2704,7 +2704,7 @@ exports[`index page it should render the section titles 1`] = `
       
     "
                 >
-                  1.7500000000000002
+                  1.75
                    
                   tsp
                 </td>
@@ -2740,7 +2740,7 @@ exports[`index page it should render the section titles 1`] = `
       
     "
                 >
-                  1.7500000000000002
+                  1.75
                    
                   tsp
                 </td>
