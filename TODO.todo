@@ -1,7 +1,9 @@
 ✔ Recipe @done(2020-04-05 23:07)
 ✔ Yield controller @done(2020-04-09 23:23)
-☐ Round ingredients to 2 decimals
+✔ Round ingredients to 2 decimals @done(2020-04-10 13:06)
+✔ Refactor store + sliders and ingredients @done(2020-04-10 19:32)
 ☐ Method
+☐ Checkboxes alongside ingredients
 ☐ Logic for sliders
 ☐ Footer
 ☐ Share Buttons

@@ -10,16 +10,12 @@ properties.subscribe((properties) => {
 })
 
 describe('slider component', () => {
-  beforeEach(() => {
-    global.window = {}
-    global.window.fetch = () => ({})
-  })
   afterEach(() => {
     cleanup()
   })
 
   test('it should get the correct value from the store', () => {
-    const property = 'cragginess'
+    const property = 'surface'
     const { container } = render(Slider, {
       props: {
         from: '',
@@ -36,7 +32,7 @@ describe('slider component', () => {
     const { container } = render(Slider, {
       props: {
         from,
-        property: 'cragginess',
+        property: 'surface',
         to,
       },
     })

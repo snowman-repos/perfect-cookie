@@ -6,7 +6,7 @@
     </Row>
   </Head>
   <Body>
-    {#each ingredient_values as ingredient}
+    {#each ingredientsList as ingredient}
       {#if ingredient.amount !== 0}
         <Row>
           <Cell>{roundToTwo(ingredient.amount * number)} {ingredient.unit}</Cell>
@@ -20,21 +20,14 @@
 <script>
   import DataTable, { Body, Cell, Head, Row } from '@smui/data-table/bare.js'
   import '@smui/data-table/bare.css'
-  import { numberOfCookies } from '../store.js'
-  import { ingredients } from '../store.js'
+  import { recipe } from '../store.js'
   import { roundToTwo } from '../utilities.js'
 
   let number
+  let ingredientsList = []
 
-  let ingredient_values = []
-
-  ingredients.subscribe((ingredients) => {
-    for (let [key, value] of Object.entries(ingredients)) {
-      ingredient_values.push(value)
-    }
-  })
-
-  numberOfCookies.subscribe((value) => {
-    number = value
+  recipe.subscribe(({ingredients, numberOfCookies}) => {
+    ingredientsList = ingredients
+    number = numberOfCookies
   })
 </script>

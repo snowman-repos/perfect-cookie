@@ -7,12 +7,9 @@
 </section>
 
 <section class="controls mdc-layout-grid">
-  <Slider from="Smooth" to="Craggy" property="cragginess" />
-  <Slider from="Soft" to="Crispy" property="crispiness" />
-  <Slider from="Light" to="Dark" property="darkness" />
-  <Slider from="Fluffy" to="Dense" property="density" />
-  <Slider from="Thin" to="Thick" property="thickness" />
-  <Slider from="Crisp Edges" to="Uniform Texture" property="uniformity" />
+  {#each $properties as { from, name, to }}
+    <Slider from="{from}" to="{to}" property="{name}" />
+  {/each}
 </section>
 
 <section class="mdc-layout-grid">
@@ -30,6 +27,7 @@
 <footer />
 
 <script>
+  import { properties } from '../store.js'
   import Ingredients from '../components/Ingredients.svelte'
   import Slider from '../components/Slider.svelte'
   import YieldController from '../components/YieldController.svelte'

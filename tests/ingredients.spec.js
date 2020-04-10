@@ -1,26 +1,16 @@
 /* eslint-disable */
 import { render, cleanup } from '@testing-library/svelte'
 import Ingredients from '../src/components/Ingredients.svelte'
-import { numberOfCookies } from '../src/store.js'
-import { ingredients } from '../src/store.js'
+import { recipe } from '../src/store.js'
 import { roundToTwo } from '../src/utilities.js'
 
-let number
-let ingredient_values
+let actualRecipe
 
-numberOfCookies.subscribe((value) => {
-  number = value
-})
-
-ingredients.subscribe((ingredients) => {
-  ingredient_values = ingredients
+recipe.subscribe((recipeDetails) => {
+  actualRecipe = recipeDetails
 })
 
 describe('recipe component', () => {
-  beforeEach(() => {
-    global.window = {}
-    global.window.fetch = () => ({})
-  })
   afterEach(() => {
     cleanup()
   })
@@ -34,13 +24,9 @@ describe('recipe component', () => {
   test('it should render a row for each required ingredient', () => {
     const { container } = render(Ingredients)
 
-    let nonZeroIngredients = []
-
-    for (let [key, value] of Object.entries(ingredient_values)) {
-      if (value.amount !== 0) {
-        nonZeroIngredients.push(key)
-      }
-    }
+    let nonZeroIngredients = actualRecipe.ingredients.map((ingredient) => {
+      return ingredient.amount != 0
+    })
 
     expect(container.querySelectorAll('tbody tr').length).toBe(nonZeroIngredients.length)
   })
@@ -48,37 +34,42 @@ describe('recipe component', () => {
   test('it should list each required ingredient', () => {
     const { getByText } = render(Ingredients)
 
-    for (let [key, value] of Object.entries(ingredient_values)) {
-      if (value.amount !== 0) {
-        expect(getByText(value.name)).toBeInTheDocument()
-      }
-    }
+    actualRecipe.ingredients.forEach((ingredient) => {
+      if (ingredient.amount != 0) expect(getByText(ingredient.name)).toBeInTheDocument()
+    })
   })
 
   test('it should calculate the amount of each ingredient based on the number of cookies', () => {
     const { container } = render(Ingredients)
     let index = 0
-    for (let [key, value] of Object.entries(ingredient_values)) {
-      if (value.amount !== 0) {
+
+    actualRecipe.ingredients.forEach((ingredient) => {
+      if (ingredient.amount != 0) {
         expect(container.querySelectorAll('tbody tr td:first-of-type')[index].innerHTML).toContain(
-          roundToTwo(value.amount * number)
+          roundToTwo(ingredient.amount * actualRecipe.numberOfCookies)
         )
         index += 1
       }
-    }
+    })
   })
+
   test('it should update the ingredients list when the number of cookies changes', () => {
     const newNumber = 5
-    numberOfCookies.set(newNumber)
+    recipe.set(
+      Object.assign(actualRecipe, {
+        numberOfCookies: newNumber,
+      })
+    )
     let index = 0
     const { container } = render(Ingredients)
-    for (let [key, value] of Object.entries(ingredient_values)) {
-      if (value.amount !== 0) {
+
+    actualRecipe.ingredients.forEach((ingredient) => {
+      if (ingredient.amount != 0) {
         expect(container.querySelectorAll('tbody tr td:first-of-type')[index].innerHTML).toContain(
-          roundToTwo(value.amount * newNumber)
+          roundToTwo(ingredient.amount * actualRecipe.numberOfCookies)
         )
         index += 1
       }
-    }
+    })
   })
 })

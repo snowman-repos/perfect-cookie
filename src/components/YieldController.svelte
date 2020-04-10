@@ -18,12 +18,14 @@
   import IconButton, { Icon } from '@smui/icon-button'
   import Textfield from '@smui/textfield/bare.js'
   import '@smui/textfield/bare.css'
-  import { numberOfCookies } from '../store.js'
+  import { recipe } from '../store.js'
 
-  export let number = 25
+  let number = 25
+  let currentRecipe
 
-  numberOfCookies.subscribe((value) => {
-    number = value
+  recipe.subscribe((actualRecipe) => {
+    currentRecipe = actualRecipe
+    number = actualRecipe.numberOfCookies
   })
 
   function handleChange() {
@@ -41,7 +43,9 @@
     updateNumber()
   }
   function updateNumber() {
-    numberOfCookies.set(number)
+    recipe.set(Object.assign(currentRecipe, {
+      numberOfCookies: number
+    }))
   }
 </script>
 

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import { render, cleanup, fireEvent } from '@testing-library/svelte'
 import YieldController from '../src/components/YieldController.svelte'
-import { numberOfCookies } from '../src/store.js'
+import { recipe } from '../src/store.js'
 
-let actualNumber
+let numberOfCookies
 
-numberOfCookies.subscribe((number) => {
-  actualNumber = number
+recipe.subscribe((actualRecipe) => {
+  numberOfCookies = actualRecipe.numberOfCookies
 })
 
 describe('yield controller component', () => {
@@ -33,16 +33,12 @@ describe('yield controller component', () => {
     //     cancelable: true,
     //   })
     // )
-    // expect(actualNumber).toBe(number)
+    // expect(numberOfCookies).toBe(number)
   })
 
   test('it should reduce the yield value when the decrement button is clicked', async () => {
-    const number = 5
-    const { getByTestId } = render(YieldController, {
-      props: {
-        number,
-      },
-    })
+    const number = numberOfCookies
+    const { getByTestId } = render(YieldController)
     const button = getByTestId('decrement-button')
     const yieldValue = getByTestId('yield')
     // await fireEvent(
@@ -56,12 +52,8 @@ describe('yield controller component', () => {
   })
 
   test('it should not reduce the yield value below 1', async () => {
-    const number = 1
-    const { getByTestId } = render(YieldController, {
-      props: {
-        number,
-      },
-    })
+    const number = numberOfCookies
+    const { getByTestId } = render(YieldController)
     const button = getByTestId('decrement-button')
     const yieldValue = getByTestId('yield')
     // await fireEvent(
@@ -80,16 +72,12 @@ describe('yield controller component', () => {
     //     cancelable: true,
     //   })
     // )
-    // expect(yieldValue).toHaveProperty('value', number)
+    // expect(yieldValue).toHaveProperty('value', 1)
   })
 
   test('it should increase the yield value when the increment button is clicked', async () => {
-    const number = 5
-    const { getByTestId } = render(YieldController, {
-      props: {
-        number,
-      },
-    })
+    const number = numberOfCookies
+    const { getByTestId } = render(YieldController)
     const button = getByTestId('decrement-button')
     const yieldValue = getByTestId('yield')
     // await fireEvent(
@@ -104,11 +92,7 @@ describe('yield controller component', () => {
 
   test('it should not increase the yield value beyond 1000', async () => {
     const number = 1000
-    const { getByTestId } = render(YieldController, {
-      props: {
-        number,
-      },
-    })
+    const { getByTestId } = render(YieldController)
     const button = getByTestId('increment-button')
     const yieldValue = getByTestId('yield')
     // await fireEvent(
@@ -141,6 +125,6 @@ describe('yield controller component', () => {
     //     cancelable: true,
     //   })
     // )
-    // expect(yieldValue).toHaveProperty('value', actualNumber)
+    // expect(yieldValue).toHaveProperty('value', numberOfCookies)
   })
 })
