@@ -3,6 +3,7 @@
     <Row>
       <Cell>Quantity</Cell>
       <Cell>Ingredient</Cell>
+      <Cell></Cell>
     </Row>
   </Head>
   <Body>
@@ -11,6 +12,9 @@
         <Row>
           <Cell>{roundToTwo(ingredient.amount * number)} {ingredient.unit}</Cell>
           <Cell>{ingredient.name}</Cell>
+          <Cell>
+            <Checkbox />
+          </Cell>
         </Row>
       {/if}
     {/each}
@@ -20,6 +24,7 @@
 <script>
   import DataTable, { Body, Cell, Head, Row } from '@smui/data-table/bare.js'
   import '@smui/data-table/bare.css'
+  import Checkbox from '@smui/checkbox'
   import { recipe } from '../store.js'
   import { roundToTwo } from '../utilities.js'
 

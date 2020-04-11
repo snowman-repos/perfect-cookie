@@ -511,6 +511,17 @@ exports[`index page it should render the page title 1`] = `
                   Ingredient
                 </th>
                 
+                 
+                <th
+                  class="
+      mdc-data-table__header-cell
+      
+      
+    "
+                  role="columnheader"
+                  scope="col"
+                />
+                
               </tr>
             </thead>
              
@@ -518,6 +529,7 @@ exports[`index page it should render the page title 1`] = `
               class="mdc-data-table__content "
             >
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -551,9 +563,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -587,9 +644,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -623,9 +725,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -659,9 +806,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -695,9 +887,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -731,9 +968,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -767,9 +1049,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -803,9 +1130,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -839,9 +1211,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -875,9 +1292,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -911,9 +1373,54 @@ exports[`index page it should render the page title 1`] = `
                 </td>
                 
                  
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                
+                 
               </tr>
               
               <tr
+                aria-selected="false"
                 class="
     
     
@@ -944,6 +1451,50 @@ exports[`index page it should render the page title 1`] = `
     "
                 >
                   Chopped dark chocolate
+                </td>
+                
+                 
+                <td
+                  class="
+      mdc-data-table__cell
+      
+      
+      
+    "
+                >
+                  <div
+                    class="
+    mdc-checkbox
+    
+    
+    
+    mdc-data-table__row-checkbox
+  "
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
                 </td>
                 
                  

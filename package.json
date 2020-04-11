@@ -40,6 +40,7 @@
     "@rollup/plugin-node-resolve": "^7.0.0",
     "@rollup/plugin-replace": "^2.2.0",
     "@smui/button": "^1.0.0-beta.20",
+    "@smui/checkbox": "^1.0.0-beta.20",
     "@smui/data-table": "^1.0.0-beta.20",
     "@smui/icon-button": "^1.0.0-beta.20",
     "@smui/list": "^1.0.0-beta.20",

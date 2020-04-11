@@ -71,4 +71,14 @@ describe('ingredients component', () => {
       }
     })
   })
+
+  test('it should render a checkbox for each required ingredient', () => {
+    const { container } = render(Ingredients)
+
+    let nonZeroIngredients = actualRecipe.ingredients.map((ingredient) => {
+      return ingredient.amount != 0
+    })
+
+    expect(container.querySelectorAll('input').length).toBe(nonZeroIngredients.length)
+  })
 })
