@@ -1000,7 +1000,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1024,7 +1024,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1048,7 +1048,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1072,7 +1072,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1096,7 +1096,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1120,7 +1120,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1144,7 +1144,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1175,7 +1175,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1199,7 +1199,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1223,7 +1223,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1247,7 +1247,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1271,7 +1271,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1295,7 +1295,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1319,7 +1319,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
@@ -1343,7 +1343,7 @@ exports[`index page it should render the page title 1`] = `
       
       
     "
-                style="height: auto; margin-bottom: 1.5em;"
+                style="height: auto; margin-bottom: 1.5rem;"
                 tabindex="-1"
               >
                 <span
