@@ -12,3 +12,4 @@ Generate the recipe for _your_ perfect cookie.
 ## TODO
 
 - [ ] Either remove SMUI or fix it so that events can be tested (See [https://github.com/hperrin/svelte-material-ui/issues/110](issue))
+- [ ] Fix test for Method component that requires waiting for store to be updated 

@@ -2,22 +2,30 @@
 ✔ Yield controller @done(2020-04-09 23:23)
 ✔ Round ingredients to 2 decimals @done(2020-04-10 13:06)
 ✔ Refactor store + sliders and ingredients @done(2020-04-10 19:32)
-☐ Method
-☐   test
-☐   styles
-☐   render baking conditions
-☐   render html
+✔ Method @done(2020-04-11 14:31)
+✔   test @done(2020-04-10 21:56)
+✔   styles @done(2020-04-11 13:02)
+✔   render baking conditions @done(2020-04-11 14:31)
+✔   render html @done(2020-04-11 13:04)
+☐ licence and repo in package.json
 ☐ Checkboxes alongside ingredients
 ☐ Logic for sliders
 ☐ Footer
+☐ Deploy
+☐ Accessibility
+☐ Security
+☐ Performance
+☐ Domain
 ☐ Share Buttons
 ☐ Print buttons
 ☐ Tips
 ☐ Details behind the recipe
 ☐ Credits
-☐ Footer
 ☐ Donate button
 ☐ About page
 ☐ Remove cypress?
-☐ save to local storage
+☐ Save to local storage
 ☐ show total time needed
+☐ App bar
+☐ Print styles
+☐ Image

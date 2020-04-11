@@ -966,551 +966,407 @@ exports[`index page it should render the page title 1`] = `
       </h2>
        
       <div
-        class="mdc-data-table "
-        data-testid="method"
+        class="mdc-layout-grid"
       >
-        <table
-          aria-label="Ingredients"
-          class="mdc-data-table__table "
+        <div
+          class="grid mdc-layout-grid__inner"
         >
-          <thead>
-            <tr
-              class="
-    
-    mdc-data-table__header-row
-    
-    
-  "
-            >
-              <th
-                class="
-      mdc-data-table__header-cell
-      
-      
-    "
-                role="columnheader"
-                scope="col"
-              >
-                Step
-              </th>
-              
-               
-              <th
-                class="
-      mdc-data-table__header-cell
-      
-      
-    "
-                role="columnheader"
-                scope="col"
-              >
-                Instructions
-              </th>
-              
-            </tr>
-          </thead>
+          <div
+            class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop"
+          />
            
-          <tbody
-            class="mdc-data-table__content "
+          <div
+            class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop"
           >
-            <tr
+            <ul
               class="
-    
-    
-    mdc-data-table__row
-    
-  "
+      mdc-list
+      
+      mdc-list--non-interactive
+      
+      mdc-list--avatar-list
+      
+      
+    "
+              data-testid="method"
+              role="list"
             >
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                0
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=1);"
+                />
+                
+                 
+                <span>
+                  In a saucepan over medium heat, cook the butter while gently swirling or stirring until you start to see golden brown milk solids. As soon as the butter turns a rich brown color with a nutty aroma, remove from the heat. This should take about 5 minutes. Be careful not to go past this point otherwise your butter will burn, leaving a bitter taste.
+                </span>
+                 
+              </li>
               
-               
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                In a saucepan over medium heat, cook the butter while gently swirling or stirring until you start to see golden brown milk solids. As soon as the butter turns a rich brown color with a nutty aroma, remove from the heat. This should take about 5 minutes. Be careful not to go past this point otherwise your butter will burn, leaving a bitter taste.
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=2);"
+                />
+                
+                 
+                <span>
+                  Mix 2 tablespoons of water into the melted butter to replace the moisture lost by cooking the butter.
+                </span>
+                 
+              </li>
               
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                1
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=3);"
+                />
+                
+                 
+                <span>
+                  Place the melted butter in the refrigerator until cool and just opaque, but not completely hardened.
+                </span>
+                 
+              </li>
               
-               
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                Mix 2 tablespoons of water into the melted butter to replace the moisture lost by cooking the butter.
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=4);"
+                />
+                
+                 
+                <span>
+                  Vigorously whisk together egg, white sugar, and vanilla until pale in color and falling from the whisk in thick ribbons.
+                </span>
+                 
+              </li>
               
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                2
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=5);"
+                />
+                
+                 
+                <span>
+                  Sift the flour, baking soda, and salt, and whisk together.
+                </span>
+                 
+              </li>
               
-               
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                Place the melted butter in the refrigerator until cool and just opaque, but not completely hardened.
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=6);"
+                />
+                
+                 
+                <span>
+                  Mix the brown butter and brown sugar into the egg mixture.
+                </span>
+                 
+              </li>
               
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                3
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=7);"
+                />
+                
+                 
+                <span>
+                  <strong>
+                    Gently
+                  </strong>
+                   fold in the dry ingredients until just combined. 
+                  <strong>
+                    Do not
+                  </strong>
+                   overmix - it's OK to still have some flour visible. It's best to do this by hand rather than using a stand mixer to avoid over-working the dough.
+                </span>
+                 
+              </li>
               
-               
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                Vigorously whisk together egg, white sugar, and vanilla until pale in color and falling from the whisk in thick ribbons.
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=8);"
+                />
+                
+                 
+                <span>
+                  Gently mix in the chocolate.
+                </span>
+                 
+              </li>
               
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                4
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=9);"
+                />
+                
+                 
+                <span>
+                  Refrigerate the dough for at least 24 hours. Keep everything as cold as possible until you bake.
+                </span>
+                 
+              </li>
               
-               
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                Sift the flour, baking soda, and salt, and whisk together.
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=10);"
+                />
+                
+                 
+                <span>
+                  Preheat the oven and line a baking sheet with something non-stick.
+                </span>
+                 
+              </li>
               
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                5
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=11);"
+                />
+                
+                 
+                <span>
+                  Shape your dough into small balls, about 3.5cm in diameter.
+                </span>
+                 
+              </li>
               
-               
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                Mix the brown butter and brown sugar into the egg mixture.
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=12);"
+                />
+                
+                 
+                <span>
+                  Tear each ball in half and smoodge the smooth sides back together before placing on the lined baking sheet. This will help maximize cragginess.
+                </span>
+                 
+              </li>
               
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                6
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=13);"
+                />
+                
+                 
+                <span>
+                  Place the cookies at least 10cm apart on a lined baking sheet.
+                </span>
+                 
+              </li>
               
-               
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                &lt;em&gt;Gently&lt;/em&gt; fold in the dry ingredients until just combined. &lt;em&gt;Do not&lt;/em&gt; overmix - it's OK to still have some flour visible. It's best to do this by hand rather than using a stand mixer to avoid over-working the dough.
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=14);"
+                />
+                
+                 
+                <span>
+                  Bake at 170 degrees for 13 minutes.
+                </span>
+                 
+              </li>
               
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
+              <li
                 class="
-      mdc-data-table__cell
+      mdc-list-item
+      
+      
       
       
       
     "
+                style="height: auto; margin-bottom: 1.5em;"
+                tabindex="-1"
               >
-                7
-              </td>
+                <span
+                  class="mdc-list-item__graphic "
+                  style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text=15);"
+                />
+                
+                 
+                <span>
+                  Once baked, leave the cookies to cool and solidify on the baking tray for 2 minutes before placing on a wire cooling rack. Leave to cool completely (if you can).
+                </span>
+                 
+              </li>
               
-               
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                Gently mix in the chocolate.
-              </td>
               
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                8
-              </td>
-              
-               
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                Refrigerate the dough for at least 24 hours. Keep everything as cold as possible until you bake.
-              </td>
-              
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                9
-              </td>
-              
-               
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                Preheat the oven and line a baking sheet with something non-stick.
-              </td>
-              
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                10
-              </td>
-              
-               
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                Shape your dough into small balls, about 3.5cm in diameter.
-              </td>
-              
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                11
-              </td>
-              
-               
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                Tear each ball in half and smoodge the smooth sides back together before placing on the lined baking sheet. This will help maximize cragginess.
-              </td>
-              
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                12
-              </td>
-              
-               
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                Place the cookies at least 10cm apart on a lined baking sheet.
-              </td>
-              
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                13
-              </td>
-              
-               
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                Bake at [TEMPERATURE] degrees for [TIME] minutes.
-              </td>
-              
-               
-            </tr>
-            <tr
-              class="
-    
-    
-    mdc-data-table__row
-    
-  "
-            >
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                14
-              </td>
-              
-               
-              <td
-                class="
-      mdc-data-table__cell
-      
-      
-      
-    "
-              >
-                Once baked, leave the cookies to cool and solidify on the baking tray for 2 minutes before placing on a wire cooling rack. Leave to cool completely (if you can).
-              </td>
-              
-               
-            </tr>
+            </ul>
             
-          </tbody>
-        </table>
+          </div>
+           
+          <div
+            class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop"
+          />
+        </div>
       </div>
     </section>
      

@@ -1,28 +1,43 @@
-<DataTable data-testid="method" table$aria-label="Ingredients">
-  <Head>
-    <Row>
-      <Cell>Step</Cell>
-      <Cell>Instructions</Cell>
-    </Row>
-  </Head>
-  <Body>
-    {#each steps as step, index}
-      <Row>
-        <Cell>{index}</Cell>
-        <Cell>{step}</Cell>
-      </Row>
-    {/each}
-  </Body>
-</DataTable>
+<div class="mdc-layout-grid">
+  <div class="grid mdc-layout-grid__inner">
+    <div class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
+    </div>
+    <div class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
+      <List avatarList data-testid="method" nonInteractive>
+        {#each steps as step, index}
+          <Item style="height: auto; margin-bottom: 1.5em;">
+            <Graphic style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text={index + 1});" />
+            <span>{@html step}</span>
+          </Item>
+        {/each}
+      </List>
+    </div>
+    <div class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
+    </div>
+  </div>
+</div>
 
 <script>
-  import DataTable, { Body, Cell, Head, Row } from '@smui/data-table/bare.js'
-  import '@smui/data-table/bare.css'
+  import List, { Graphic, Item } from '@smui/list/bare.js';
+  import '@smui/list/bare.css'
   import { recipe } from '../store.js'
+  import { replaceAll } from '../utilities.js'
 
   let steps = []
+  let mappedValues
 
-  recipe.subscribe(({ method }) => {
+  recipe.subscribe(({ bakingConditions, method }) => {
+    mappedValues = {
+      "{TIME}": bakingConditions.time,
+      "{TEMPERATURE}": bakingConditions.temperature
+    }
     steps = method
+    insertBakingConditions()
   })
+
+  function insertBakingConditions() {
+    steps.forEach((step, index) => {
+      steps[index] = replaceAll(step, mappedValues)
+    })
+  }
 </script>

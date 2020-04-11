@@ -37,6 +37,7 @@
     "@smui/button": "^1.0.0-beta.20",
     "@smui/data-table": "^1.0.0-beta.20",
     "@smui/icon-button": "^1.0.0-beta.20",
+    "@smui/list": "^1.0.0-beta.20",
     "@smui/slider": "^1.0.0-beta.20",
     "@smui/textfield": "^1.0.0-beta.20",
     "@testing-library/jest-dom": "^5.3.0",
