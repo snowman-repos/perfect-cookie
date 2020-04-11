@@ -5,7 +5,7 @@
     <div class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
       <List avatarList data-testid="method" nonInteractive>
         {#each steps as step, index}
-          <Item style="height: auto; margin-bottom: 1.5em;">
+          <Item style="height: auto; margin-bottom: 1.5rem;">
             <Graphic style="background-image: url(https://via.placeholder.com/40/f2f2f2/777777?text={index + 1});" />
             <span>{@html step}</span>
           </Item>
