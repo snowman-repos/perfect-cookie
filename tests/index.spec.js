@@ -36,4 +36,9 @@ describe('index page', () => {
     const { getByText } = render(Index)
     expect(getByText('Method')).toBeInTheDocument()
   })
+
+  test('it should render the Footer section', () => {
+    const { container } = render(Index)
+    expect(container.querySelector('footer')).toBeInTheDocument()
+  })
 })

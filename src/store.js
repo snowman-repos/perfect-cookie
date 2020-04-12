@@ -90,7 +90,7 @@ export const recipe = writable({
     mouthfeel: 80,
     spread: 30,
     surface: 80,
-    texture: 20,
+    texture: 30,
   },
 })
 
