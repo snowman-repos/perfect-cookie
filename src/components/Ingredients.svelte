@@ -1,28 +1,22 @@
-<DataTable data-testid="ingredients" table$aria-label="Ingredients">
-  <Head>
-    <Row>
-      <Cell>Quantity</Cell>
-      <Cell>Ingredient</Cell>
-      <Cell></Cell>
-    </Row>
-  </Head>
-  <Body>
-    {#each ingredientsList as ingredient}
-      {#if ingredient.amount !== 0}
-        <Row>
-          <Cell>{roundToTwo(ingredient.amount * number)} {ingredient.unit}</Cell>
-          <Cell>{ingredient.name}</Cell>
-          <Cell>
-            <Checkbox />
-          </Cell>
-        </Row>
-      {/if}
-    {/each}
-  </Body>
-</DataTable>
+<div class="mdc-data-table">
+  <table class="mdc-data-table__table " aria-label="Ingredients">
+    <tbody class="mdc-data-table__content ">
+      {#each ingredientsList as ingredient}
+        {#if ingredient.amount !== 0}
+          <tr class=" mdc-data-table__row" aria-selected="false">
+            <td class="mdc-data-table__cell">{roundToTwo(ingredient.amount * number)} {ingredient.unit}</td>
+            <td class="mdc-data-table__cell">{ingredient.name}</td>
+            <td class="mdc-data-table__cell">
+              <Checkbox checked={false} />
+            </td>
+          </tr>
+        {/if}
+      {/each}
+    </tbody>
+  </table>
+</div>
 
 <script>
-  import DataTable, { Body, Cell, Head, Row } from '@smui/data-table/bare.js'
   import '@smui/data-table/bare.css'
   import Checkbox from '@smui/checkbox'
   import { recipe } from '../store.js'

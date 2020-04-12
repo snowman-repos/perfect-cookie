@@ -470,119 +470,43 @@ exports[`index page it should render the page title 1`] = `
         class="ingredients"
       >
         <div
-          class="mdc-data-table "
-          data-testid="ingredients"
+          class="mdc-data-table"
         >
           <table
             aria-label="Ingredients"
             class="mdc-data-table__table "
           >
-            <thead>
-              <tr
-                class="
-    
-    mdc-data-table__header-row
-    
-    
-  "
-              >
-                <th
-                  class="
-      mdc-data-table__header-cell
-      
-      
-    "
-                  role="columnheader"
-                  scope="col"
-                >
-                  Quantity
-                </th>
-                
-                 
-                <th
-                  class="
-      mdc-data-table__header-cell
-      
-      
-    "
-                  role="columnheader"
-                  scope="col"
-                >
-                  Ingredient
-                </th>
-                
-                 
-                <th
-                  class="
-      mdc-data-table__header-cell
-      
-      
-    "
-                  role="columnheader"
-                  scope="col"
-                />
-                
-              </tr>
-            </thead>
-             
             <tbody
               class="mdc-data-table__content "
             >
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   50
                    
                   g
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Plain flour
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -605,65 +529,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   200
                    
                   g
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Bread flour
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -686,65 +582,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   201
                    
                   g
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Butter
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -767,65 +635,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   125
                    
                   g
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Granulated sugar
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -848,65 +688,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   125
                    
                   g
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Brown sugar
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -929,65 +741,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   1.75
                    
                   
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Eggs
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -1010,65 +794,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   0.75
                    
                   tsp
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Baking soda
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -1091,65 +847,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   1.75
                    
                   tsp
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Salt
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -1172,65 +900,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   1.75
                    
                   tsp
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Vanilla extract
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -1253,65 +953,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   1.75
                    
                   tbsp
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Water
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -1334,65 +1006,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   0.5
                    
                   tsp
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Cinnamon
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -1415,65 +1059,37 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
               
               <tr
                 aria-selected="false"
-                class="
-    
-    
-    mdc-data-table__row
-    
-  "
+                class=" mdc-data-table__row"
               >
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   150
                    
                   g
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   Chopped dark chocolate
                 </td>
-                
                  
                 <td
-                  class="
-      mdc-data-table__cell
-      
-      
-      
-    "
+                  class="mdc-data-table__cell"
                 >
                   <div
-                    class="
-    mdc-checkbox
-    
-    
-    
-    mdc-data-table__row-checkbox
-  "
+                    class="mdc-checkbox mdc-checkbox--upgraded"
                   >
                     <input
                       class="mdc-checkbox__native-control "
                       type="checkbox"
+                      value=""
                     />
                      
                     <div
@@ -1496,10 +1112,8 @@ exports[`index page it should render the page title 1`] = `
                     </div>
                   </div>
                 </td>
-                
                  
               </tr>
-              
               
             </tbody>
           </table>

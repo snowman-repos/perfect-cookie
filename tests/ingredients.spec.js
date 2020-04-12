@@ -16,8 +16,8 @@ describe('ingredients component', () => {
   })
 
   test('it should render the table', () => {
-    const { getByTestId } = render(Ingredients)
-    expect(getByTestId('ingredients')).toBeInTheDocument()
+    const { container } = render(Ingredients)
+    expect(container.querySelector('.mdc-data-table')).toBeInTheDocument()
   })
 
   test('it should render a row for each required ingredient', () => {
