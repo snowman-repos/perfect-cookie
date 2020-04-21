@@ -28,12 +28,18 @@
 <footer />
 
 <script>
+  import { setContext } from 'svelte'
   import { properties } from '../store.js'
   import Ingredients from '../components/Ingredients.svelte'
   import Method from '../components/Method.svelte'
   import Slider from '../components/Slider.svelte'
   import YieldController from '../components/YieldController.svelte'
   import '../theme/_smui-theme.scss'
+  import { getUpdateRecipeFunction } from '../utilities.js'
+
+  const updateRecipe = getUpdateRecipeFunction()
+  setContext('updateRecipe', updateRecipe)
+
 </script>
 
 <style>

@@ -105,111 +105,6 @@ export const bakingConditions = readable({
   },
 })
 
-export const ingredients = readable([
-  {
-    max: 17.5,
-    min: 5.33,
-    name: 'Plain flour',
-    unit: 'g',
-  },
-  {
-    max: 17.5,
-    min: 5.33,
-    name: 'Cake flour',
-    unit: 'g',
-  },
-  {
-    max: 17.5,
-    min: 5.3,
-    name: 'Bread flour',
-    unit: 'g',
-  },
-  {
-    max: 0.09,
-    min: 0,
-    name: 'Cornstarch',
-    unit: 'g',
-  },
-  {
-    max: 11.33,
-    min: 4.69,
-    name: 'Butter',
-    unit: 'g',
-  },
-  {
-    max: 8.33,
-    min: 1.57,
-    name: 'Granulated sugar',
-    unit: 'g',
-  },
-  {
-    max: 14.67,
-    min: 0,
-    name: 'Brown sugar',
-    unit: 'g',
-  },
-  {
-    max: 3.31,
-    min: 0,
-    name: 'Corn syrup',
-    unit: 'g',
-  },
-  {
-    max: 0.08,
-    min: 0.02,
-    name: 'Eggs',
-    unit: '',
-  },
-  {
-    max: 0.07,
-    min: 0,
-    name: 'Additional egg yolk',
-    unit: '',
-  },
-  {
-    max: 0.06,
-    min: 0,
-    name: 'Baking soda',
-    unit: 'tsp',
-  },
-  {
-    max: 0.02,
-    min: 0,
-    name: 'Baking powder',
-    unit: 'tsp',
-  },
-  {
-    max: 0.08,
-    min: 0.08,
-    name: 'Salt',
-    unit: 'tsp',
-  },
-  {
-    max: 0.13,
-    min: 0.13,
-    name: 'Vanilla extract',
-    unit: 'tsp',
-  },
-  {
-    max: 0.08,
-    min: 0,
-    name: 'Water',
-    unit: 'tbsp',
-  },
-  {
-    max: 0.02,
-    min: 0.02,
-    name: 'Cinnamon',
-    unit: 'tsp',
-  },
-  {
-    max: 6,
-    min: 6,
-    name: 'Chopped dark chocolate',
-    unit: 'g',
-  },
-])
-
 export const method = readable([
   {
     ingredientsNeeded: [],
@@ -217,7 +112,7 @@ export const method = readable([
       'In a saucepan over medium heat, cook the butter while gently swirling or stirring until you start to see golden brown milk solids. As soon as the butter turns a rich brown color with a nutty aroma, remove from the heat. This should take about 5 minutes. Be careful not to go past this point otherwise your butter will burn, leaving a bitter taste.',
     timeNeeded: 5,
     thresholds: {
-      color: 0,
+      color: 60,
       mouthfeel: 0,
       spread: 0,
       surface: 0,
@@ -230,6 +125,18 @@ export const method = readable([
       'Mix 2 tablespoons of water into the melted butter to replace the moisture lost by cooking the butter.',
     timeNeeded: 0.5,
     thresholds: {
+      color: 80,
+      mouthfeel: 0,
+      spread: 0,
+      surface: 0,
+      texture: 0,
+    },
+  },
+  {
+    ingredientsNeeded: [],
+    instruction: 'Use cold hard butter from the refrigerator.',
+    timeNeeded: 20,
+    thresholds: {
       color: 0,
       mouthfeel: 0,
       spread: 0,
@@ -239,11 +146,23 @@ export const method = readable([
   },
   {
     ingredientsNeeded: [],
-    instruction: 'Place the melted butter in the refrigerator until cool and just opaque, but not completely hardened.',
+    instruction: 'Make sure the butter is cool, but not completely hardened.',
     timeNeeded: 20,
     thresholds: {
       color: 0,
-      mouthfeel: 0,
+      mouthfeel: 40,
+      spread: 0,
+      surface: 0,
+      texture: 0,
+    },
+  },
+  {
+    ingredientsNeeded: [],
+    instruction: 'Use completely melted butter.',
+    timeNeeded: 20,
+    thresholds: {
+      color: 0,
+      mouthfeel: 90,
       spread: 0,
       surface: 0,
       texture: 0,
@@ -272,7 +191,7 @@ export const method = readable([
       mouthfeel: 0,
       spread: 0,
       surface: 0,
-      texture: 0,
+      texture: 70,
     },
   },
   {
@@ -316,7 +235,7 @@ export const method = readable([
     instruction: 'Mix the brown butter into the egg mixture.',
     timeNeeded: 0.5,
     thresholds: {
-      color: 0,
+      color: 60,
       mouthfeel: 0,
       spread: 0,
       surface: 0,
@@ -328,7 +247,19 @@ export const method = readable([
     instruction: 'Mix the brown butter and brown sugar into the egg mixture.',
     timeNeeded: 0.5,
     thresholds: {
-      color: 0,
+      color: 60,
+      mouthfeel: 0,
+      spread: 0,
+      surface: 0,
+      texture: 0,
+    },
+  },
+  {
+    ingredientsNeeded: [],
+    instruction: 'Mix the brown sugar into the egg mixture.',
+    timeNeeded: 0.5,
+    thresholds: {
+      color: 10,
       mouthfeel: 0,
       spread: 0,
       surface: 0,
@@ -344,7 +275,7 @@ export const method = readable([
       color: 0,
       mouthfeel: 0,
       spread: 0,
-      surface: 0,
+      surface: 70,
       texture: 0,
     },
   },
@@ -356,7 +287,7 @@ export const method = readable([
       color: 0,
       mouthfeel: 0,
       spread: 0,
-      surface: 0,
+      surface: 40,
       texture: 0,
     },
   },
@@ -375,19 +306,19 @@ export const method = readable([
   },
   {
     ingredientsNeeded: ['Chopped dark chocolate'],
-    instruction: 'Gently mix in the chocolate.',
+    instruction: 'Gently mix in the chocolate and anything else you might want to add.',
     timeNeeded: 1,
     thresholds: {
       color: 0,
       mouthfeel: 0,
       spread: 0,
-      surface: 0,
+      surface: 50,
       texture: 0,
     },
   },
   {
     ingredientsNeeded: ['Chopped dark chocolate'],
-    instruction: 'Stir in the chocolate.',
+    instruction: 'Stir in the chocolate and anything else you might want to add.',
     timeNeeded: 1,
     thresholds: {
       color: 0,
@@ -402,10 +333,10 @@ export const method = readable([
     instruction: 'Refrigerate the dough for at least 24 hours. Keep everything as cold as possible until you bake.',
     timeNeeded: 1440,
     thresholds: {
-      color: 0,
+      color: 80,
       mouthfeel: 0,
       spread: 0,
-      surface: 0,
+      surface: 50,
       texture: 0,
     },
   },
@@ -414,7 +345,7 @@ export const method = readable([
     instruction: 'Refrigerate the dough for 30 minutes or until it firms up slightly.',
     timeNeeded: 30,
     thresholds: {
-      color: 0,
+      color: 50,
       mouthfeel: 0,
       spread: 0,
       surface: 0,
@@ -454,7 +385,7 @@ export const method = readable([
       mouthfeel: 0,
       spread: 0,
       surface: 0,
-      texture: 0,
+      texture: 80,
     },
   },
   {
@@ -478,7 +409,7 @@ export const method = readable([
       color: 0,
       mouthfeel: 0,
       spread: 0,
-      surface: 0,
+      surface: 70,
       texture: 0,
     },
   },

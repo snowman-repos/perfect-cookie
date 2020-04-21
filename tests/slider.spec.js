@@ -21,6 +21,7 @@ describe('slider component', () => {
         from: '',
         property,
         to: '',
+        updateRecipe: () => {},
       },
     })
     expect(container).toHaveProperty('aria-valuenow', properties[property])
