@@ -1,4 +1,4 @@
-import { recipe } from './store.js'
+import { recipe, method } from './store.js'
 
 export const replaceAll = (str, mapObj) => {
   const re = new RegExp(Object.keys(mapObj).join('|'), 'g')
@@ -14,8 +14,12 @@ export const roundToTwo = (num) => {
 
 export const getUpdateRecipeFunction = () => {
   let currentRecipe = {}
+  let potentialMethod = []
   recipe.subscribe((store) => {
     currentRecipe = store
+  })
+  method.subscribe((store) => {
+    potentialMethod = store
   })
   return (property) => {
     const { properties } = currentRecipe
@@ -159,16 +163,16 @@ export const getUpdateRecipeFunction = () => {
     }
 
     // caculate amount of baking soda based on texture
-    let bakingSoda = 0.0625
+    let bakingSoda = 0.0262
     switch (properties.texture) {
       case 60:
-        bakingSoda = 0.047
+        bakingSoda = 0.02
         break
       case 70:
-        bakingSoda = 0.031
+        bakingSoda = 0.013
         break
       case 80:
-        bakingSoda = 0.016
+        bakingSoda = 0.007
         break
       case 90:
         bakingSoda = 0
@@ -201,17 +205,17 @@ export const getUpdateRecipeFunction = () => {
     // calculate baking time based on color & spread
     if (property === 'color') {
       // = 0.024(color) + 10.8
-      bakingTime = 0.024 * properties.color + 10.8
+      bakingTime = Math.round(0.024 * properties.color + 10.8)
     } else if (property === 'spread') {
       // = 0.01(spread) + 11.5
-      bakingTime = 0.01 * properties.spread + 11.5
+      bakingTime = Math.round(0.01 * properties.spread + 11.5)
     }
 
     // calculate heat exposure based on texture
     let bakingTemperature = 176
     // = 0.09(texture) + 12.5
     const heatExposure = 0.09 * properties.texture + 12.5
-    bakingTemperature = heatExposure * bakingTime
+    bakingTemperature = Math.round(heatExposure * bakingTime)
 
     // update spread
     if (property === 'spread') {
@@ -316,17 +320,60 @@ export const getUpdateRecipeFunction = () => {
       unit: 'g',
     })
 
+    let newMethod = []
+
+    potentialMethod.forEach((option) => {
+      let addOption = true
+
+      if (option.ingredientsNeeded.length) {
+        option.ingredientsNeeded.forEach((requiredIngredient) => {
+          const matchingIngredients = newIngredients.filter((ingredient) => {
+            return ingredient.name === requiredIngredient
+          })
+          if (!matchingIngredients.length) addOption = false
+        })
+      }
+
+      if (newProperties.color < option.thresholds.color.min || newProperties.color > option.thresholds.color.max)
+        addOption = false
+      if (
+        newProperties.mouthfeel < option.thresholds.mouthfeel.min ||
+        newProperties.mouthfeel > option.thresholds.mouthfeel.max
+      )
+        addOption = false
+      if (newProperties.spread < option.thresholds.spread.min || newProperties.spread > option.thresholds.spread.max)
+        addOption = false
+      if (
+        newProperties.surface < option.thresholds.surface.min ||
+        newProperties.surface > option.thresholds.surface.max
+      )
+        addOption = false
+      if (
+        newProperties.texture < option.thresholds.texture.min ||
+        newProperties.texture > option.thresholds.texture.max
+      )
+        addOption = false
+
+      const mappedValues = {
+        '{TIME}': bakingTime,
+        '{TEMPERATURE}': bakingTemperature,
+      }
+
+      if (addOption) {
+        newMethod.push(replaceAll(option.instruction, mappedValues))
+      }
+    })
+
     recipe.set(
       Object.assign(currentRecipe, {
-        properties: newProperties,
+        bakingConditions: {
+          temperature: bakingTemperature,
+          time: bakingTime,
+        },
         ingredients: newIngredients,
+        method: newMethod,
+        properties: newProperties,
       })
     )
-
-    // update method based on properties
-    // update baking conditions
-
-    // set recipe
-    // recipe.set(tempRecipe)
   }
 }

@@ -21,23 +21,10 @@
   import List, { Graphic, Item } from '@smui/list/bare.js';
   import '@smui/list/bare.css'
   import { recipe } from '../store.js'
-  import { replaceAll } from '../utilities.js'
 
   let steps = []
-  let mappedValues
 
-  recipe.subscribe(({ bakingConditions, method }) => {
-    mappedValues = {
-      "{TIME}": bakingConditions.time,
-      "{TEMPERATURE}": bakingConditions.temperature
-    }
+  recipe.subscribe(({ method }) => {
     steps = method
-    insertBakingConditions()
   })
-
-  function insertBakingConditions() {
-    steps.forEach((step, index) => {
-      steps[index] = replaceAll(step, mappedValues)
-    })
-  }
 </script>

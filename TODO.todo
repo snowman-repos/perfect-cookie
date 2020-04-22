@@ -10,7 +10,11 @@
 ✔ licence and repo in package.json @done(2020-04-11 20:56)
 ✔ Checkboxes alongside ingredients @done(2020-04-11 21:09)
 ✔ Footer @done(2020-04-12 15:24)
-☐ Logic for sliders
+✔ Logic for sliders @done(2020-04-22 21:22)
+☐ Summary - time needed
+☐ breakdown utilities megafunction
+☐ run setup at start / remove default recipe
+☐ Rename spread to thickness
 ☐ Deploy
 ☐ Accessibility
 ☐ Security

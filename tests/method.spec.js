@@ -26,17 +26,6 @@ describe('recipe component', () => {
     expect(container.querySelectorAll('.mdc-list li').length).toBe(actualRecipe.method.length)
   })
 
-  test('it should render the baking conditions', () => {
-    const step = 'Bake at {TEMPERATURE} degrees for {TIME} minutes.'
-    const mappedValues = {
-      '{TIME}': actualRecipe.bakingConditions.time,
-      '{TEMPERATURE}': actualRecipe.bakingConditions.temperature,
-    }
-
-    const { getByText } = render(Method)
-    expect(getByText(replaceAll(step, mappedValues))).toBeInTheDocument()
-  })
-
   test('it should update the method when the baking conditions change', () => {
     const newTemperature = 160
     const newTime = 15

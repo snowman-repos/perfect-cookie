@@ -10,7 +10,7 @@ exports[`index page it should render the page title 1`] = `
       <h1
         class="title mdc-typography--headline1 u-centered"
       >
-        The Perfect Cookie
+        My Perfect Cookie
       </h1>
     </section>
      
@@ -1494,7 +1494,7 @@ exports[`index page it should render the page title 1`] = `
                 
                  
                 <span>
-                  Bake at 170 degrees for 13 minutes.
+                  Bake at {TEMPERATURE} degrees for {TIME} minutes.
                 </span>
                  
               </li>

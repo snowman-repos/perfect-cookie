@@ -1,9 +1,9 @@
 <svelte:head>
-  <title>The Perfect Cookie</title>
+  <title>My Perfect Cookie</title>
 </svelte:head>
 
 <section class="hero">
-  <h1 class="title mdc-typography--headline1 u-centered">The Perfect Cookie</h1>
+  <h1 class="title mdc-typography--headline1 u-centered">My Perfect Cookie</h1>
 </section>
 
 <section class="controls mdc-layout-grid">

@@ -17,7 +17,7 @@ describe('index page', () => {
   test('it should render the page title', () => {
     const { container, getByText } = render(Index)
 
-    expect(getByText('The Perfect Cookie')).toBeInTheDocument()
+    expect(getByText('My Perfect Cookie')).toBeInTheDocument()
     expect(container).toMatchSnapshot()
   })
 
