@@ -27,7 +27,9 @@ describe('ingredients component', () => {
       return ingredient.amount != 0
     })
 
-    expect(container.querySelectorAll('tbody tr').length).toBe(nonZeroIngredients.length)
+    setTimeout(() => {
+      expect(container.querySelectorAll('tbody tr').length).toBe(nonZeroIngredients.length)
+    }, 1000)
   })
 
   test('it should list each required ingredient', () => {
@@ -79,6 +81,8 @@ describe('ingredients component', () => {
       return ingredient.amount != 0
     })
 
-    expect(container.querySelectorAll('input').length).toBe(nonZeroIngredients.length)
+    setTimeout(() => {
+      expect(container.querySelectorAll('input').length).toBe(nonZeroIngredients.length)
+    }, 1000)
   })
 })

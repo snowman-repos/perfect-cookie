@@ -4,7 +4,7 @@
       {#each ingredientsList as ingredient}
         {#if ingredient.amount !== 0}
           <tr class=" mdc-data-table__row" aria-selected="false">
-            <td class="mdc-data-table__cell">{roundToTwo(ingredient.amount * number)} {ingredient.unit}</td>
+            <td class="mdc-data-table__cell">{Math.round(ingredient.amount * number)} {ingredient.unit}</td>
             <td class="mdc-data-table__cell">{ingredient.name}</td>
             <td class="mdc-data-table__cell">
               <Checkbox checked={false} />
@@ -20,7 +20,6 @@
   import '@smui/data-table/bare.css'
   import Checkbox from '@smui/checkbox'
   import { recipe } from '../store.js'
-  import { roundToTwo } from '../utilities.js'
 
   let number
   let ingredientsList = []

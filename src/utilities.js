@@ -46,13 +46,13 @@ export const getUpdateRecipeFunction = () => {
         break
     }
 
-    // calculate fat type based on spread
+    // calculate fat type based on thickness
     let fatType = 'Butter'
-    if (properties.spread < 20) fatType = 'Vegetable oil'
+    if (properties.thickness < 20) fatType = 'Vegetable oil'
 
-    // calculate fat amount based on spread
-    // = -0.021(spread) + 7.7
-    let fat = -0.021 * properties.spread + 7.7
+    // calculate fat amount based on thickness
+    // = -0.021(thickness) + 7.7
+    let fat = -0.021 * properties.thickness + 7.7
 
     // calculate liquid ratio based on surface
     // = 0.021(surface) + 0.65
@@ -119,24 +119,24 @@ export const getUpdateRecipeFunction = () => {
     }
 
     let brownWhiteSugarRatio = 0
-    // calculate brown/white sugar ratio based on texture & color & spread
+    // calculate brown/white sugar ratio based on texture & color & thickness
     if (property === 'color') {
       // brown / white = 0.0212(color) + 0.27
       brownWhiteSugarRatio = 0.0212 * properties.color - 0.27
       sugars.white = sugar / (1 + brownWhiteSugarRatio)
       sugars.brown = sugar - sugars.white
-      //update texture, spread
+      //update texture, thickness
       if (brownWhiteSugarRatio < 1.1 && brownWhiteSugarRatio / 1.1 > 0.5) {
-        if (properties.spread >= 5) newProperties.spread = properties.spread - 5
+        if (properties.thickness >= 5) newProperties.thickness = properties.thickness - 5
         if (properties.texture <= 90) newProperties.texture = properties.texture + 10
       }
       if (brownWhiteSugarRatio > 1.1 && brownWhiteSugarRatio < 3.0 && brownWhiteSugarRatio / 1.9 > 0.5) {
-        if (properties.spread <= 90) newProperties.spread = properties.spread + 10
+        if (properties.thickness <= 90) newProperties.thickness = properties.thickness + 10
         if (properties.texture >= 10) newProperties.texture = properties.texture - 10
       }
-    } else if (property === 'spread') {
-      // brown / white = 0.005(spread) + 0.75
-      brownWhiteSugarRatio = 0.005 * properties.spread + 0.75
+    } else if (property === 'thickness') {
+      // brown / white = 0.005(thickness) + 0.75
+      brownWhiteSugarRatio = 0.005 * properties.thickness + 0.75
       sugars.white = sugar / (1 + brownWhiteSugarRatio)
       sugars.brown = sugar - sugars.white
       //update texture, color
@@ -150,17 +150,17 @@ export const getUpdateRecipeFunction = () => {
       }
     } else {
       // brown / white = -0.0165(texture) + 1.8
-      brownWhiteSugarRatio = -0.0165 * properties.spread + 1.8
+      brownWhiteSugarRatio = -0.0165 * properties.thickness + 1.8
       sugars.white = sugar / (1 + brownWhiteSugarRatio)
       sugars.brown = sugar - sugars.white
-      //update color,spread
+      //update color,thickness
       if (brownWhiteSugarRatio < 1.1 && brownWhiteSugarRatio / 1.1 > 0.5) {
         if (properties.color >= 5) newProperties.color = properties.color - 5
-        if (properties.spread >= 5) newProperties.spread = properties.spread - 5
+        if (properties.thickness >= 5) newProperties.thickness = properties.thickness - 5
       }
       if (brownWhiteSugarRatio > 1.1 && brownWhiteSugarRatio < 3.0 && brownWhiteSugarRatio / 1.9 > 0.5) {
         if (properties.color <= 90) newProperties.color = properties.color + 10
-        if (properties.spread <= 90) newProperties.spread = properties.spread + 10
+        if (properties.thickness <= 90) newProperties.thickness = properties.thickness + 10
       }
     }
 
@@ -185,15 +185,15 @@ export const getUpdateRecipeFunction = () => {
     }
 
     let bakingPowder = 0
-    // calculate amount of baking powder based on surface & spread
+    // calculate amount of baking powder based on surface & thickness
     // = -0.00062x + 0.0188
     if (property === 'surface' && properties.surface < 30) {
       bakingPowder = -0.00062 * properties.surface + 0.0188
-      if (properties.spread >= 10) newProperties.spread = properties.spread - 10
+      if (properties.thickness >= 10) newProperties.thickness = properties.thickness - 10
     }
     // = -0.00062x + 0.0188
-    if (property === 'spread' && properties.spread < 50) {
-      bakingPowder = -0.00037 * properties.spread + 0.0188
+    if (property === 'thickness' && properties.thickness < 50) {
+      bakingPowder = -0.00037 * properties.thickness + 0.0188
       if (properties.surface >= 10) newProperties.surface = properties.surface - 10
     }
 
@@ -204,13 +204,13 @@ export const getUpdateRecipeFunction = () => {
     if (properties.mouthfeel < 30) cornstarch = 0.08
 
     let bakingTime = 12
-    // calculate baking time based on color & spread
+    // calculate baking time based on color & thickness
     if (property === 'color') {
       // = 0.024(color) + 10.8
       bakingTime = Math.round(0.024 * properties.color + 10.8)
-    } else if (property === 'spread') {
-      // = 0.01(spread) + 11.5
-      bakingTime = Math.round(0.01 * properties.spread + 11.5)
+    } else if (property === 'thickness') {
+      // = 0.01(thickness) + 11.5
+      bakingTime = Math.round(0.01 * properties.thickness + 11.5)
     }
 
     time = bakingTime
@@ -221,9 +221,9 @@ export const getUpdateRecipeFunction = () => {
     const heatExposure = 0.09 * properties.texture + 12.5
     bakingTemperature = Math.round(heatExposure * bakingTime)
 
-    // update spread
-    if (property === 'spread') {
-      newProperties.spread = (heatExposure - 18) / -0.025
+    // update thickness
+    if (property === 'thickness') {
+      newProperties.thickness = (heatExposure - 18) / -0.025
     }
 
     let newIngredients = []
@@ -345,7 +345,10 @@ export const getUpdateRecipeFunction = () => {
         newProperties.mouthfeel > option.thresholds.mouthfeel.max
       )
         addOption = false
-      if (newProperties.spread < option.thresholds.spread.min || newProperties.spread > option.thresholds.spread.max)
+      if (
+        newProperties.thickness < option.thresholds.thickness.min ||
+        newProperties.thickness > option.thresholds.thickness.max
+      )
         addOption = false
       if (
         newProperties.surface < option.thresholds.surface.min ||

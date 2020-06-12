@@ -27,8 +27,10 @@
   let timeNeeded = ''
 
   const parseTime = (t) => {
-    if (t >= 60 ) {
+    if (t >= 120 ) {
       return `${Math.floor(t/60)} hours, ${t % 60} minutes`
+    } else if (t >= 60) {
+      return `${Math.floor(t/60)} hour, ${t % 60} minutes`
     } else return `${t} minutes`
   }
 

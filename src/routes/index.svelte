@@ -39,6 +39,7 @@
 
   const updateRecipe = getUpdateRecipeFunction()
   setContext('updateRecipe', updateRecipe)
+  updateRecipe()
 
 </script>
 

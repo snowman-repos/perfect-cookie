@@ -2,107 +2,80 @@ import { readable, writable } from 'svelte/store'
 
 export const recipe = writable({
   bakingConditions: {
-    temperature: 170,
-    time: 13,
+    temperature: 0,
+    time: 0,
   },
   ingredients: [
     {
-      amount: 2,
+      amount: 0,
       name: 'Plain flour',
       unit: 'g',
     },
     {
-      amount: 8,
+      amount: 0,
       name: 'Bread flour',
       unit: 'g',
     },
     {
-      amount: 8.04,
+      amount: 0,
       name: 'Butter',
       unit: 'g',
     },
     {
-      amount: 5,
+      amount: 0,
       name: 'Granulated sugar',
       unit: 'g',
     },
     {
-      amount: 5,
+      amount: 0,
       name: 'Brown sugar',
       unit: 'g',
     },
     {
-      amount: 0.07,
+      amount: 0,
       name: 'Eggs',
       unit: '',
     },
     {
-      amount: 0.03,
+      amount: 0,
       name: 'Baking soda',
       unit: 'tsp',
     },
     {
-      amount: 0.07,
+      amount: 0,
       name: 'Salt',
       unit: 'tsp',
     },
     {
-      amount: 0.07,
+      amount: 0,
       name: 'Vanilla extract',
       unit: 'tsp',
     },
     {
-      amount: 0.07,
+      amount: 0,
       name: 'Water',
       unit: 'tbsp',
     },
     {
-      amount: 0.02,
+      amount: 0,
       name: 'Cinnamon',
       unit: 'tsp',
     },
     {
-      amount: 6,
+      amount: 0,
       name: 'Chopped dark chocolate',
       unit: 'g',
     },
   ],
-  method: [
-    'In a saucepan over medium heat, cook the butter while gently swirling or stirring until you start to see golden brown milk solids. As soon as the butter turns a rich brown color with a nutty aroma, remove from the heat. This should take about 5 minutes. Be careful not to go past this point otherwise your butter will burn, leaving a bitter taste.',
-    'Mix 2 tablespoons of water into the melted butter to replace the moisture lost by cooking the butter.',
-    'Make sure the butter is cool, but not completely hardened.',
-    'Vigorously whisk together egg, white sugar, and vanilla until pale in color and falling from the whisk in thick ribbons.',
-    'Sift the flour, baking soda, and salt, and whisk together.',
-    'Mix the brown butter and brown sugar into the egg mixture.',
-    "<strong>Gently</strong> fold in the dry ingredients until just combined. <strong>Do not</strong> overmix - it's OK to still have some flour visible. It's best to do this by hand rather than using a stand mixer to avoid over-working the dough.",
-    'Gently mix in the chocolate and anything else you might want to add.',
-    'Refrigerate the dough for at least 24 hours. Keep everything as cold as possible until you bake.',
-    'Preheat the oven and line a baking sheet with something non-stick.',
-    'Shape your dough into small balls, about 3.5cm in diameter.',
-    'Tear each ball in half and smoodge the smooth sides back together before placing on the lined baking sheet. This will help maximize cragginess.',
-    'Place the cookies at least 10cm apart on a lined baking sheet.',
-    'Bake at {TEMPERATURE} degrees for {TIME} minutes.',
-    'Once baked, leave the cookies to cool and solidify on the baking tray for 2 minutes before placing on a wire cooling rack. Leave to cool completely (if you can).',
-  ],
+  method: [],
   numberOfCookies: 25,
-  preparationTime: 1519,
+  preparationTime: 0,
   properties: {
-    color: 90,
+    color: 60,
     mouthfeel: 80,
-    spread: 30,
-    surface: 80,
+    surface: 90,
     texture: 30,
-  },
-})
-
-export const bakingConditions = readable({
-  time: {
-    max: 200,
-    min: 7,
-  },
-  temperature: {
-    max: 200,
-    min: 160,
+    thickness: 40,
   },
 })
 
@@ -121,15 +94,15 @@ export const method = readable([
         min: 40,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -149,15 +122,15 @@ export const method = readable([
         min: 40,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -176,15 +149,15 @@ export const method = readable([
         min: 0,
         max: 40,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -203,15 +176,15 @@ export const method = readable([
         min: 40,
         max: 80,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -230,15 +203,15 @@ export const method = readable([
         min: 90,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -258,15 +231,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -286,16 +259,16 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
         min: 70,
+        max: 100,
+      },
+      thickness: {
+        min: 0,
         max: 100,
       },
     },
@@ -313,16 +286,16 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
         min: 90,
+        max: 100,
+      },
+      thickness: {
+        min: 0,
         max: 100,
       },
     },
@@ -340,10 +313,6 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 50,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
@@ -351,6 +320,10 @@ export const method = readable([
       texture: {
         min: 0,
         max: 90,
+      },
+      thickness: {
+        min: 50,
+        max: 100,
       },
     },
   },
@@ -367,10 +340,6 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 50,
-      },
       surface: {
         min: 0,
         max: 100,
@@ -378,6 +347,10 @@ export const method = readable([
       texture: {
         min: 0,
         max: 90,
+      },
+      thickness: {
+        min: 0,
+        max: 50,
       },
     },
   },
@@ -394,15 +367,15 @@ export const method = readable([
         min: 40,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -421,15 +394,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -448,15 +421,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -476,15 +449,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 70,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -503,15 +476,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 40,
         max: 60,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -531,15 +504,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 30,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -558,15 +531,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 50,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -585,15 +558,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 40,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -612,16 +585,16 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 50,
-        max: 100,
-      },
       surface: {
         min: 50,
         max: 100,
       },
       texture: {
         min: 0,
+        max: 100,
+      },
+      thickness: {
+        min: 50,
         max: 100,
       },
     },
@@ -639,16 +612,16 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 50,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
         min: 0,
+        max: 100,
+      },
+      thickness: {
+        min: 50,
         max: 100,
       },
     },
@@ -666,15 +639,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -693,15 +666,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -720,16 +693,16 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
         min: 80,
+        max: 100,
+      },
+      thickness: {
+        min: 0,
         max: 100,
       },
     },
@@ -748,15 +721,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 80,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -775,10 +748,6 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
@@ -787,12 +756,16 @@ export const method = readable([
         min: 0,
         max: 100,
       },
+      thickness: {
+        min: 0,
+        max: 100,
+      },
     },
   },
   {
     ingredientsNeeded: [],
     instruction: 'Bake at {TEMPERATURE} degrees for {TIME} minutes.',
-    timeNeeded: '{TIME}',
+    timeNeeded: 0,
     thresholds: {
       color: {
         min: 0,
@@ -802,15 +775,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -830,15 +803,15 @@ export const method = readable([
         min: 0,
         max: 100,
       },
-      spread: {
-        min: 0,
-        max: 100,
-      },
       surface: {
         min: 0,
         max: 100,
       },
       texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
         min: 0,
         max: 100,
       },
@@ -858,11 +831,6 @@ export const properties = readable([
     to: 'Dense & chewy',
   },
   {
-    from: 'Spread thin',
-    name: 'spread',
-    to: 'Tall & thick',
-  },
-  {
     from: 'Smooth',
     name: 'surface',
     to: 'Craggy',
@@ -871,6 +839,11 @@ export const properties = readable([
     from: 'Soft',
     name: 'texture',
     to: 'Crunchy',
+  },
+  {
+    from: 'Spread thin',
+    name: 'thickness',
+    to: 'Tall & thick',
   },
 ])
 
