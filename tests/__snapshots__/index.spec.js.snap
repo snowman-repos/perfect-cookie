@@ -8,7 +8,7 @@ exports[`index page it should render the page title 1`] = `
       class="hero"
     >
       <h1
-        class="title mdc-typography--headline1 u-centered"
+        class="title u-centered"
       >
         My Perfect Cookie
       </h1>
@@ -358,7 +358,7 @@ exports[`index page it should render the page title 1`] = `
       class="mdc-layout-grid"
     >
       <h2
-        class="mdc-typography--headline1 u-centered"
+        class="mdc-typography--headline2 u-centered"
       >
         Ingredients
       </h2>
@@ -1077,7 +1077,7 @@ exports[`index page it should render the page title 1`] = `
       class="mdc-layout-grid u-padding-bottom--zero"
     >
       <h2
-        class="mdc-typography--headline1 u-centered"
+        class="mdc-typography--headline2 u-centered"
       >
         Method
       </h2>
@@ -1096,12 +1096,14 @@ exports[`index page it should render the page title 1`] = `
             class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop"
           >
             <h3
-              class="mdc-typography--headline3 u-centered"
+              class="u-centered"
               data-testid="preparationTime"
             >
               About 
-              2 hours, 2 minutes
-               needed before you can eat these babies.
+              <strong>
+                2 hours, 2 minutes
+              </strong>
+               needed before you can eat these babies…
             </h3>
              
             <ul
