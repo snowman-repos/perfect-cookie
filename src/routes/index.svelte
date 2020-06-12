@@ -20,7 +20,7 @@
   </div>
 </section>
 
-<section class="mdc-layout-grid">
+<section class="mdc-layout-grid u-padding-bottom--zero">
   <h2 class="mdc-typography--headline1 u-centered">Method</h2>
   <Method />
 </section>

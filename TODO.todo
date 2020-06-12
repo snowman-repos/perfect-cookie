@@ -14,8 +14,8 @@
 ✔ Summary - time needed @done(2020-06-12 18:45)
 ✔ Round numbers @done(2020-06-12 19:03)
 ☐ breakdown utilities megafunction
-☐ run setup at start / remove default recipe
-☐ Rename spread to thickness
+✔ run setup at start / remove default recipe @done(2020-06-12 22:22)
+✔ Rename spread to thickness @done(2020-06-12 22:25)
 ☐ Disclaimer
 ☐ Deploy
 ☐ Accessibility

@@ -2,7 +2,6 @@
   import { getContext } from 'svelte'
   import Slider from '@smui/slider/bare.js'
   import '@smui/slider/bare.css'
-  import '@material/layout-grid/dist/mdc.layout-grid.css'
   import { recipe } from '../store.js'
 
   export let from
