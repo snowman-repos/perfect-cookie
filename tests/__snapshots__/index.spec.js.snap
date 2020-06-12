@@ -1143,6 +1143,15 @@ exports[`index page it should render the page title 1`] = `
           <div
             class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop"
           >
+            <h3
+              class="mdc-typography--headline3 u-centered"
+              data-testid="preparationTime"
+            >
+              About 
+              25 hours, 19 minutes
+               needed before you can eat these babies.
+            </h3>
+             
             <ul
               class="
       mdc-list
@@ -1223,7 +1232,7 @@ exports[`index page it should render the page title 1`] = `
                 
                  
                 <span>
-                  Place the melted butter in the refrigerator until cool and just opaque, but not completely hardened.
+                  Make sure the butter is cool, but not completely hardened.
                 </span>
                  
               </li>
@@ -1350,7 +1359,7 @@ exports[`index page it should render the page title 1`] = `
                 
                  
                 <span>
-                  Gently mix in the chocolate.
+                  Gently mix in the chocolate and anything else you might want to add.
                 </span>
                  
               </li>

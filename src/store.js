@@ -70,12 +70,12 @@ export const recipe = writable({
   method: [
     'In a saucepan over medium heat, cook the butter while gently swirling or stirring until you start to see golden brown milk solids. As soon as the butter turns a rich brown color with a nutty aroma, remove from the heat. This should take about 5 minutes. Be careful not to go past this point otherwise your butter will burn, leaving a bitter taste.',
     'Mix 2 tablespoons of water into the melted butter to replace the moisture lost by cooking the butter.',
-    'Place the melted butter in the refrigerator until cool and just opaque, but not completely hardened.',
+    'Make sure the butter is cool, but not completely hardened.',
     'Vigorously whisk together egg, white sugar, and vanilla until pale in color and falling from the whisk in thick ribbons.',
     'Sift the flour, baking soda, and salt, and whisk together.',
     'Mix the brown butter and brown sugar into the egg mixture.',
     "<strong>Gently</strong> fold in the dry ingredients until just combined. <strong>Do not</strong> overmix - it's OK to still have some flour visible. It's best to do this by hand rather than using a stand mixer to avoid over-working the dough.",
-    'Gently mix in the chocolate.',
+    'Gently mix in the chocolate and anything else you might want to add.',
     'Refrigerate the dough for at least 24 hours. Keep everything as cold as possible until you bake.',
     'Preheat the oven and line a baking sheet with something non-stick.',
     'Shape your dough into small balls, about 3.5cm in diameter.',
@@ -85,6 +85,7 @@ export const recipe = writable({
     'Once baked, leave the cookies to cool and solidify on the baking tray for 2 minutes before placing on a wire cooling rack. Leave to cool completely (if you can).',
   ],
   numberOfCookies: 25,
+  preparationTime: 1519,
   properties: {
     color: 90,
     mouthfeel: 80,
@@ -200,7 +201,7 @@ export const method = readable([
       },
       mouthfeel: {
         min: 40,
-        max: 90,
+        max: 80,
       },
       spread: {
         min: 0,

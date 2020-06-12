@@ -26,6 +26,12 @@ describe('recipe component', () => {
     expect(container.querySelectorAll('.mdc-list li').length).toBe(actualRecipe.method.length)
   })
 
+  test('it should render the time taken to prepare', () => {
+    const { getByTestId } = render(Method)
+
+    expect(getByTestId('preparationTime')).toBeInTheDocument()
+  })
+
   test('it should update the method when the baking conditions change', () => {
     const newTemperature = 160
     const newTime = 15

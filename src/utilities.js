@@ -26,6 +26,8 @@ export const getUpdateRecipeFunction = () => {
 
     let newProperties = properties
 
+    let time = 0
+
     // calculate required egg based on texture
     // = -0.00038(texture) + 0.065
     const eggs = -0.00038 * properties.texture + 0.065
@@ -211,6 +213,8 @@ export const getUpdateRecipeFunction = () => {
       bakingTime = Math.round(0.01 * properties.spread + 11.5)
     }
 
+    time = bakingTime
+
     // calculate heat exposure based on texture
     let bakingTemperature = 176
     // = 0.09(texture) + 12.5
@@ -361,6 +365,7 @@ export const getUpdateRecipeFunction = () => {
 
       if (addOption) {
         newMethod.push(replaceAll(option.instruction, mappedValues))
+        time += option.timeNeeded
       }
     })
 
@@ -372,6 +377,7 @@ export const getUpdateRecipeFunction = () => {
         },
         ingredients: newIngredients,
         method: newMethod,
+        preparationTime: time,
         properties: newProperties,
       })
     )
