@@ -85,4 +85,41 @@ describe('ingredients component', () => {
       expect(container.querySelectorAll('input').length).toBe(nonZeroIngredients.length)
     }, 1000)
   })
+
+  test('it should check the checkbox if the ingredient is checked', () => {
+    recipe.set(
+      Object.assign(actualRecipe, {
+        ingredients: [
+          {
+            amount: 0,
+            checked: true,
+            name: 'Plain flour',
+            unit: 'g',
+          },
+          {
+            amount: 0,
+            checked: false,
+            name: 'Bread flour',
+            unit: 'g',
+          },
+        ],
+      })
+    )
+
+    let index = 0
+    const { container } = render(Ingredients)
+
+    setTimeout(() => {
+      actualRecipe.ingredients.forEach((ingredient) => {
+        if (ingredient.amount != 0) {
+          if (ingredient.checked) {
+            expect(container.querySelectorAll('input[type="checkbox"]')[index]).toHaveProperty('checked')
+          } else {
+            expect(container.querySelectorAll('input[type="checkbox"]')[index]).not.toHaveProperty('checked')
+          }
+          index += 1
+        }
+      })
+    }, 1000)
+  })
 })

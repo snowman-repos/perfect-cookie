@@ -17,12 +17,12 @@
 ✔ run setup at start / remove default recipe @done(2020-06-12 22:22)
 ✔ Rename spread to thickness @done(2020-06-12 22:25)
 ✔ Disclaimer @done(2020-06-13 00:00)
-☐ Save checkbox to state
+☐ Deploy
+✔ Save checkbox to state @done(2020-06-15 20:17)
 ☐ Save state to local storage
-☐ update readme to ask for help with the image
+☐ update readme to ask for help with the image and explain how it works, how i put it together, credits etc.
 ☐ Feedback
 ☐ Credits
-☐ Deploy
 ☐ Accessibility
 ☐ Security
 ☐ Performance

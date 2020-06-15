@@ -7,7 +7,7 @@
             <td class="mdc-data-table__cell">{Math.round(ingredient.amount * number)} {ingredient.unit}</td>
             <td class="mdc-data-table__cell">{ingredient.name}</td>
             <td class="mdc-data-table__cell">
-              <Checkbox checked={false} />
+              <Checkbox checked={ingredient.checked} />
             </td>
           </tr>
         {/if}

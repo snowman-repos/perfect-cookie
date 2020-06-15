@@ -438,6 +438,7 @@ export const getUpdateRecipeFunction = () => {
     // 1 egg = 57g
     newIngredients.push({
       amount: eggs * 57,
+      checked: false,
       name: 'Beaten egg',
       unit: 'g',
     })
@@ -445,6 +446,7 @@ export const getUpdateRecipeFunction = () => {
     // 1 yolk = 18g
     newIngredients.push({
       amount: additionalEggYolk * 18,
+      checked: false,
       name: 'Additional egg yolk',
       unit: 'g',
     })
@@ -455,6 +457,7 @@ export const getUpdateRecipeFunction = () => {
     const flour = getFlour(liquidRatio, eggs, additionalEggYolk, getFat(thickness))
     newIngredients.push({
       amount: flour / 1.74,
+      checked: false,
       name: getFatType(thickness),
       unit: 'g',
     })
@@ -463,18 +466,21 @@ export const getUpdateRecipeFunction = () => {
 
     newIngredients.push({
       amount: getCakeFlour(flour, texture, mouthfeel),
+      checked: false,
       name: 'Cake flour',
       unit: 'g',
     })
 
     newIngredients.push({
       amount: getPlainFlour(flour, mouthfeel),
+      checked: false,
       name: 'Plain flour',
       unit: 'g',
     })
 
     newIngredients.push({
       amount: getBreadFlour(flour, mouthfeel),
+      checked: false,
       name: 'Bread flour',
       unit: 'g',
     })
@@ -487,6 +493,7 @@ export const getUpdateRecipeFunction = () => {
 
     newIngredients.push({
       amount: sugar / (1 + brownWhiteSugarRatio),
+      checked: false,
       name: 'Granulated sugar',
       unit: 'g',
     })
@@ -494,12 +501,14 @@ export const getUpdateRecipeFunction = () => {
     const brownSugar = sugar - sugar / (1 + brownWhiteSugarRatio)
     newIngredients.push({
       amount: brownSugar,
+      checked: false,
       name: 'Brown sugar',
       unit: 'g',
     })
 
     newIngredients.push({
       amount: getCornSyrup(flour / flourSugarRatio, surface),
+      checked: false,
       name: 'Corn syrup',
       unit: 'g',
     })
@@ -508,12 +517,14 @@ export const getUpdateRecipeFunction = () => {
 
     newIngredients.push({
       amount: getBakingSoda(texture),
+      checked: false,
       name: 'Baking soda',
       unit: 'tsp',
     })
 
     newIngredients.push({
       amount: getBakingPowder(property, surface, thickness),
+      checked: false,
       name: 'Baking powder',
       unit: 'tsp',
     })
@@ -522,30 +533,35 @@ export const getUpdateRecipeFunction = () => {
 
     newIngredients.push({
       amount: brownSugar / sugar > 0.5 ? 0.08 : 0,
+      checked: false,
       name: 'Hot water',
       unit: 'tsp',
     })
 
     newIngredients.push({
       amount: mouthfeel < 30 ? 0.08 : 0,
+      checked: false,
       name: 'Cornstarch',
       unit: 'g',
     })
 
     newIngredients.push({
       amount: 0.04,
+      checked: false,
       name: 'Salt',
       unit: 'tsp',
     })
 
     newIngredients.push({
       amount: 0.04,
+      checked: false,
       name: 'Vanilla extract',
       unit: 'tsp',
     })
 
     newIngredients.push({
       amount: 6,
+      checked: false,
       name: 'Chopped dark chocolate',
       unit: 'g',
     })

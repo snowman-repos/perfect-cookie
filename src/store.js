@@ -8,61 +8,73 @@ export const recipe = writable({
   ingredients: [
     {
       amount: 0,
+      checked: false,
       name: 'Plain flour',
       unit: 'g',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Bread flour',
       unit: 'g',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Butter',
       unit: 'g',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Granulated sugar',
       unit: 'g',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Brown sugar',
       unit: 'g',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Eggs',
       unit: '',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Baking soda',
       unit: 'tsp',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Salt',
       unit: 'tsp',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Vanilla extract',
       unit: 'tsp',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Water',
       unit: 'tbsp',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Cinnamon',
       unit: 'tsp',
     },
     {
       amount: 0,
+      checked: false,
       name: 'Chopped dark chocolate',
       unit: 'g',
     },
