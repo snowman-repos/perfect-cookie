@@ -37,7 +37,7 @@ exports[`index page it should render the page title 1`] = `
             <div
               aria-valuemax="100"
               aria-valuemin="0"
-              aria-valuenow="70"
+              aria-valuenow="60"
               class="mdc-slider"
               data-step="10"
               role="slider"
@@ -479,6 +479,113 @@ exports[`index page it should render the page title 1`] = `
             <tbody
               class="mdc-data-table__content "
             >
+              <tr
+                aria-selected="false"
+                class=" mdc-data-table__row"
+              >
+                <td
+                  class="mdc-data-table__cell"
+                >
+                  76
+                   
+                  g
+                </td>
+                 
+                <td
+                  class="mdc-data-table__cell"
+                >
+                  Beaten egg
+                </td>
+                 
+                <td
+                  class="mdc-data-table__cell"
+                >
+                  <div
+                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                      value=""
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                 
+              </tr>
+              
+              
+              <tr
+                aria-selected="false"
+                class=" mdc-data-table__row"
+              >
+                <td
+                  class="mdc-data-table__cell"
+                >
+                  348
+                   
+                  g
+                </td>
+                 
+                <td
+                  class="mdc-data-table__cell"
+                >
+                  Butter
+                </td>
+                 
+                <td
+                  class="mdc-data-table__cell"
+                >
+                  <div
+                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  >
+                    <input
+                      class="mdc-checkbox__native-control "
+                      type="checkbox"
+                      value=""
+                    />
+                     
+                    <div
+                      class="mdc-checkbox__background"
+                    >
+                      <svg
+                        class="mdc-checkbox__checkmark"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="mdc-checkbox__checkmark-path"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                          fill="none"
+                        />
+                      </svg>
+                       
+                      <div
+                        class="mdc-checkbox__mixedmark"
+                      />
+                    </div>
+                  </div>
+                </td>
+                 
+              </tr>
+              
               
               <tr
                 aria-selected="false"
@@ -549,59 +656,6 @@ exports[`index page it should render the page title 1`] = `
                   class="mdc-data-table__cell"
                 >
                   Bread flour
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
-                  >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
-                     
-                    <div
-                      class="mdc-checkbox__background"
-                    >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
-                      <div
-                        class="mdc-checkbox__mixedmark"
-                      />
-                    </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  348
-                   
-                  g
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Butter
                 </td>
                  
                 <td
@@ -753,15 +807,15 @@ exports[`index page it should render the page title 1`] = `
                 <td
                   class="mdc-data-table__cell"
                 >
-                  76
+                  1
                    
-                  g
+                  tsp
                 </td>
                  
                 <td
                   class="mdc-data-table__cell"
                 >
-                  Beaten egg
+                  Baking soda
                 </td>
                  
                 <td
@@ -807,7 +861,7 @@ exports[`index page it should render the page title 1`] = `
                 <td
                   class="mdc-data-table__cell"
                 >
-                  1
+                  2
                    
                   tsp
                 </td>
@@ -815,7 +869,7 @@ exports[`index page it should render the page title 1`] = `
                 <td
                   class="mdc-data-table__cell"
                 >
-                  Baking soda
+                  Hot water
                 </td>
                  
                 <td
@@ -923,60 +977,6 @@ exports[`index page it should render the page title 1`] = `
                   class="mdc-data-table__cell"
                 >
                   Vanilla extract
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
-                  >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
-                     
-                    <div
-                      class="mdc-checkbox__background"
-                    >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
-                      <div
-                        class="mdc-checkbox__mixedmark"
-                      />
-                    </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  2
-                   
-                  tsp
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Hot water
                 </td>
                  
                 <td

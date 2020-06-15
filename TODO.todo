@@ -13,26 +13,27 @@
 ✔ Logic for sliders @done(2020-04-22 21:22)
 ✔ Summary - time needed @done(2020-06-12 18:45)
 ✔ Round numbers @done(2020-06-12 19:03)
-☐ breakdown utilities megafunction
+✔ breakdown utilities megafunction @done(2020-06-13 21:45)
 ✔ run setup at start / remove default recipe @done(2020-06-12 22:22)
 ✔ Rename spread to thickness @done(2020-06-12 22:25)
 ✔ Disclaimer @done(2020-06-13 00:00)
+☐ Save checkbox to state
+☐ Save state to local storage
+☐ update readme to ask for help with the image
+☐ Feedback
+☐ Credits
 ☐ Deploy
 ☐ Accessibility
 ☐ Security
 ☐ Performance
 ☐ Domain
 ☐ Share Buttons
-☐ Print buttons
+☐ Print buttons & print styles
 ☐ Tips
 ☐ Details behind the recipe
-☐ Credits
 ☐ Donate button
 ☐ About page
 ☐ Remove cypress?
-☐ Save to local storage
-☐ show total time needed
 ☐ App bar
 ☐ units switcher
-☐ Print styles
 ☐ Image
