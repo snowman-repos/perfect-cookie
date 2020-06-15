@@ -7,7 +7,7 @@
             <td class="mdc-data-table__cell">{Math.round(ingredient.amount * number)} {ingredient.unit}</td>
             <td class="mdc-data-table__cell">{ingredient.name}</td>
             <td class="mdc-data-table__cell">
-              <Checkbox checked={ingredient.checked} />
+              <Checkbox bind:checked={ingredient.checked} on:change={updateRecipe} />
             </td>
           </tr>
         {/if}
@@ -23,9 +23,15 @@
 
   let number
   let ingredientsList = []
+  let currentRecipe
 
-  recipe.subscribe(({ingredients, numberOfCookies}) => {
-    ingredientsList = ingredients
-    number = numberOfCookies
+  recipe.subscribe((actualRecipe) => {
+    currentRecipe = actualRecipe
+    ingredientsList = actualRecipe.ingredients
+    number = actualRecipe.numberOfCookies
   })
+
+  const updateRecipe = () => {
+    localStorage.setItem('recipe', JSON.stringify(currentRecipe))
+  }
 </script>

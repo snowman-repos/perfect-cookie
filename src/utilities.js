@@ -641,10 +641,3 @@ export const setRecipe = () => {
 
   recipe.set(Object.assign(currentRecipe, JSON.parse(localStorage.getItem('recipe'))))
 }
-
-/**
- * [setCheckbox description]
- * @param {[type]} ingredient [description]
- * @param {[type]} checked    [description]
- */
-export const setCheckbox = (ingredient, checked) => {}
