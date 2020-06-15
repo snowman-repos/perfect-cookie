@@ -621,5 +621,30 @@ export const getUpdateRecipeFunction = () => {
         properties: newProperties,
       })
     )
+
+    // --UPDATE LOCAL STORAGE--
+
+    localStorage.setItem('recipe', JSON.stringify(currentRecipe))
   }
 }
+
+// ------SET RECIPE------
+
+/**
+ * Sets the recipe to the last used recipe in local storage.
+ */
+export const setRecipe = () => {
+  let currentRecipe = {}
+  recipe.subscribe((store) => {
+    currentRecipe = store
+  })
+
+  recipe.set(Object.assign(currentRecipe, JSON.parse(localStorage.getItem('recipe'))))
+}
+
+/**
+ * [setCheckbox description]
+ * @param {[type]} ingredient [description]
+ * @param {[type]} checked    [description]
+ */
+export const setCheckbox = (ingredient, checked) => {}

@@ -35,11 +35,19 @@
   import Slider from '../components/Slider.svelte'
   import YieldController from '../components/YieldController.svelte'
   import '../theme/_smui-theme.scss'
-  import { getUpdateRecipeFunction } from '../utilities.js'
+  import { getUpdateRecipeFunction, setRecipe } from '../utilities.js'
 
   const updateRecipe = getUpdateRecipeFunction()
+
+  // ensure the update recipe function can be shared throughout the app
   setContext('updateRecipe', updateRecipe)
-  updateRecipe()
+
+  // use the same recipe as last time if it exists in local storage
+  if (localStorage.getItem('recipe') === null) {
+    updateRecipe()
+  } else {
+    setRecipe()
+  }
 
 </script>
 

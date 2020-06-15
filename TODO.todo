@@ -19,7 +19,10 @@
 ✔ Disclaimer @done(2020-06-13 00:00)
 ☐ Deploy
 ✔ Save checkbox to state @done(2020-06-15 20:17)
-☐ Save state to local storage
+✔ Save state to local storage @done(2020-06-15 20:37)
+☐ debounce the slider update feature
+☐ update state when checking a checkbox
+☐ fix negative brown sugar bug
 ☐ update readme to ask for help with the image and explain how it works, how i put it together, credits etc.
 ☐ Feedback
 ☐ Credits

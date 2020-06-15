@@ -24,7 +24,39 @@ import {
   getThickness,
   shouldAddStep,
   getUpdateRecipeFunction,
+  setRecipe,
 } from '../src/utilities.js'
+import { recipe } from '../src/store.js'
+
+let currentRecipe
+
+recipe.subscribe((actualRecipe) => {
+  currentRecipe = actualRecipe
+})
+
+class LocalStorageMock {
+  constructor() {
+    this.store = {}
+  }
+
+  clear() {
+    this.store = {}
+  }
+
+  getItem(key) {
+    return this.store[key] || null
+  }
+
+  setItem(key, value) {
+    this.store[key] = value.toString()
+  }
+
+  removeItem(key) {
+    delete this.store[key]
+  }
+}
+
+global.localStorage = new LocalStorageMock()
 
 describe('utility functions', () => {
   test('replaceAll', () => {
@@ -542,5 +574,19 @@ describe('utility functions', () => {
 
   test('getUpdateRecipeFunction', () => {
     expect(typeof getUpdateRecipeFunction()).toBe('function')
+  })
+
+  test('setRecipe', () => {
+    const recipe = {
+      test: 'test',
+    }
+
+    localStorage.setItem('recipe', JSON.stringify(recipe))
+
+    setRecipe()
+
+    setTimeout(() => {
+      expect(currentRecipe).toBe(recipe)
+    }, 1000)
   })
 })
