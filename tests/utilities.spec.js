@@ -199,8 +199,8 @@ describe('utility functions', () => {
 
   test('getBrownWhiteSugarRatio', () => {
     // property, color, thickness
-    expect(parseFloat(getBrownWhiteSugarRatio('color', 0, 0).toFixed(3))).toBe(-0.27)
-    expect(parseFloat(getBrownWhiteSugarRatio('color', 10, 0).toFixed(3))).toBe(-0.058)
+    expect(parseFloat(getBrownWhiteSugarRatio('color', 0, 0).toFixed(3))).toBe(0)
+    expect(parseFloat(getBrownWhiteSugarRatio('color', 10, 0).toFixed(3))).toBe(0)
     expect(parseFloat(getBrownWhiteSugarRatio('color', 20, 0).toFixed(3))).toBe(0.154)
     expect(parseFloat(getBrownWhiteSugarRatio('color', 30, 0).toFixed(3))).toBe(0.366)
     expect(parseFloat(getBrownWhiteSugarRatio('color', 40, 0).toFixed(3))).toBe(0.578)

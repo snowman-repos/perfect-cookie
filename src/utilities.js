@@ -158,7 +158,8 @@ export const getBreadFlour = (flour, mouthfeel) => {
  */
 export const getBrownWhiteSugarRatio = (property, color, thickness) => {
   if (property === 'color') {
-    return 0.0212 * color - 0.27
+    const ratio = 0.0212 * color - 0.27
+    return ratio >= 0 ? ratio : 0
   } else if (property === 'thickness') {
     return 0.005 * thickness + 0.75
   } else {
@@ -522,6 +523,7 @@ export const getUpdateRecipeFunction = () => {
     })
 
     const brownSugar = sugar - sugar / (1 + brownWhiteSugarRatio)
+
     newIngredients.push({
       amount: brownSugar,
       checked: false,
