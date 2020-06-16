@@ -1,4 +1,5 @@
 import {
+  debounce,
   replaceAll,
   roundToTwo,
   getAdditionalEggYolk,
@@ -59,6 +60,16 @@ class LocalStorageMock {
 global.localStorage = new LocalStorageMock()
 
 describe('utility functions', () => {
+  test('debounce', () => {
+    const mockFunction = jest.fn(() => {})
+    const waitTime = 250
+    debounce(mockFunction, waitTime)
+    expect(mockFunction).not.toHaveBeenCalled()
+    setTimeout(() => {
+      expect(mockFunction).toHaveBeenCalled()
+    }, waitTime)
+  })
+
   test('replaceAll', () => {
     const testString = 'a cookie a day keeps the cookie monster away'
     const testMapObject = {

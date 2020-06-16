@@ -3,6 +3,29 @@ import { recipe, method } from './store.js'
 // ------UTILITY FUNCTIONS------
 
 /**
+ * Debounces a function call to avoid taxing the browser.
+ * @param  {[Function]} callback          The function to be debounced
+ * @param  {[Number]}   wait              The wait time before the function can be called again
+ * @param  {[Boolean]}  [immediate=false] Whether or not to call the function at T=0
+ * @return {[Function]}                   The debouncer
+ */
+export const debounce = (callback, wait, immediate = false) => {
+  let timeout = null
+
+  return function () {
+    const callNow = immediate && !timeout
+    const next = () => callback.apply(this, arguments)
+
+    clearTimeout(timeout)
+    timeout = setTimeout(next, wait)
+
+    if (callNow) {
+      next()
+    }
+  }
+}
+
+/**
  * Replaces all occurrences of multiple placeholders in a string with a given set of values.
  * @param  {[String]} str    The input containing the placeholders
  * @param  {[Object]} mapObj An object that maps placeholders to the actual values

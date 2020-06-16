@@ -3,6 +3,7 @@
   import Slider from '@smui/slider/bare.js'
   import '@smui/slider/bare.css'
   import { recipe } from '../store.js'
+  import { debounce } from '../utilities.js'
 
   export let from
   export let to
@@ -11,7 +12,7 @@
   export let updateRecipe = getContext('updateRecipe')
 
   function update() {
-    updateRecipe(property)
+    debounce(updateRecipe(property), 250)
   }
 </script>
 
