@@ -4,10 +4,10 @@ import { recipe, method } from './store.js'
 
 /**
  * Debounces a function call to avoid taxing the browser.
- * @param  {[Function]} callback          The function to be debounced
- * @param  {[Number]}   wait              The wait time before the function can be called again
- * @param  {[Boolean]}  [immediate=false] Whether or not to call the function at T=0
- * @return {[Function]}                   The debouncer
+ * @param  {Function} callback          The function to be debounced
+ * @param  {Number}   wait              The wait time before the function can be called again
+ * @param  {Boolean}  [immediate=false] Whether or not to call the function at T=0
+ * @return {Function}                   The debouncer
  */
 export const debounce = (callback, wait, immediate = false) => {
   let timeout = null
@@ -27,9 +27,9 @@ export const debounce = (callback, wait, immediate = false) => {
 
 /**
  * Replaces all occurrences of multiple placeholders in a string with a given set of values.
- * @param  {[String]} str    The input containing the placeholders
- * @param  {[Object]} mapObj An object that maps placeholders to the actual values
- * @return {[String]}        The string with the placeholders replaced
+ * @param  {String} str    The input containing the placeholders
+ * @param  {Object} mapObj An object that maps placeholders to the actual values
+ * @return {String}        The string with the placeholders replaced
  */
 export const replaceAll = (str, mapObj) => {
   const re = new RegExp(Object.keys(mapObj).join('|'), 'g')
@@ -41,19 +41,19 @@ export const replaceAll = (str, mapObj) => {
 
 /**
  * Rounds a number to 2 significant figures.
- * @param  {[Number]} num The number to be rounded
- * @return {[Number]}     The rounded number
+ * @param  {Number} num The number to be rounded
+ * @return {Number}     The rounded number
  */
-export const roundToTwo = (num) => {
-  return +(Math.round(num + 'e+2') + 'e-2')
+export const roundToTwo = (number) => {
+  return +(Math.round(number + 'e+2') + 'e-2')
 }
 
 // ------CALCULATE RECIPE------
 
 /**
  * Calculates any additional egg yolk needed (in grams) based on the required texture. Additional egg yolk is required for a softer texture.
- * @param  {[Number]} texture The texture percentage value 0-100
- * @return {[Number]}         Grams of additional egg yolk needed
+ * @param  {Number} texture The texture percentage value 0-100
+ * @return {Number}         Grams of additional egg yolk needed
  */
 export const getAdditionalEggYolk = (texture) => {
   switch (texture) {
@@ -70,10 +70,10 @@ export const getAdditionalEggYolk = (texture) => {
 
 /**
  * Calculates any baking powder needed based on the required surface quality and thickness. Baking powder leads to a smoother and thinner cookies.
- * @param  {[String]} property  [description]
- * @param  {[Number]} surface   The surface percentage value 0-100
- * @param  {[Number]} thickness The thickness percentage value 0-100
- * @return {[Number]}           Grams of baking powder required
+ * @param  {String} property  [description]
+ * @param  {Number} surface   The surface percentage value 0-100
+ * @param  {Number} thickness The thickness percentage value 0-100
+ * @return {Number}           Grams of baking powder required
  */
 export const getBakingPowder = (property, surface, thickness) => {
   if (property === 'surface' && surface < 30) {
@@ -87,8 +87,8 @@ export const getBakingPowder = (property, surface, thickness) => {
 
 /**
  * Calculates the baking soda needed based on the required texture. Baking soda softens the texture.
- * @param  {[Number]} texture The texture percentage value 0-100
- * @return {[Number]}         Grams of baking soda required
+ * @param  {Number} texture The texture percentage value 0-100
+ * @return {Number}         Grams of baking soda required
  */
 export const getBakingSoda = (texture) => {
   switch (texture) {
@@ -109,8 +109,8 @@ export const getBakingSoda = (texture) => {
 
 /**
  * Calculates the heat exposure (a ratio between time in the oven and oven temperature) based on the required texture. More heat is needed for a crunchier texture.
- * @param  {[Number]} texture The texture percentage value 0-100
- * @return {[Number]}         The heat exposure ratio
+ * @param  {Number} texture The texture percentage value 0-100
+ * @return {Number}         The heat exposure ratio
  */
 export const getHeatExposure = (texture) => {
   return 0.09 * texture + 12.5
@@ -118,10 +118,10 @@ export const getHeatExposure = (texture) => {
 
 /**
  * Calculates the baking time needed based on the color and thickness. The calculation will prioritize the property that the user is currently adjusting. Darker color or taller cookies need more time in the oven.
- * @param  {[String]} property  The property that the user adjusted to trigger this function
- * @param  {[Number]} color     The color percentage value 0-100
- * @param  {[Number]} thickness The thickness percentage value 0-100
- * @return {[number]}           Number of minutes the cookies should be baked for
+ * @param  {String} property  The property that the user adjusted to trigger this function
+ * @param  {Number} color     The color percentage value 0-100
+ * @param  {Number} thickness The thickness percentage value 0-100
+ * @return {number}           Number of minutes the cookies should be baked for
  */
 export const getBakingTime = (property, color, thickness) => {
   if (property === 'color') {
@@ -133,9 +133,9 @@ export const getBakingTime = (property, color, thickness) => {
 
 /**
  * Calculates how much bread flour is needed based on the total amount of flour and the required mouthfeel. Bread flour adds density & chewiness.
- * @param  {[Number]} flour     Total grams of flour needed
- * @param  {[Number]} mouthfeel The mouthfeel percentage value 0-100
- * @return {[Number]}           Grams of bread flour needed
+ * @param  {Number} flour     Total grams of flour needed
+ * @param  {Number} mouthfeel The mouthfeel percentage value 0-100
+ * @return {Number}           Grams of bread flour needed
  */
 export const getBreadFlour = (flour, mouthfeel) => {
   if (mouthfeel > 90) {
@@ -151,10 +151,10 @@ export const getBreadFlour = (flour, mouthfeel) => {
 
 /**
  * Calculates the ratio of brown to white sugar required based on the required color or thickness. The calculation will prioritize the property that the user is currently adjusting. More brown sugar will lead to darker and taller cookies.
- * @param  {[String]} property  The property that the user adjusted to trigger this function
- * @param  {[Number]} color     The color percentage value 0-100
- * @param  {[Number]} thickness The thickness percentage value 0-100
- * @return {[Number]}           The brown:white sugar ratio
+ * @param  {String} property  The property that the user adjusted to trigger this function
+ * @param  {Number} color     The color percentage value 0-100
+ * @param  {Number} thickness The thickness percentage value 0-100
+ * @return {Number}           The brown:white sugar ratio
  */
 export const getBrownWhiteSugarRatio = (property, color, thickness) => {
   if (property === 'color') {
@@ -169,10 +169,10 @@ export const getBrownWhiteSugarRatio = (property, color, thickness) => {
 
 /**
  * Calculates how much cake flour is needed based on the total amount of flour, the texture, and the mouthfeel. Cake flour will lead to softer, lighter, and cakier cookies.
- * @param  {[Number]} flour     Total grams of flour needed
- * @param  {[Number]} texture   The texture percentage value 0-100
- * @param  {[Number]} mouthfeel The mouthfeel percentage value 0-100
- * @return {[Number]}           Grams of cake flour needed
+ * @param  {Number} flour     Total grams of flour needed
+ * @param  {Number} texture   The texture percentage value 0-100
+ * @param  {Number} mouthfeel The mouthfeel percentage value 0-100
+ * @return {Number}           Grams of cake flour needed
  */
 export const getCakeFlour = (flour, texture, mouthfeel) => {
   if (texture < 10 && mouthfeel < 10) {
@@ -188,11 +188,11 @@ export const getCakeFlour = (flour, texture, mouthfeel) => {
 
 /**
  * Calculates the updated color property. Color is impacted by ingredients that also impact thickness and surface quality. Smoother surfaced cookies may contain corn syrup, which also darkens cookies. Brown sugar increases the thickness of cookies and also darkens the color.
- * @param  {[String]} property             The property that the user adjusted to trigger this function
- * @param  {[Number]} brownWhiteSugarRatio The brown:white sugar ratio
- * @param  {[Number]} color                The current color percentage value 0-100
- * @param  {[Number]} surface              The surface percentage value 0-100
- * @return {[Number]}                      The resulting color percentage value 0-100
+ * @param  {String} property             The property that the user adjusted to trigger this function
+ * @param  {Number} brownWhiteSugarRatio The brown:white sugar ratio
+ * @param  {Number} color                The current color percentage value 0-100
+ * @param  {Number} surface              The surface percentage value 0-100
+ * @return {Number}                      The resulting color percentage value 0-100
  */
 export const getColor = (property, brownWhiteSugarRatio, color, surface) => {
   let newColor = color
@@ -217,9 +217,9 @@ export const getColor = (property, brownWhiteSugarRatio, color, surface) => {
 
 /**
  * Calculates how much corn syrup is needed based on the total amount of sugar and the desired surface quality. Corn sugar will lead to a smooth surface.
- * @param  {[Number]} sugar   Total grams of sugar in the recipe
- * @param  {[Number]} surface The surface percentage value 0-100
- * @return {[Number]}         Grams of corn syrup needed
+ * @param  {Number} sugar   Total grams of sugar in the recipe
+ * @param  {Number} surface The surface percentage value 0-100
+ * @return {Number}         Grams of corn syrup needed
  */
 export const getCornSyrup = (totalSugar, surface) => {
   if (surface < 10) {
@@ -235,8 +235,8 @@ export const getCornSyrup = (totalSugar, surface) => {
 
 /**
  * Calculates how many eggs are needed based on the desired texture. More egg will lead to a softer texture.
- * @param  {[Number]} texture The texture percentage value 0-100
- * @return {[Number]}         The number of eggs needed
+ * @param  {Number} texture The texture percentage value 0-100
+ * @return {Number}         The number of eggs needed
  */
 export const getEggs = (texture) => {
   return -0.00038 * texture + 0.065
@@ -244,8 +244,8 @@ export const getEggs = (texture) => {
 
 /**
  * Calculates how much fat is needed based on the desired thickness. Less fat will result in a thicker cookie.
- * @param  {[Number]} thickness The thickness percentage value 0-100
- * @return {[Number]}           Grams of fat needed
+ * @param  {Number} thickness The thickness percentage value 0-100
+ * @return {Number}           Grams of fat needed
  */
 export const getFat = (thickness) => {
   return -0.021 * thickness + 7.7
@@ -253,8 +253,8 @@ export const getFat = (thickness) => {
 
 /**
  * Determines the type of fat that should be used based on the thickness. Thinner cookies should use vegetable oil instead of butter.
- * @param  {[Number]} thickness The thickness percentage value 0-100
- * @return {[String]}           The type of fat needed
+ * @param  {Number} thickness The thickness percentage value 0-100
+ * @return {String}           The type of fat needed
  */
 export const getFatType = (thickness) => {
   if (thickness < 20) return 'Vegetable oil'
@@ -263,11 +263,11 @@ export const getFatType = (thickness) => {
 
 /**
  * Calculates how much flour is needed based on the liquid:dry ingredients ratio, and the liquid ingredients.
- * @param  {[Number]} liquidRatio       The ratio of liquid:dry ingredients
- * @param  {[Number]} eggs              The number of eggs
- * @param  {[Number]} additionalEggYolk The number of additional egg yolks
- * @param  {[Number]} fat               Grams of fat
- * @return {[Number]}                   Grams of flour needed
+ * @param  {Number} liquidRatio       The ratio of liquid:dry ingredients
+ * @param  {Number} eggs              The number of eggs
+ * @param  {Number} additionalEggYolk The number of additional egg yolks
+ * @param  {Number} fat               Grams of fat
+ * @return {Number}                   Grams of flour needed
  */
 export const getFlour = (liquidRatio, eggs, additionalEggYolk, fat) => {
   // Assume an egg weighs 50g, an egg yolk weighs 18g
@@ -276,8 +276,8 @@ export const getFlour = (liquidRatio, eggs, additionalEggYolk, fat) => {
 
 /**
  * Calculates the flour:sugar ratio based on the desired texture. A higher ratio will result in crunchier cookies.
- * @param  {[Number]} texture The texture percentage value 0-100
- * @return {[Number]}         The flour:sugar ratio
+ * @param  {Number} texture The texture percentage value 0-100
+ * @return {Number}         The flour:sugar ratio
  */
 export const getFlourSugarRatio = (texture) => {
   return 0.0025 * texture + 1.3
@@ -285,8 +285,8 @@ export const getFlourSugarRatio = (texture) => {
 
 /**
  * Calculates the dry:liquid ingredient ratio based on the desired surface quality. A higher ratio (more dry) will result in a craggier surface.
- * @param  {[Number]} surface The surface percentage value 0-100
- * @return {[Number]}         The dry:liquid ingredient ratio
+ * @param  {Number} surface The surface percentage value 0-100
+ * @return {Number}         The dry:liquid ingredient ratio
  */
 export const getDryLiquidRatio = (surface) => {
   return 0.021 * surface + 0.65
@@ -294,9 +294,9 @@ export const getDryLiquidRatio = (surface) => {
 
 /**
  * Calculates how much plain flour is needed based on the total amount of flour and the desired mouthfeel. Denser, chewier cookies will need some amount of bread flour, whereas lighter, cakier cookies would need some amount of cake flour.
- * @param  {[Number]} flour     Total grams of flour
- * @param  {[Number]} mouthfeel The mouthfeel percentage value 0-100
- * @return {[Number]}           Grams of plain flour needed
+ * @param  {Number} flour     Total grams of flour
+ * @param  {Number} mouthfeel The mouthfeel percentage value 0-100
+ * @return {Number}           Grams of plain flour needed
  */
 export const getPlainFlour = (flour, mouthfeel) => {
   if (mouthfeel < 20) {
@@ -316,9 +316,9 @@ export const getPlainFlour = (flour, mouthfeel) => {
 
 /**
  * Calculates how much total sugar is needed based on the flour:sugar ratio and the desired surface quality. For cookies with a smoother surface, some of the required sugar will be replaced with corn syrup.
- * @param  {[Number]} amount  Total grams of sugar
- * @param  {[Number]} surface The surface percentage value 0-100
- * @return {[Number]}         Grams of sugar needed
+ * @param  {Number} amount  Total grams of sugar
+ * @param  {Number} surface The surface percentage value 0-100
+ * @return {Number}         Grams of sugar needed
  */
 export const getSugar = (totalSugar, surface) => {
   if (surface < 10) {
@@ -334,10 +334,10 @@ export const getSugar = (totalSugar, surface) => {
 
 /**
  * Calculates the updated surface property. Surface quality is impacted by ingredients that also impact thickness. Thinner cookies may contain ingredients which also result in a smoother surface.
- * @param  {[String]} property  The property that the user adjusted to trigger this function
- * @param  {[Number]} surface   The current surface percentage value 0-100
- * @param  {[Number]} thickness The thickness percentage value 0-100
- * @return {[Number]}           The resulting surface percentage value 0-100
+ * @param  {String} property  The property that the user adjusted to trigger this function
+ * @param  {Number} surface   The current surface percentage value 0-100
+ * @param  {Number} thickness The thickness percentage value 0-100
+ * @return {Number}           The resulting surface percentage value 0-100
  */
 export const getSurface = (property, surface, thickness) => {
   if (property === 'thickness' && thickness < 50) {
@@ -348,10 +348,10 @@ export const getSurface = (property, surface, thickness) => {
 
 /**
  * Calculates the updated texture property. Texture is impacted by the brown:white sugar ratio, which is determined by the desired color and thickness properties. More brown sugar results not only in darker, thicker cookies, but also a softer texture.
- * @param  {[String]} property             The property that the user adjusted to trigger this function
- * @param  {[Number]} brownWhiteSugarRatio The brown:white sugar ratio
- * @param  {[Number]} texture              The current texture percentage value 0-100
- * @return {[Number]}                      The resulting texture percentage value 0-100
+ * @param  {String} property             The property that the user adjusted to trigger this function
+ * @param  {Number} brownWhiteSugarRatio The brown:white sugar ratio
+ * @param  {Number} texture              The current texture percentage value 0-100
+ * @return {Number}                      The resulting texture percentage value 0-100
  */
 export const getTexture = (property, brownWhiteSugarRatio, texture) => {
   if (property === 'color' || property === 'thickness') {
@@ -367,10 +367,10 @@ export const getTexture = (property, brownWhiteSugarRatio, texture) => {
 
 /**
  * Calculates the updated thickness property. Thickness is impacted by the brown:white sugar ratio, which is determined by the desired color. Thickness is also impacted by ingredients that also impact surface quality, such as vegetable oil and corn syrup. Thickness is also impacted by the heat exposure - a longer time in the oven at a lower temperature would result in thinner cookies.
- * @param  {[type]} property             [description]
- * @param  {[type]} brownWhiteSugarRatio [description]
- * @param  {[type]} thickness            [description]
- * @return {[type]}                      [description]
+ * @param  {String} property             The property that the user adjusted to trigger this function
+ * @param  {Number} brownWhiteSugarRatio The brown:white sugar ratio
+ * @param  {Number} thickness            The current thickness percentage value 0-100
+ * @return {Number}                      The resulting thickness percentage value 0-100
  */
 export const getThickness = (property, brownWhiteSugarRatio, surface, thickness, heatExposure) => {
   if (property === 'color') {
@@ -397,10 +397,10 @@ export const getThickness = (property, brownWhiteSugarRatio, surface, thickness,
 
 /**
  * Determines whether a potential step should be added to the instructions for the recipe based on the ingredients that will be used and the desired properties of the cookies.
- * @param  {[Object]} step        A step, containing properties such as the ingredients needed and the property thresholds
- * @param  {[Array]} ingredients A collection of objects representing each ingredient in the recipe
- * @param  {[Object]} properties  A set of desired properties for the cookies
- * @return {[Boolean]}             A true/false decision on whether the step should be added to the recipe method
+ * @param  {Object} step        A step, containing properties such as the ingredients needed and the property thresholds
+ * @param  {Array} ingredients A collection of objects representing each ingredient in the recipe
+ * @param  {Object} properties  A set of desired properties for the cookies
+ * @return {Boolean}             A true/false decision on whether the step should be added to the recipe method
  */
 export const shouldAddStep = (step, ingredients, properties) => {
   let addStep = true
@@ -432,7 +432,7 @@ export const shouldAddStep = (step, ingredients, properties) => {
 
 /**
  * [getUpdateRecipeFunction description]
- * @return {[type]} [description]
+ * @return {type} [description]
  */
 export const getUpdateRecipeFunction = () => {
   let currentRecipe = {}
@@ -601,16 +601,18 @@ export const getUpdateRecipeFunction = () => {
     // "you can't always get what you want" - Mick Jagger
     // Some property adjustment impact others...
 
-    newProperties.color = getColor(property, brownWhiteSugarRatio, properties.color, properties.surface)
-    newProperties.thickness = getThickness(
-      property,
-      brownWhiteSugarRatio,
-      properties.surface,
-      properties.thickness,
-      heatExposure
-    )
-    newProperties.texture = getTexture(property, brownWhiteSugarRatio, properties.texture)
-    newProperties.surface = getSurface(property, properties.surface, properties.thickness)
+    if (property !== 'color')
+      newProperties.color = getColor(property, brownWhiteSugarRatio, properties.color, properties.surface)
+    if (property !== 'thickness')
+      newProperties.thickness = getThickness(
+        property,
+        brownWhiteSugarRatio,
+        properties.surface,
+        properties.thickness,
+        heatExposure
+      )
+    if (property !== 'texture') newProperties.texture = getTexture(property, brownWhiteSugarRatio, properties.texture)
+    if (property !== 'surface') newProperties.surface = getSurface(property, properties.surface, properties.thickness)
 
     // --METHOD--
 

@@ -20,8 +20,9 @@
   import '@smui/textfield/bare.css'
   import { recipe } from '../store.js'
 
-  let number = 25
+  let number
   let currentRecipe
+  let newRecipe
 
   recipe.subscribe((actualRecipe) => {
     currentRecipe = actualRecipe
@@ -43,9 +44,11 @@
     updateNumber()
   }
   function updateNumber() {
-    recipe.set(Object.assign(currentRecipe, {
+    newRecipe = Object.assign(currentRecipe, {
       numberOfCookies: number
-    }))
+    })
+    recipe.set(newRecipe)
+    localStorage.setItem('recipe', JSON.stringify(newRecipe))
   }
 </script>
 

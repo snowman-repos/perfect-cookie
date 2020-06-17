@@ -4,7 +4,11 @@
       {#each ingredientsList as ingredient}
         {#if ingredient.amount !== 0}
           <tr class=" mdc-data-table__row" aria-selected="false">
-            <td class="mdc-data-table__cell">{Math.round(ingredient.amount * number)} {ingredient.unit}</td>
+            {#if ingredient.unit !== 'tsp'}
+              <td class="mdc-data-table__cell">{Math.round(ingredient.amount * number)} {ingredient.unit}</td>
+            {:else}
+              <td class="mdc-data-table__cell">{parseFloat(ingredient.amount * number).toPrecision(2)} {ingredient.unit}</td>
+            {/if}
             <td class="mdc-data-table__cell">{ingredient.name}</td>
             <td class="mdc-data-table__cell">
               <Checkbox bind:checked={ingredient.checked} on:change={updateRecipe} />

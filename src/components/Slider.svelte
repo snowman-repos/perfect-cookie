@@ -12,7 +12,7 @@
   export let updateRecipe = getContext('updateRecipe')
 
   function update() {
-    debounce(updateRecipe(property), 250)
+    debounce(updateRecipe(property), 1000)
   }
 </script>
 
@@ -32,7 +32,7 @@
       <span>{from}</span>
     </div>
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
-      <Slider bind:value={$recipe.properties[property]} min={0} max={100} step={10} on:MDCSlider:input={update} />
+      <Slider bind:value={$recipe.properties[property]} min={0} max={100} step={10} on:MDCSlider:change={update} />
     </div>
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
       <span>{to}</span>

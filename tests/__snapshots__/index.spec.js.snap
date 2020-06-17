@@ -807,7 +807,7 @@ exports[`index page it should render the page title 1`] = `
                 <td
                   class="mdc-data-table__cell"
                 >
-                  1
+                  0.66
                    
                   tsp
                 </td>
@@ -861,7 +861,7 @@ exports[`index page it should render the page title 1`] = `
                 <td
                   class="mdc-data-table__cell"
                 >
-                  2
+                  2.0
                    
                   tsp
                 </td>
@@ -915,7 +915,7 @@ exports[`index page it should render the page title 1`] = `
                 <td
                   class="mdc-data-table__cell"
                 >
-                  1
+                  1.0
                    
                   tsp
                 </td>
@@ -968,7 +968,7 @@ exports[`index page it should render the page title 1`] = `
                 <td
                   class="mdc-data-table__cell"
                 >
-                  1
+                  1.0
                    
                   tsp
                 </td>
