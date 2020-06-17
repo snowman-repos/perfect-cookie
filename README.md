@@ -4,10 +4,10 @@ Generate the recipe for _your_ perfect cookie.
 
 ## Built with:
 
-- [https://svelte.dev/](Svelte)
-- [https://sapper.svelte.dev/](Sapper)
-- [https://github.com/hperrin/svelte-material-ui](Svelte Material UI) (SMUI)
-- [https://jestjs.io/](Jest)
+- [Svelte](https://svelte.dev/)
+- [Sapper](https://sapper.svelte.dev/)
+- [Svelte Material UI (SMUI)](https://github.com/hperrin/svelte-material-ui)
+- [Jest](https://jestjs.io/)
 
 ## Background
 
@@ -57,7 +57,7 @@ The updating the slider triggers an "update recipe" function that runs all the c
 
 ## Help / Contribute
 
-I would love to have an image or illustration at the top of the page which depicts what the cookie might look like, based on the selected properties. I'm imagining a top-down view and a cross section that shows the color, mouthfeel, surface quality, texture, and thickness. Given how many permutations there are, sourcing images and loading/updating them each time any slider is changed might not be feasible. I thought about animating SVGs or drawing something with canvas that can be manipulated by the code might work, but not sure how to implement it. If anyone has any idea then please [mailto:darryl@darrylsnow.com](get in touch with me).
+I would love to have an image or illustration at the top of the page which depicts what the cookie might look like, based on the selected properties. I'm imagining a top-down view and a cross section that shows the color, mouthfeel, surface quality, texture, and thickness. Given how many permutations there are, sourcing images and loading/updating them each time any slider is changed might not be feasible. I thought about animating SVGs or drawing something with canvas that can be manipulated by the code might work, but not sure how to implement it. If anyone has any idea then please [get in touch with me](mailto:darryl@darrylsnow.com).
 
 If there are any Math geniuses who want to help out, right now I'm just using linear equations in the calculations, but they don't exactly fit the model from my data...
 
