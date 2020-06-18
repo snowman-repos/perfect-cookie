@@ -13,7 +13,7 @@
           <li>Adjust the sliders to design your cookies just how you like them. You might find that changing one slider affects another - just keep tweeking them until it feels right.</li>
           <li>Scroll down to choose how many cookies you want to make. You'll get a customized list of ingredients and steps needed to make <strong>your perfect cookies</strong>.</li>
           <li>There are checkboxes alongside the ingredients for you to check them off as you go along.</li>
-          <li>The numbers may seem quite precise - try to stick as close as you can to the recipe and <a href="mailto:darryl@darrylsnow.com" title="Email the creator">let me know how they turn out!<a/></li>
+          <li>The numbers may seem quite precise - try to stick as close as you can to the recipe and <a href="mailto:darryl@darrylsnow.com" title="Email the creator">let me know how they turn out!</a></li>
         </ul>
       </div>
     </div>
@@ -57,11 +57,18 @@
   setContext('updateRecipe', updateRecipe)
 
   // use the same recipe as last time if it exists in local storage
-  if (localStorage.getItem('recipe') === null) {
-    updateRecipe()
-  } else {
-    setRecipe()
-  }
+  if (typeof localStorage !== 'undefined') {
+    try {
+      if (localStorage.getItem('recipe') === null) {
+        updateRecipe()
+      } else {
+        setRecipe()
+      }
+    } catch (e) {
+      //
+    }
+  } else updateRecipe()
+
 
 </script>
 

@@ -48,7 +48,15 @@
       numberOfCookies: number
     })
     recipe.set(newRecipe)
-    localStorage.setItem('recipe', JSON.stringify(newRecipe))
+
+    if (typeof localStorage !== 'undefined') {
+      try {
+        localStorage.setItem('recipe', JSON.stringify(newRecipe))
+      } catch (e) {
+        //
+      }
+    }
+
   }
 </script>
 

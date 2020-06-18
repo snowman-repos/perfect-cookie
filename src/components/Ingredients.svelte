@@ -36,6 +36,12 @@
   })
 
   const updateRecipe = () => {
-    localStorage.setItem('recipe', JSON.stringify(currentRecipe))
+    if (typeof localStorage !== 'undefined') {
+      try {
+        localStorage.setItem('recipe', JSON.stringify(currentRecipe))
+      } catch (e) {
+        //
+      }
+    }
   }
 </script>
