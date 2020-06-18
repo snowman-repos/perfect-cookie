@@ -52,7 +52,6 @@ exports[`index page it should render the page title 1`] = `
                   title="Email the creator"
                 >
                   let me know how they turn out!
-                  <a />
                 </a>
               </li>
             </ul>

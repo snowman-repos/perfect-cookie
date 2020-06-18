@@ -25,11 +25,18 @@
 ✔ update readme to ask for help with the image and explain how it works, how i put it together, credits etc. @done(2020-06-17 23:09)
 ✔ Deploy @done(2020-06-18 22:47)
 ✔ Fix 500 error - local storage is not defined @done(2020-06-18 22:55)
+☐ favicon
 ☐ Feedback
 ☐ Credits
-☐ Accessibility
-☐ Security
-☐ Performance
+✔ Accessibility @done(2020-06-18 23:15)
+✔ Performance @done(2020-06-18 23:15)
+☐ https://web.dev/remove-unused-code/?utm_source=lighthouse&utm_medium=unknown
+☐ https://web.dev/render-blocking-resources/?utm_source=lighthouse&utm_medium=unknown
+☐ https://web.dev/font-display/?utm_source=lighthouse&utm_medium=unknown
+☐ https://web.dev/uses-passive-event-listeners/?utm_source=lighthouse&utm_medium=unknown
+☐ add labels for all checkboxes
+☐ remove noscript
+☐ lighthouse
 ☐ Domain
 ☐ Share Buttons
 ☐ Print buttons & print styles
