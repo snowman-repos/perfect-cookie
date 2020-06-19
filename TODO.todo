@@ -25,18 +25,26 @@
 ✔ update readme to ask for help with the image and explain how it works, how i put it together, credits etc. @done(2020-06-17 23:09)
 ✔ Deploy @done(2020-06-18 22:47)
 ✔ Fix 500 error - local storage is not defined @done(2020-06-18 22:55)
-☐ favicon
-☐ Feedback
-☐ Credits
-✔ Accessibility @done(2020-06-18 23:15)
-✔ Performance @done(2020-06-18 23:15)
+✔ favicon @done(2020-06-18 23:32)
+☐ link rel=preload for js
+☐ https://web.dev/critical-request-chains/?utm_source=lighthouse&utm_medium=cli
+☐ sliders don't have accessible names
+☐ tab order
+☐ Does not provide a valid apple-touch-icon
+☐ Manifest doesn't have a maskable icon
+☐ budget.json https://web.dev/use-lighthouse-for-performance-budgets/?utm_medium=cli&utm_source=lighthouse
 ☐ https://web.dev/remove-unused-code/?utm_source=lighthouse&utm_medium=unknown
-☐ https://web.dev/render-blocking-resources/?utm_source=lighthouse&utm_medium=unknown
+✔ https://web.dev/render-blocking-resources/?utm_source=lighthouse&utm_medium=unknown @done(2020-06-19 22:35)
 ☐ https://web.dev/font-display/?utm_source=lighthouse&utm_medium=unknown
 ☐ https://web.dev/uses-passive-event-listeners/?utm_source=lighthouse&utm_medium=unknown
 ☐ add labels for all checkboxes
 ☐ remove noscript
 ☐ lighthouse
+☐ meta data, rich data, manifest
+☐ Feedback
+☐ Credits
+✔ Accessibility @done(2020-06-18 23:15)
+✔ Performance @done(2020-06-18 23:15)
 ☐ Domain
 ☐ Share Buttons
 ☐ Print buttons & print styles

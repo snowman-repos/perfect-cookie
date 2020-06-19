@@ -79,3 +79,4 @@ __sapper__/
 cypress/screenshots/
 
 *.todo
+/*.html
