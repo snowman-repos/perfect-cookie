@@ -77,14 +77,6 @@ export default {
       !dev &&
         terser({
           module: true,
-          compress: {
-            unused: false,
-            collapse_vars: false,
-          },
-          output: {
-            comments: false,
-          },
-          sourceMap: true,
         }),
     ],
 
