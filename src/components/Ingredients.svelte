@@ -13,7 +13,10 @@
               {/if}
               <td class="mdc-data-table__cell">{ingredient.name}</td>
               <td class="mdc-data-table__cell">
-                <Checkbox bind:checked={ingredient.checked} on:change={updateRecipe} />
+                <FormField>
+                  <Checkbox bind:checked={ingredient.checked} on:change={updateRecipe} />
+                  <span class="u-visually-hidden" slot="label">Do I have: {ingredient.name}?</span>
+                </FormField>
               </td>
             </tr>
           {/if}
@@ -27,6 +30,7 @@
 <script>
   import '@smui/data-table/bare.css'
   import Checkbox from '@smui/checkbox'
+  import FormField from '@smui/form-field/bare.js'
   import { recipe } from '../store.js'
 
   let number

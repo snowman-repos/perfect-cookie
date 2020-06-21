@@ -516,605 +516,862 @@ exports[`index page it should render the page title 1`] = `
         class="ingredients"
       >
         <div
-          class="mdc-data-table"
+          class="mdc-layout-grid u-layout--centered"
         >
-          <table
-            aria-label="Ingredients"
-            class="mdc-data-table__table "
+          <div
+            class="mdc-data-table"
           >
-            <tbody
-              class="mdc-data-table__content "
+            <table
+              aria-label="Ingredients"
+              class="mdc-data-table__table "
             >
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
+              <tbody
+                class="mdc-data-table__content "
               >
-                <td
-                  class="mdc-data-table__cell"
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
                 >
-                  76
-                   
-                  g
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Beaten egg
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
+                    76
                      
-                    <div
-                      class="mdc-checkbox__background"
-                    >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
-                      <div
-                        class="mdc-checkbox__mixedmark"
-                      />
-                    </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  348
+                    g
+                  </td>
                    
-                  g
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Butter
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
-                     
-                    <div
-                      class="mdc-checkbox__background"
-                    >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
-                      <div
-                        class="mdc-checkbox__mixedmark"
-                      />
-                    </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  406
+                    Beaten egg
+                  </td>
                    
-                  g
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Plain flour
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
-                     
                     <div
-                      class="mdc-checkbox__background"
+                      class="
+    mdc-form-field
+    
+    
+  "
                     >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
                       <div
-                        class="mdc-checkbox__mixedmark"
-                      />
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-0"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-0"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Beaten egg
+                          ?
+                        </span>
+                      </label>
                     </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  200
+                  </td>
                    
-                  g
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
+                </tr>
+                
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
                 >
-                  Bread flour
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
+                    348
                      
-                    <div
-                      class="mdc-checkbox__background"
-                    >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
-                      <div
-                        class="mdc-checkbox__mixedmark"
-                      />
-                    </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  206
+                    g
+                  </td>
                    
-                  g
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Granulated sugar
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
-                     
-                    <div
-                      class="mdc-checkbox__background"
-                    >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
-                      <div
-                        class="mdc-checkbox__mixedmark"
-                      />
-                    </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  235
+                    Butter
+                  </td>
                    
-                  g
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Brown sugar
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
-                     
                     <div
-                      class="mdc-checkbox__background"
+                      class="
+    mdc-form-field
+    
+    
+  "
                     >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
                       <div
-                        class="mdc-checkbox__mixedmark"
-                      />
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-1"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-1"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Butter
+                          ?
+                        </span>
+                      </label>
                     </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  0.66
+                  </td>
                    
-                  tsp
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
+                </tr>
+                
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
                 >
-                  Baking soda
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
+                    406
                      
-                    <div
-                      class="mdc-checkbox__background"
-                    >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
-                      <div
-                        class="mdc-checkbox__mixedmark"
-                      />
-                    </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  2.0
+                    g
+                  </td>
                    
-                  tsp
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Hot water
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
-                     
-                    <div
-                      class="mdc-checkbox__background"
-                    >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
-                      <div
-                        class="mdc-checkbox__mixedmark"
-                      />
-                    </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  1.0
+                    Plain flour
+                  </td>
                    
-                  tsp
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Salt
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
-                     
                     <div
-                      class="mdc-checkbox__background"
+                      class="
+    mdc-form-field
+    
+    
+  "
                     >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
                       <div
-                        class="mdc-checkbox__mixedmark"
-                      />
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-2"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-2"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Plain flour
+                          ?
+                        </span>
+                      </label>
                     </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  1.0
+                  </td>
                    
-                  tsp
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
+                </tr>
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
                 >
-                  Vanilla extract
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
+                    200
                      
-                    <div
-                      class="mdc-checkbox__background"
-                    >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
-                      <div
-                        class="mdc-checkbox__mixedmark"
-                      />
-                    </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-              <tr
-                aria-selected="false"
-                class=" mdc-data-table__row"
-              >
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  150
+                    g
+                  </td>
                    
-                  g
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  Chopped dark chocolate
-                </td>
-                 
-                <td
-                  class="mdc-data-table__cell"
-                >
-                  <div
-                    class="mdc-checkbox mdc-checkbox--upgraded"
+                  <td
+                    class="mdc-data-table__cell"
                   >
-                    <input
-                      class="mdc-checkbox__native-control "
-                      type="checkbox"
-                      value=""
-                    />
-                     
+                    Bread flour
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
                     <div
-                      class="mdc-checkbox__background"
+                      class="
+    mdc-form-field
+    
+    
+  "
                     >
-                      <svg
-                        class="mdc-checkbox__checkmark"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          class="mdc-checkbox__checkmark-path"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"
-                          fill="none"
-                        />
-                      </svg>
-                       
                       <div
-                        class="mdc-checkbox__mixedmark"
-                      />
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-3"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-3"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Bread flour
+                          ?
+                        </span>
+                      </label>
                     </div>
-                  </div>
-                </td>
-                 
-              </tr>
-              
-            </tbody>
-          </table>
+                  </td>
+                   
+                </tr>
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
+                >
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    206
+                     
+                    g
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    Granulated sugar
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    <div
+                      class="
+    mdc-form-field
+    
+    
+  "
+                    >
+                      <div
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-4"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-4"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Granulated sugar
+                          ?
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                   
+                </tr>
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
+                >
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    235
+                     
+                    g
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    Brown sugar
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    <div
+                      class="
+    mdc-form-field
+    
+    
+  "
+                    >
+                      <div
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-5"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-5"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Brown sugar
+                          ?
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                   
+                </tr>
+                
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
+                >
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    0.66
+                     
+                    tsp
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    Baking soda
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    <div
+                      class="
+    mdc-form-field
+    
+    
+  "
+                    >
+                      <div
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-6"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-6"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Baking soda
+                          ?
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                   
+                </tr>
+                
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
+                >
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    2.0
+                     
+                    tsp
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    Hot water
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    <div
+                      class="
+    mdc-form-field
+    
+    
+  "
+                    >
+                      <div
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-7"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-7"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Hot water
+                          ?
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                   
+                </tr>
+                
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
+                >
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    1.0
+                     
+                    tsp
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    Salt
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    <div
+                      class="
+    mdc-form-field
+    
+    
+  "
+                    >
+                      <div
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-8"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-8"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Salt
+                          ?
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                   
+                </tr>
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
+                >
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    1.0
+                     
+                    tsp
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    Vanilla extract
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    <div
+                      class="
+    mdc-form-field
+    
+    
+  "
+                    >
+                      <div
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-9"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-9"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Vanilla extract
+                          ?
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                   
+                </tr>
+                
+                <tr
+                  aria-selected="false"
+                  class=" mdc-data-table__row"
+                >
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    150
+                     
+                    g
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    Chopped dark chocolate
+                  </td>
+                   
+                  <td
+                    class="mdc-data-table__cell"
+                  >
+                    <div
+                      class="
+    mdc-form-field
+    
+    
+  "
+                    >
+                      <div
+                        class="mdc-checkbox mdc-checkbox--upgraded"
+                      >
+                        <input
+                          class="mdc-checkbox__native-control "
+                          id="SMUI-form-field-10"
+                          type="checkbox"
+                          value=""
+                        />
+                         
+                        <div
+                          class="mdc-checkbox__background"
+                        >
+                          <svg
+                            class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="mdc-checkbox__checkmark-path"
+                              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                              fill="none"
+                            />
+                          </svg>
+                           
+                          <div
+                            class="mdc-checkbox__mixedmark"
+                          />
+                        </div>
+                      </div>
+                       
+                       
+                      <label
+                        for="SMUI-form-field-10"
+                      >
+                        <span
+                          class="u-visually-hidden"
+                          slot="label"
+                        >
+                          Do I have: 
+                          Chopped dark chocolate
+                          ?
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                   
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>

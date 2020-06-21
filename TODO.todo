@@ -29,8 +29,7 @@
 ✔ sliders don't have accessible names @done(2020-06-21 15:45)
 ✔ minify smui imports @done(2020-06-21 16:10)
 ✔ Manifest doesn't have a maskable icon @done(2020-06-20 21:32)
-☐ tab order
-☐ add labels for all checkboxes
+✔ add labels for all checkboxes @done(2020-06-21 16:28)
 ☐ Does not provide a valid apple-touch-icon
 ☐ meta data, rich data, manifest
 ✔ budget.json https://web.dev/use-lighthouse-for-performance-budgets/?utm_medium=cli&utm_source=lighthouse @done(2020-06-19 23:34)
