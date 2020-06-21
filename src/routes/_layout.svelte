@@ -26,8 +26,8 @@
 <script>
   import Card from '@smui/card/bare.js'
   import '@smui/card/bare.css'
-  import '@material/layout-grid/dist/mdc.layout-grid.css'
-  import '@material/typography/dist/mdc.typography.css'
+  import '@material/layout-grid/dist/mdc.layout-grid.min.css'
+  import '@material/typography/dist/mdc.typography.min.css'
   export let segment
 </script>
 
