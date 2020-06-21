@@ -5,7 +5,6 @@ import svelte from 'rollup-plugin-svelte'
 import postcss from 'rollup-plugin-postcss'
 import babel from 'rollup-plugin-babel'
 import { terser } from 'rollup-plugin-terser'
-import purgecss from 'rollup-plugin-purgecss'
 import config from 'sapper/config/rollup.js'
 import pkg from './package.json'
 
@@ -50,9 +49,6 @@ export default {
       commonjs(),
 
       postcss(postcssOptions()),
-      purgecss({
-        content: ['index.html'],
-      }),
 
       legacy &&
         babel({
@@ -113,9 +109,6 @@ export default {
       commonjs(),
 
       postcss(postcssOptions()),
-      purgecss({
-        content: ['index.html'],
-      }),
     ],
     external: Object.keys(pkg.dependencies).concat(
       require('module').builtinModules || Object.keys(process.binding('natives'))

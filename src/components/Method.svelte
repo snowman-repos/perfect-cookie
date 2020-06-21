@@ -3,7 +3,7 @@
     <div class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
     </div>
     <div class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
-      <h3 class="u-centered" data-testid="preparationTime">About <strong>{timeNeeded}</strong> needed before you can eat these babies&hellip;</h3>
+      <h3 class="u-centered" data-testid="preparationTime">About <strong>{timeNeeded}</strong> preparation time</h3>
       <List avatarList data-testid="method" nonInteractive>
         {#each steps as step, index}
           <Item style="height: auto; margin-bottom: 1.5rem;">
@@ -28,10 +28,10 @@
 
   const parseTime = (t) => {
     if (t >= 120 ) {
-      return `${Math.floor(t/60)} hours, ${t % 60} minutes`
+      return `${Math.floor(t/60)} hours, ${Math.round(t % 60)} minutes`
     } else if (t >= 60) {
-      return `${Math.floor(t/60)} hour, ${t % 60} minutes`
-    } else return `${t} minutes`
+      return `${Math.floor(t/60)} hour, ${Math.round(t % 60)} minutes`
+    } else return `${Math.round(t)} minutes`
   }
 
   recipe.subscribe(({ method, preparationTime }) => {

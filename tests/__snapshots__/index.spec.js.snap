@@ -8,7 +8,7 @@ exports[`index page it should render the page title 1`] = `
       class="hero"
     >
       <h1
-        class="title u-centered"
+        class="title u-centered mdc-typography--headline2"
       >
         My Perfect Cookie
       </h1>
@@ -401,10 +401,10 @@ exports[`index page it should render the page title 1`] = `
     </section>
      
     <section
-      class="mdc-layout-grid"
+      class="mdc-layout-grid u-padding-bottom--zero"
     >
       <h2
-        class="mdc-typography--headline2 u-centered"
+        class="mdc-typography--headline3 u-centered"
       >
         Ingredients
       </h2>
@@ -1380,7 +1380,7 @@ exports[`index page it should render the page title 1`] = `
       class="mdc-layout-grid u-padding-bottom--zero"
     >
       <h2
-        class="mdc-typography--headline2 u-centered"
+        class="mdc-typography--headline3 u-centered"
       >
         Method
       </h2>
@@ -1406,7 +1406,7 @@ exports[`index page it should render the page title 1`] = `
               <strong>
                 2 hours, 2 minutes
               </strong>
-               needed before you can eat these babies…
+               preparation time
             </h3>
              
             <ul

@@ -1,3 +1,4 @@
+import { JSDOM } from 'jsdom'
 import {
   debounce,
   replaceAll,
@@ -26,6 +27,7 @@ import {
   shouldAddStep,
   getUpdateRecipeFunction,
   setRecipe,
+  addRichData,
 } from '../src/utilities.js'
 import { recipe } from '../src/store.js'
 
@@ -599,5 +601,20 @@ describe('utility functions', () => {
     setTimeout(() => {
       expect(currentRecipe).toBe(recipe)
     }, 1000)
+  })
+
+  test('addRichData', () => {
+    const dom = new JSDOM()
+    global.document = dom.window.document
+
+    expect(document.querySelector('script[type="application/ld+json"]')).not.toBeInTheDocument()
+
+    addRichData()
+
+    expect(document.querySelector('script[type="application/ld+json"]')).toBeInTheDocument()
+
+    const data = JSON.parse(document.querySelector('script[type="application/ld+json"]').innerText)
+    expect(typeof data).toBe('object')
+    expect(data.name).toBe('The Perfect Cookie')
   })
 })

@@ -674,3 +674,75 @@ export const setRecipe = () => {
 
   recipe.set(Object.assign(currentRecipe, JSON.parse(localStorage.getItem('recipe'))))
 }
+
+// ------RICH DATA------
+
+/**
+ * Adds a script tag containing rich data to the document.
+ */
+export const addRichData = () => {
+  let currentRecipe = {}
+  recipe.subscribe((store) => {
+    currentRecipe = store
+  })
+
+  // Format the date in ISO-8601
+  const getDate = () => {
+    const date = new Date()
+    const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: '2-digit', day: '2-digit' })
+    const [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(date)
+    return `${year}-${month}-${day}`
+  }
+
+  // Format the properties
+  const getDescription = () => {
+    const { color, mouthfeel, surface, texture, thickness } = currentRecipe.properties
+
+    return `${color}% dark, ${mouthfeel}% chewy, ${surface}% craggy surface, ${texture}% crunchy, and ${thickness}% thick.`
+  }
+
+  // Format the preparation time in ISO-8601
+  const getPreparationTime = (t) => {
+    if (t >= 60) {
+      return `PT${Math.floor(t / 60)}H${Math.round(t % 60)}M`
+    } else return `PT${t}M`
+  }
+
+  // Format the ingredients list as an array of strings
+  const getIngredients = () => {
+    let ingredients = []
+
+    currentRecipe.ingredients.forEach((ingredient) => {
+      let amount = ingredient.amount
+      if (amount !== 0) {
+        if (ingredient.unit !== 'tsp') amount = Math.round(amount * currentRecipe.numberOfCookies)
+        else amount = parseFloat(amount * currentRecipe.numberOfCookies).toPrecision(2)
+
+        ingredients.push(`${amount}${ingredient.unit} ${ingredient.name}`)
+      }
+    })
+
+    return ingredients
+  }
+
+  let richData = document.createElement('script')
+  richData.type = 'application/ld+json'
+  richData.innerText = JSON.stringify({
+    '@context': 'https://schema.org/',
+    '@type': 'Recipe',
+    name: 'The Perfect Cookie',
+    author: {
+      '@type': 'Person',
+      name: 'Darryl Snow',
+    },
+    recipeCuisine: 'American',
+    datePublished: getDate(),
+    description: getDescription(),
+    prepTime: getPreparationTime(currentRecipe.preparationTime),
+    cookTime: `PT${currentRecipe.bakingConditions.time}M`,
+    recipeIngredient: getIngredients(),
+    recipeInstructions: currentRecipe.method.join(' '),
+    recipeYield: currentRecipe.numberOfCookies,
+  })
+  document.head.appendChild(richData)
+}

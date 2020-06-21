@@ -31,7 +31,7 @@
 ✔ Manifest doesn't have a maskable icon @done(2020-06-20 21:32)
 ✔ add labels for all checkboxes @done(2020-06-21 16:28)
 ✔ Does not provide a valid apple-touch-icon @done(2020-06-21 16:41)
-☐ meta data, rich data, manifest
+✔ rich data @done(2020-06-21 20:48)
 ✔ budget.json https://web.dev/use-lighthouse-for-performance-budgets/?utm_medium=cli&utm_source=lighthouse @done(2020-06-19 23:34)
 ✔ https://web.dev/render-blocking-resources/?utm_source=lighthouse&utm_medium=unknown @done(2020-06-19 22:35)
 ✔ https://web.dev/font-display/?utm_source=lighthouse&utm_medium=unknown @done(2020-06-19 23:12)

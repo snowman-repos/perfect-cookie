@@ -3,7 +3,7 @@
 </svelte:head>
 
 <section class="hero">
-  <h1 class="title u-centered">My Perfect Cookie</h1>
+  <h1 class="title u-centered mdc-typography--headline2">My Perfect Cookie</h1>
 
   <div class="mdc-layout-grid u-padding-bottom--zero">
     <div class="grid mdc-layout-grid__inner">
@@ -26,8 +26,8 @@
   {/each}
 </section>
 
-<section class="mdc-layout-grid">
-  <h2 class="mdc-typography--headline2 u-centered">Ingredients</h2>
+<section class="mdc-layout-grid u-padding-bottom--zero">
+  <h2 class="mdc-typography--headline3 u-centered">Ingredients</h2>
   <YieldController />
   <div class="ingredients">
     <Ingredients />
@@ -35,7 +35,7 @@
 </section>
 
 <section class="mdc-layout-grid u-padding-bottom--zero">
-  <h2 class="mdc-typography--headline2 u-centered">Method</h2>
+  <h2 class="mdc-typography--headline3 u-centered">Method</h2>
   <Method />
 </section>
 
@@ -49,7 +49,7 @@
   import Slider from '../components/Slider.svelte'
   import YieldController from '../components/YieldController.svelte'
   import '../theme/_smui-theme.scss'
-  import { getUpdateRecipeFunction, setRecipe } from '../utilities.js'
+  import { addRichData, getUpdateRecipeFunction, setRecipe } from '../utilities.js'
 
   const updateRecipe = getUpdateRecipeFunction()
 
@@ -69,12 +69,16 @@
     }
   } else updateRecipe()
 
+  // add rich data to the page
+  if(process.browser === true)
+    addRichData()
 
 </script>
 
 <style>
   .hero {
     background: white;
+    margin-top: 2rem;
     position: relative;
     padding: 2rem;
   }
