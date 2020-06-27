@@ -26,6 +26,44 @@ The updating the slider triggers an "update recipe" function that runs all the c
 ### The Science
 
 * https://sweets.seriouseats.com/2013/12/the-food-lab-the-best-chocolate-chip-cookies.html
+* https://www.insider.com/chocolate-chip-cookies-common-baking-mistakes-photos
+
+#### Tips
+
+* Butter keeps cookies tender because it inhibits the formation of gluten
+* A higher proportion of butter to flour will result in cookies that spread more
+* Using shortening instead of butter will result in softer, denser cookies because it doesn't add to the water content
+* Creaming butter with sugar introduces air and helps leaven the cookies
+* Using softer or melted butter results in denser cookies
+* Butter is the most flavorful fat in baking because the milk proteins brown as they bake
+* Using browned butter adds no moisture, and so the cookies may not taste quite as sweet
+* Using browned butter adds no moisture, and less moisture means less gluten, and so the cookies will have a softer texture
+* Eggs are the main source of water in cookies
+* Additional egg yolks will result in denser, softer, fudgier cookies
+* Additional egg whites will result in taller cookies
+* Brown sugar results in taller cookies because it's slightly acidic and so reacts with the baking soda
+* White sugar causes cookies to spread more and become crunchier
+* Using caramelized sugar or syrup will result in chewy cookies with a uniform surface
+* Using baking powder will result in cakier, taller cookies with a smoother surface
+* More dissolved sugar will result in smoother-surfaced cookies with a more uniform texture
+* Over-mixing your batter can lead to runny cookies
+* If you use baking powder instead of baking soda, the chocolate chips will probably taste a little different
+* Too much flour can result in cookies that look like scoops of ice cream
+* Not using enough flour will make your cookies crisp and thin
+* Loading all the ingredients in the bowl at once may cut down on time, but it compromises the texture of your cookies
+* Leaving out eggs makes a huge difference in the texture and flavor, resulting in a dry cookie
+* Using too much egg drastically changes the cookies and gives them a spongy, cake-like texture
+* When you leave out most of the sugar, cookies will grow upward instead of outward
+* Too much butter makes cookies turn out just as you'd expect: very buttery
+* Using too little butter will make them lightweight
+* Using cake flour will result in very soft cookies
+* Bread flour results in chewy cookies
+* The more you mix your dry and wet ingredients, the smoother the surface of your cookies will be
+* Cookies need more salt than you might think...
+* Don't bother with expensive vanilla here - essence will do
+* A lower baking temperature leads to flatter, wider cookies
+* Baking refrigerated cookie dough results in less spread in the oven
+* Resting your cookie dough in the refrigerator overnight before baking will result in a better flavor
 
 ### The Recipes
 
