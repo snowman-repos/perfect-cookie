@@ -39,11 +39,17 @@
   <Method />
 </section>
 
+<section class="mdc-layout-grid u-padding-bottomØ--zero">
+  <Feedback />
+</section>
+
+
 <footer />
 
 <script>
   import { setContext } from 'svelte'
   import { properties } from '../store.js'
+  import Feedback from '../components/Feedback.svelte'
   import Ingredients from '../components/Ingredients.svelte'
   import Method from '../components/Method.svelte'
   import Slider from '../components/Slider.svelte'

@@ -18,7 +18,23 @@
   </div>
 </div>
 
+<div class="mdc-layout-grid u-padding-top--zero">
+  <div class="grid mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 u-centered">
+      <Card padded>
+        ⚠️
+        <br>
+        Room temperature, humidity, ingredients, equipment all have an impact - if your cookies don't come out perfect, try again.
+      </Card>
+    </div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
+  </div>
+</div>
+
 <script>
+  import Card from '@smui/card/bare.js'
+  import '@smui/card/bare.css'
   import List, { Graphic, Item } from '@smui/list/bare.js';
   import '@smui/list/bare.css'
   import { recipe } from '../store.js'

@@ -35,11 +35,17 @@
 ✔ budget.json https://web.dev/use-lighthouse-for-performance-budgets/?utm_medium=cli&utm_source=lighthouse @done(2020-06-19 23:34)
 ✔ https://web.dev/render-blocking-resources/?utm_source=lighthouse&utm_medium=unknown @done(2020-06-19 22:35)
 ✔ https://web.dev/font-display/?utm_source=lighthouse&utm_medium=unknown @done(2020-06-19 23:12)
-☐ Feedback
+✔ Feedback @done(2020-06-29 22:33)
+✔ fix text input bug @done(2020-07-01 13:48)
+✔ fix form layout @done(2020-07-01 21:04)
+✔ call submit form when positive feedback given @done(2020-07-01 21:06)
+✔ toggle the icons after feedback is given @done(2020-07-01 21:07)
+✔ submit the form @done(2020-07-03 23:15)
+✔ show thanks after form is submit @done(2020-07-01 21:21)
 ☐ Credits
 ✔ Accessibility @done(2020-06-18 23:15)
 ✔ Performance @done(2020-06-18 23:15)
-☐ Domain
+✔ Domain @done(2020-06-29 21:43)
 ☐ Share Buttons
 ☐ Print buttons & print styles
 ☐ Tips

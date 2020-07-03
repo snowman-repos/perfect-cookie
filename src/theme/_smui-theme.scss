@@ -27,6 +27,10 @@
   --darryl-theme-background--dark: #333333;
 }
 
+.mdc-data-table__header-row {
+  display: none;
+}
+
 .u-centered {
   text-align: center;
 }
@@ -37,8 +41,8 @@
   justify-content: center;
 }
 
-.mdc-data-table__header-row {
-  display: none;
+.u-margin--bottom {
+  margin-bottom: 1em;
 }
 
 .u-padding-bottom--zero {
@@ -57,6 +61,14 @@
   position: absolute !important;
   width: 1px;
   white-space: nowrap; /* added line */
+}
+
+.u-pointer-events-none {
+  pointer-events: none;
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--mdc-theme-primary);
 }
 
 /* cyrillic-ext */
