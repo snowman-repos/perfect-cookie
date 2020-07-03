@@ -15,7 +15,9 @@
 
             <h3 class="mdc-typography--headline5 u-centered">Did you try making these? Did they turn out perfect?</h3>
 
-            <form name="feedback" netlify on:submit|preventDefault="{submitForm}">
+            <form data-netlify="true" name="feedback" netlify netlify-honeypot="bot-field" on:submit|preventDefault="{submitForm}">
+
+              <input type="hidden" name="form-name" value="feedback" />
 
               <div class="u-margin--bottom">
                 <IconButton bind:pressed={positiveFeedback} data-testid="positive-button" on:click={() => { negativeFeedback = false; }} toggle>
@@ -35,7 +37,7 @@
 
               {#if negativeFeedback}
                 <div class="u-margin--bottom">
-                  <Textfield data-testid="what-went-wrong" fullwidth label="What was wrong with them?" lineRipple={false}  input$aria-controls="helper-text-fullwidth" input$aria-describedby="helper-text-fullwidth" textarea value="" />
+                  <Textfield data-testid="what-went-wrong" fullwidth label="What was wrong with them?" lineRipple={false}  input$aria-controls="helper-text-fullwidth" input$aria-describedby="helper-text-fullwidth" name="what-went-wrong" textarea value="" />
                   <HelperText id="helper-text-fullwidth">Please describe the color, mouthfeel, surface quality, texture, and thickness of the cookies that you made and why they weren't as you expected.</HelperText>
                 </div>
                 <div class="u-margin--bottom">

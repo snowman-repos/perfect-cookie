@@ -42,10 +42,11 @@
 ✔ toggle the icons after feedback is given @done(2020-07-01 21:07)
 ✔ submit the form @done(2020-07-03 23:15)
 ✔ show thanks after form is submit @done(2020-07-01 21:21)
-☐ Credits
 ✔ Accessibility @done(2020-06-18 23:15)
 ✔ Performance @done(2020-06-18 23:15)
 ✔ Domain @done(2020-06-29 21:43)
+☐ fix form submission
+☐ Credits
 ☐ Share Buttons
 ☐ Print buttons & print styles
 ☐ Tips

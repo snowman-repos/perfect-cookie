@@ -1892,9 +1892,17 @@ exports[`index page it should render the page title 1`] = `
               </h3>
                
               <form
+                data-netlify="true"
                 name="feedback"
                 netlify=""
+                netlify-honeypot="bot-field"
               >
+                <input
+                  name="form-name"
+                  type="hidden"
+                  value="feedback"
+                />
+                 
                 <div
                   class="u-margin--bottom"
                 >
