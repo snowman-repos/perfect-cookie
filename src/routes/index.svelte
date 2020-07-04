@@ -39,7 +39,7 @@
   <Method />
 </section>
 
-<section class="mdc-layout-grid u-padding-bottomØ--zero">
+<section class="mdc-layout-grid u-padding-bottom--zero">
   <Feedback />
 </section>
 

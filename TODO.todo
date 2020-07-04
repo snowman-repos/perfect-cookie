@@ -45,7 +45,7 @@
 ✔ Accessibility @done(2020-06-18 23:15)
 ✔ Performance @done(2020-06-18 23:15)
 ✔ Domain @done(2020-06-29 21:43)
-☐ fix form submission
+☐ fix form submission - form wrapper needs to be outside of the if statement
 ☐ Credits
 ☐ Share Buttons
 ☐ Print buttons & print styles

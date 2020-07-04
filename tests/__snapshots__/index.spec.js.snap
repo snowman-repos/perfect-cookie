@@ -1861,47 +1861,71 @@ exports[`index page it should render the page title 1`] = `
     </section>
      
     <section
-      class="mdc-layout-grid u-padding-bottomØ--zero"
+      class="mdc-layout-grid u-padding-bottom--zero"
     >
-      <div
-        class="mdc-layout-grid u-padding-top--zero"
-        data-testid="feedback"
+      <form
+        data-netlify="true"
+        name="feedback"
+        netlify=""
+        netlify-honeypot="bot-field"
       >
+        <input
+          name="form-name"
+          type="hidden"
+          value="feedback"
+        />
+         
+        <input
+          name="positive"
+          type="hidden"
+          value="false"
+        />
+         
+        <input
+          name="negative"
+          type="hidden"
+          value="false"
+        />
+         
+        <input
+          name="what-went-wrong"
+          type="hidden"
+          value=""
+        />
+         
+        <input
+          name="recipe"
+          type="hidden"
+          value="{\\"bakingConditions\\":{\\"temperature\\":182,\\"time\\":12},\\"ingredients\\":[{\\"amount\\":3.0552,\\"checked\\":false,\\"name\\":\\"Beaten egg\\",\\"unit\\":\\"g\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Additional egg yolk\\",\\"unit\\":\\"g\\"},{\\"amount\\":13.926206896551726,\\"checked\\":false,\\"name\\":\\"Butter\\",\\"unit\\":\\"g\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Cake flour\\",\\"unit\\":\\"g\\"},{\\"amount\\":16.235172000000002,\\"checked\\":false,\\"name\\":\\"Plain flour\\",\\"unit\\":\\"g\\"},{\\"amount\\":7.996428000000002,\\"checked\\":false,\\"name\\":\\"Bread flour\\",\\"unit\\":\\"g\\"},{\\"amount\\":8.235038232795242,\\"checked\\":false,\\"name\\":\\"Granulated sugar\\",\\"unit\\":\\"g\\"},{\\"amount\\":9.387943585386578,\\"checked\\":false,\\"name\\":\\"Brown sugar\\",\\"unit\\":\\"g\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Corn syrup\\",\\"unit\\":\\"g\\"},{\\"amount\\":0.0262,\\"checked\\":false,\\"name\\":\\"Baking soda\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Baking powder\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":0.08,\\"checked\\":false,\\"name\\":\\"Hot water\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Cornstarch\\",\\"unit\\":\\"g\\"},{\\"amount\\":0.04,\\"checked\\":false,\\"name\\":\\"Salt\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":0.04,\\"checked\\":false,\\"name\\":\\"Vanilla extract\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":6,\\"checked\\":false,\\"name\\":\\"Chopped dark chocolate\\",\\"unit\\":\\"g\\"}],\\"method\\":[\\"In a saucepan over medium heat, cook the butter while gently swirling or stirring until you start to see golden brown milk solids. As soon as the butter turns a rich brown color with a nutty aroma, remove from the heat. This should take about 5 minutes. Be careful not to go past this point otherwise your butter will burn, leaving a bitter taste.\\",\\"Make sure the butter is cool, but not completely hardened.\\",\\"Vigorously whisk together egg, white sugar, and vanilla until pale in color and falling from the whisk in thick ribbons.\\",\\"Sift the flour, baking soda, and salt, and whisk together.\\",\\"Sift the flour, baking soda, baking powder, and salt, and whisk together.\\",\\"Mix the brown butter into the egg mixture.\\",\\"Mix the brown butter and brown sugar into the egg mixture.\\",\\"<em>Gently</em> fold in the dry ingredients until just combined. <em>Do not</em> overmix - it's OK to still have some flour visible. It's best to do this by hand rather than using a stand mixer to avoid over-working the dough.\\",\\"Gently mix in the chocolate and anything else you might want to add.\\",\\"Refrigerate the dough for 30 minutes or until it firms up slightly.\\",\\"Preheat the oven and line a baking sheet with something non-stick.\\",\\"Shape your dough into small balls, about 3.5cm in diameter.\\",\\"Tear each ball in half and smoodge the smooth sides back together before placing on the lined baking sheet. This will help maximize cragginess.\\",\\"Place the cookies at least 10cm apart on a lined baking sheet.\\",\\"Bake at 182 degrees for 12 minutes.\\",\\"Once baked, leave the cookies to cool and solidify on the baking tray for 2 minutes before placing on a wire cooling rack. Leave to cool completely (if you can).\\"],\\"numberOfCookies\\":25,\\"preparationTime\\":122,\\"properties\\":{\\"color\\":60,\\"mouthfeel\\":80,\\"surface\\":90,\\"texture\\":30,\\"thickness\\":50}}"
+        />
+         
         <div
-          class="grid mdc-layout-grid__inner"
+          class="mdc-layout-grid u-padding-top--zero"
+          data-testid="feedback"
         >
           <div
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"
-          />
-           
-          <div
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 u-centered"
+            class="grid mdc-layout-grid__inner"
           >
             <div
-              class="
+              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"
+            />
+             
+            <div
+              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 u-centered"
+            >
+              <div
+                class="
     mdc-card
     
     
     smui-card--padded
   "
-            >
-              <h3
-                class="mdc-typography--headline5 u-centered"
               >
-                Did you try making these? Did they turn out perfect?
-              </h3>
-               
-              <form
-                data-netlify="true"
-                name="feedback"
-                netlify=""
-                netlify-honeypot="bot-field"
-              >
-                <input
-                  name="form-name"
-                  type="hidden"
-                  value="feedback"
-                />
+                <h3
+                  class="mdc-typography--headline5 u-centered"
+                >
+                  Did you try making these? Did they turn out perfect?
+                </h3>
                  
                 <div
                   class="u-margin--bottom"
@@ -1999,35 +2023,17 @@ exports[`index page it should render the page title 1`] = `
                   
                 </div>
                  
-                <input
-                  name="positive"
-                  type="hidden"
-                  value="false"
-                />
-                 
-                <input
-                  name="negative"
-                  type="hidden"
-                  value="false"
-                />
-                 
-                <input
-                  name="recipe"
-                  type="hidden"
-                  value="{\\"bakingConditions\\":{\\"temperature\\":182,\\"time\\":12},\\"ingredients\\":[{\\"amount\\":3.0552,\\"checked\\":false,\\"name\\":\\"Beaten egg\\",\\"unit\\":\\"g\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Additional egg yolk\\",\\"unit\\":\\"g\\"},{\\"amount\\":13.926206896551726,\\"checked\\":false,\\"name\\":\\"Butter\\",\\"unit\\":\\"g\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Cake flour\\",\\"unit\\":\\"g\\"},{\\"amount\\":16.235172000000002,\\"checked\\":false,\\"name\\":\\"Plain flour\\",\\"unit\\":\\"g\\"},{\\"amount\\":7.996428000000002,\\"checked\\":false,\\"name\\":\\"Bread flour\\",\\"unit\\":\\"g\\"},{\\"amount\\":8.235038232795242,\\"checked\\":false,\\"name\\":\\"Granulated sugar\\",\\"unit\\":\\"g\\"},{\\"amount\\":9.387943585386578,\\"checked\\":false,\\"name\\":\\"Brown sugar\\",\\"unit\\":\\"g\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Corn syrup\\",\\"unit\\":\\"g\\"},{\\"amount\\":0.0262,\\"checked\\":false,\\"name\\":\\"Baking soda\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Baking powder\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":0.08,\\"checked\\":false,\\"name\\":\\"Hot water\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":0,\\"checked\\":false,\\"name\\":\\"Cornstarch\\",\\"unit\\":\\"g\\"},{\\"amount\\":0.04,\\"checked\\":false,\\"name\\":\\"Salt\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":0.04,\\"checked\\":false,\\"name\\":\\"Vanilla extract\\",\\"unit\\":\\"tsp\\"},{\\"amount\\":6,\\"checked\\":false,\\"name\\":\\"Chopped dark chocolate\\",\\"unit\\":\\"g\\"}],\\"method\\":[\\"In a saucepan over medium heat, cook the butter while gently swirling or stirring until you start to see golden brown milk solids. As soon as the butter turns a rich brown color with a nutty aroma, remove from the heat. This should take about 5 minutes. Be careful not to go past this point otherwise your butter will burn, leaving a bitter taste.\\",\\"Make sure the butter is cool, but not completely hardened.\\",\\"Vigorously whisk together egg, white sugar, and vanilla until pale in color and falling from the whisk in thick ribbons.\\",\\"Sift the flour, baking soda, and salt, and whisk together.\\",\\"Sift the flour, baking soda, baking powder, and salt, and whisk together.\\",\\"Mix the brown butter into the egg mixture.\\",\\"Mix the brown butter and brown sugar into the egg mixture.\\",\\"<em>Gently</em> fold in the dry ingredients until just combined. <em>Do not</em> overmix - it's OK to still have some flour visible. It's best to do this by hand rather than using a stand mixer to avoid over-working the dough.\\",\\"Gently mix in the chocolate and anything else you might want to add.\\",\\"Refrigerate the dough for 30 minutes or until it firms up slightly.\\",\\"Preheat the oven and line a baking sheet with something non-stick.\\",\\"Shape your dough into small balls, about 3.5cm in diameter.\\",\\"Tear each ball in half and smoodge the smooth sides back together before placing on the lined baking sheet. This will help maximize cragginess.\\",\\"Place the cookies at least 10cm apart on a lined baking sheet.\\",\\"Bake at 182 degrees for 12 minutes.\\",\\"Once baked, leave the cookies to cool and solidify on the baking tray for 2 minutes before placing on a wire cooling rack. Leave to cool completely (if you can).\\"],\\"numberOfCookies\\":25,\\"preparationTime\\":122,\\"properties\\":{\\"color\\":60,\\"mouthfeel\\":80,\\"surface\\":90,\\"texture\\":30,\\"thickness\\":50}}"
-                />
-                 
-              </form>
-              
+                
+                
+              </div>
             </div>
+             
+            <div
+              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"
+            />
           </div>
-           
-          <div
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"
-          />
         </div>
-      </div>
-      
+      </form>
     </section>
      
     <footer />
