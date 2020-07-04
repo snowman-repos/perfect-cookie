@@ -4,7 +4,7 @@
   <input bind:value={feedback} name="feedback" type="hidden">
   <input bind:value={positiveFeedback} name="positive" type="hidden">
   <input bind:value={negativeFeedback} name="negative" type="hidden">
-  <input bind:value={whatWentWrong} name="what-went-wrong" type="hidden">
+  <input bind:value={whatWentWrong} name="whatWentWrong" type="hidden">
   <input bind:value={recipe} name="recipe" type="hidden">
   <!-- only show if local storage isn't empty -->
   {#if recipe}

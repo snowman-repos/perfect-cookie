@@ -1893,7 +1893,7 @@ exports[`index page it should render the page title 1`] = `
         />
          
         <input
-          name="what-went-wrong"
+          name="whatWentWrong"
           type="hidden"
           value=""
         />
