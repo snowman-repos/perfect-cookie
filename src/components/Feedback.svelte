@@ -1,10 +1,11 @@
 <form data-netlify="true" name="feedback" netlify netlify-honeypot="bot-field" on:submit|preventDefault="{submitForm}">
   <input type="hidden" name="form-name" value="feedback" />
   <!-- hidden fields containing feedback and the last stored recipe -->
+  <input bind:value={feedback} name="feedback" type="hidden">
   <input bind:value={positiveFeedback} name="positive" type="hidden">
   <input bind:value={negativeFeedback} name="negative" type="hidden">
   <input bind:value={whatWentWrong} name="what-went-wrong" type="hidden">
-  <input name="recipe" type="hidden" bind:value={recipe}>
+  <input bind:value={recipe} name="recipe" type="hidden">
   <!-- only show if local storage isn't empty -->
   {#if recipe}
     <div class="mdc-layout-grid u-padding-top--zero" data-testid="feedback">
@@ -67,6 +68,7 @@
   import '@smui/textfield/bare.css'
 
   let recipe
+  let feedback
   let negativeFeedback = false
   let positiveFeedback = false
   let whatWentWrong = ""
@@ -89,19 +91,19 @@
   const submitForm = (e) => {
     e.preventDefault()
 
-    const feedback = positiveFeedback ? 'positive' : 'negative'
+    feedback = positiveFeedback ? 'positive' : 'negative'
 
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "feedback",
-          feedback,
-          recipe
-        })
-      })
-        .then(() => console.info('Feedback sent!'))
-        .catch(error => console.error(error));
+    // fetch("/", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //     body: encode({
+    //       "form-name": "feedback",
+    //       feedback,
+    //       recipe
+    //     })
+    //   })
+    //     .then(() => console.info('Feedback sent!'))
+    //     .catch(error => console.error(error));
 
     negativeFeedback = false
     positiveFeedback = false
