@@ -2,8 +2,6 @@
   <input type="hidden" name="form-name" value="feedback" />
   <!-- hidden fields containing feedback and the last stored recipe -->
   <input bind:value={feedback} name="feedback" type="hidden">
-  <input bind:value={positiveFeedback} name="positive" type="hidden">
-  <input bind:value={negativeFeedback} name="negative" type="hidden">
   <input bind:value={whatWentWrong} name="whatWentWrong" type="hidden">
   <input bind:value={recipe} name="recipe" type="hidden">
   <!-- only show if local storage isn't empty -->
@@ -99,8 +97,6 @@
         body: encode({
           "form-name": "feedback",
           feedback,
-          positiveFeedback,
-          negativeFeedback,
           whatWentWrong,
           recipe
         })

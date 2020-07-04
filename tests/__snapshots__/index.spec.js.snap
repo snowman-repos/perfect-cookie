@@ -1881,18 +1881,6 @@ exports[`index page it should render the page title 1`] = `
         />
          
         <input
-          name="positive"
-          type="hidden"
-          value="false"
-        />
-         
-        <input
-          name="negative"
-          type="hidden"
-          value="false"
-        />
-         
-        <input
           name="whatWentWrong"
           type="hidden"
           value=""
