@@ -93,17 +93,20 @@
 
     feedback = positiveFeedback ? 'positive' : 'negative'
 
-    // fetch("/", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //     body: encode({
-    //       "form-name": "feedback",
-    //       feedback,
-    //       recipe
-    //     })
-    //   })
-    //     .then(() => console.info('Feedback sent!'))
-    //     .catch(error => console.error(error));
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "feedback",
+          feedback,
+          positiveFeedback,
+          negativeFeedback,
+          whatWentWrong,
+          recipe
+        })
+      })
+        .then(() => console.info('Feedback sent!'))
+        .catch(error => console.error(error));
 
     negativeFeedback = false
     positiveFeedback = false

@@ -1876,6 +1876,11 @@ exports[`index page it should render the page title 1`] = `
         />
          
         <input
+          name="feedback"
+          type="hidden"
+        />
+         
+        <input
           name="positive"
           type="hidden"
           value="false"
