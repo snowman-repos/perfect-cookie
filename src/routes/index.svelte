@@ -1,26 +1,13 @@
 <svelte:head>
-  <title>My Perfect Cookie</title>
+  <title>The Cookie Website</title>
 </svelte:head>
 
 <section class="hero">
-  <h1 class="title u-centered mdc-typography--headline2">My Perfect Cookie</h1>
-
-  <div class="mdc-layout-grid u-padding-bottom--zero">
-    <div class="grid mdc-layout-grid__inner">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <p class="u-centered">Tired of online recipes not quite turning out right?</p>
-        <ul>
-          <li>Adjust the sliders to design your cookies just how you like them. You might find that changing one slider affects another - just keep tweeking them until it feels right.</li>
-          <li>Scroll down to choose how many cookies you want to make. You'll get a customized list of ingredients and steps needed to make <strong>your perfect cookies</strong>.</li>
-          <li>There are checkboxes alongside the ingredients for you to check them off as you go along.</li>
-          <li>The numbers may seem quite precise - try to stick as close as you can to the recipe and <a href="mailto:darryl@darrylsnow.com" title="Email the creator">let me know how they turn out!</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <h1 class="title u-centered mdc-typography--headline2">The Cookie Website</h1>
 </section>
 
 <section class="controls mdc-layout-grid">
+  <h2 class="mdc-typography--headline4 u-centered">How do you like your cookies?</h2>
   {#each $properties as { from, name, to }}
     <Slider from="{from}" to="{to}" property="{name}" />
   {/each}
@@ -83,17 +70,37 @@
 
 <style>
   .hero {
-    background: white;
-    margin-top: 2rem;
+    background-color: white;
+    background-image: url("/cookies.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--mdc-theme-surface);
     position: relative;
     padding: 2rem;
+    position: relative;
   }
+
+  .hero::before {
+    background: rgba(0,0,0,.4);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
   .title {
     margin-bottom: 0;
+    position: relative;
   }
+
   .controls {
     background: var(--darryl-theme-background);
   }
+
   .ingredients {
     display: flex;
     justify-content: center;
