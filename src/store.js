@@ -27,6 +27,12 @@ export const recipe = writable({
     {
       amount: 0,
       checked: false,
+      name: 'Hot water',
+      unit: 'tbsp',
+    },
+    {
+      amount: 0,
+      checked: false,
       name: 'Granulated sugar',
       unit: 'g',
     },
@@ -59,12 +65,6 @@ export const recipe = writable({
       checked: false,
       name: 'Vanilla extract',
       unit: 'tsp',
-    },
-    {
-      amount: 0,
-      checked: false,
-      name: 'Water',
-      unit: 'tbsp',
     },
     {
       amount: 0,
@@ -122,8 +122,7 @@ export const method = readable([
   },
   {
     ingredientsNeeded: ['Hot water'],
-    instruction:
-      'Mix 2 tablespoons of hot water into the melted butter to replace the moisture lost by cooking the butter.',
+    instruction: 'Mix hot water into the melted butter to replace the moisture lost by cooking the butter.',
     timeNeeded: 0.5,
     thresholds: {
       color: {
@@ -422,7 +421,7 @@ export const method = readable([
   },
   {
     ingredientsNeeded: [],
-    instruction: 'Mix the brown sugar into the egg mixture.',
+    instruction: 'Mix the butter and brown sugar into the egg mixture.',
     timeNeeded: 0.5,
     thresholds: {
       color: {
@@ -450,7 +449,7 @@ export const method = readable([
   {
     ingredientsNeeded: [],
     instruction:
-      "<em>Gently</em> fold in the dry ingredients until just combined. <em>Do not</em> overmix - it's OK to still have some flour visible. It's best to do this by hand rather than using a stand mixer to avoid over-working the dough.",
+      "<em>Gently</em> fold the wet ingredients into the dry ingredients until just combined. <em>Do not</em> overmix - it's OK to still have some flour visible. It's best to do this by hand rather than using a stand mixer to avoid over-working the dough.",
     timeNeeded: 1,
     thresholds: {
       color: {

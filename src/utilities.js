@@ -556,12 +556,14 @@ export const getUpdateRecipeFunction = () => {
 
     // --OTHER--
 
-    newIngredients.push({
-      amount: brownSugar / sugar > 0.5 ? 0.08 : 0,
-      checked: false,
-      name: 'Hot water',
-      unit: 'tsp',
-    })
+    if (properties.color >= 40 && properties.mouthfeel >= 80) {
+      newIngredients.push({
+        amount: brownSugar / sugar > 0.5 ? 0.08 : 0,
+        checked: false,
+        name: 'Hot water',
+        unit: 'tsp',
+      })
+    }
 
     newIngredients.push({
       amount: mouthfeel < 30 ? 0.08 : 0,
