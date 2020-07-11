@@ -10,59 +10,19 @@ exports[`index page it should render the page title 1`] = `
       <h1
         class="title u-centered mdc-typography--headline2"
       >
-        My Perfect Cookie
+        The Cookie Website
       </h1>
-       
-      <div
-        class="mdc-layout-grid u-padding-bottom--zero"
-      >
-        <div
-          class="grid mdc-layout-grid__inner"
-        >
-          <div
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
-          >
-            <p
-              class="u-centered"
-            >
-              Tired of online recipes not quite turning out right?
-            </p>
-             
-            <ul>
-              <li>
-                Adjust the sliders to design your cookies just how you like them. You might find that changing one slider affects another - just keep tweeking them until it feels right.
-              </li>
-               
-              <li>
-                Scroll down to choose how many cookies you want to make. You'll get a customized list of ingredients and steps needed to make 
-                <strong>
-                  your perfect cookies
-                </strong>
-                .
-              </li>
-               
-              <li>
-                There are checkboxes alongside the ingredients for you to check them off as you go along.
-              </li>
-               
-              <li>
-                The numbers may seem quite precise - try to stick as close as you can to the recipe and 
-                <a
-                  href="mailto:darryl@darrylsnow.com"
-                  title="Email the creator"
-                >
-                  let me know how they turn out!
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
      
     <section
       class="controls mdc-layout-grid"
     >
+      <h2
+        class="mdc-typography--headline4 u-centered"
+      >
+        How do you like your cookies?
+      </h2>
+       
       <div
         class="mdc-layout-grid"
       >

@@ -402,7 +402,7 @@ export const method = readable([
         max: 100,
       },
       mouthfeel: {
-        min: 0,
+        min: 40,
         max: 100,
       },
       surface: {
@@ -431,6 +431,33 @@ export const method = readable([
       mouthfeel: {
         min: 0,
         max: 100,
+      },
+      surface: {
+        min: 0,
+        max: 100,
+      },
+      texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
+        min: 0,
+        max: 100,
+      },
+    },
+  },
+  {
+    ingredientsNeeded: [],
+    instruction: 'Rub butter into the flour until you have breadcrumb consistency.',
+    timeNeeded: 7,
+    thresholds: {
+      color: {
+        min: 0,
+        max: 60,
+      },
+      mouthfeel: {
+        min: 0,
+        max: 40,
       },
       surface: {
         min: 0,
