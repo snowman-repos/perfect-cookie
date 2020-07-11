@@ -132,6 +132,20 @@ export const getBakingTime = (property, color, thickness) => {
 }
 
 /**
+ * Calculates the baking temperature needed based on the required heat exposure and baking time.
+ * @param  {Number} heat The heat exposure ratio
+ * @param  {Number} time The baking time in minutes
+ * @return {Number}      The baking temperature
+ */
+export const getBakingTemperature = (heat, time) => {
+  let temperature = Math.round(heat * time)
+
+  if (temperature < 150) return 150
+  if (temperature > 250) return 250
+  return temperature
+}
+
+/**
  * Calculates how much bread flour is needed based on the total amount of flour and the required mouthfeel. Bread flour adds density & chewiness.
  * @param  {Number} flour     Total grams of flour needed
  * @param  {Number} mouthfeel The mouthfeel percentage value 0-100
@@ -596,7 +610,7 @@ export const getUpdateRecipeFunction = () => {
     // --BAKING CONDITIONS--
     const bakingTime = getBakingTime(property, color, thickness)
     const heatExposure = getHeatExposure(texture)
-    const bakingTemperature = Math.round(heatExposure * bakingTime)
+    const bakingTemperature = getBakingTemperature(heatExposure, bakingTime)
 
     // --NEW PROPERTIES--
 

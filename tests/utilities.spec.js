@@ -8,6 +8,7 @@ import {
   getBakingSoda,
   getHeatExposure,
   getBakingTime,
+  getBakingTemperature,
   getBreadFlour,
   getBrownWhiteSugarRatio,
   getCakeFlour,
@@ -177,6 +178,15 @@ describe('utility functions', () => {
     expect(getBakingTime('', 0, 0)).toBe(12)
     expect(getBakingTime('', 10, 10)).toBe(12)
     expect(getBakingTime('', 100, 100)).toBe(12)
+  })
+
+  test('getBakingTemperature', () => {
+    // heat exposure, baking time
+    expect(getBakingTemperature(0, 0)).toBe(150)
+    expect(getBakingTemperature(9, 15)).toBe(150)
+    expect(getBakingTemperature(11, 15)).toBe(165)
+    expect(getBakingTemperature(25, 10)).toBe(250)
+    expect(getBakingTemperature(25, 11)).toBe(250)
   })
 
   test('getBreadFlour', () => {

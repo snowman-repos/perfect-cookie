@@ -22,7 +22,7 @@
               <h3 class="mdc-typography--headline5 u-centered">Did you try making these? Did they turn out perfect?</h3>
 
                 <div class="u-margin--bottom">
-                  <IconButton bind:pressed={positiveFeedback} data-testid="positive-button" on:click={() => { negativeFeedback = false; }} toggle>
+                  <IconButton bind:pressed={positiveFeedback} data-testid="positive-button" on:click={(e) => { negativeFeedback = false; submitForm(e); }} toggle>
                     <Icon class="material-icons u-pointer-events-none" style="color: var(--mdc-theme-text-secondary-on-background);">thumb_up</Icon>
                     <Icon class="material-icons u-pointer-events-none" on style="color: var(--mdc-theme-secondary);">thumb_up</Icon>
                   </IconButton>
