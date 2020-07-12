@@ -70,12 +70,16 @@
 
 <style>
   .hero {
+    align-items: center;
     background-color: white;
     background-image: url("/cookies.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--mdc-theme-surface);
+    display: flex;
+    justify-content: center;
+    min-height: 25vh;
     position: relative;
     padding: 2rem;
     position: relative;
