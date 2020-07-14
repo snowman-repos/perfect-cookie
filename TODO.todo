@@ -50,6 +50,10 @@
 ✔ Remove cypress @done(2020-07-12 12:04)
 ✔ og tags @done(2020-07-12 13:35)
 ✔ Share Buttons @done(2020-07-12 13:49)
+✔ loading when donate button is clicked, unloading when complete @done(2020-07-14 22:52)
+✔ show thanks when the previous page url was https://checkout.stripe.com/, and when money had been paid.. maybe success url... @done(2020-07-14 13:21)
+☐ Donate component test
+☐ Live publishable key and live price code
 ☐ About / Credits / How To page
 ☐ Tips
 ☐ Print buttons & print styles

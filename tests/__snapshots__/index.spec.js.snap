@@ -1989,6 +1989,62 @@ exports[`index page it should render the page title 1`] = `
       </form>
     </section>
      
+    <section
+      class="mdc-layout-grid u-padding-bottom--zero"
+    >
+      <div
+        class="mdc-layout-grid u-padding-top--zero"
+        data-testid="feedback"
+      >
+        <div
+          class="grid mdc-layout-grid__inner"
+        >
+          <div
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"
+          />
+           
+          <div
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 u-centered"
+          >
+            <button
+              class="
+    mdc-button
+    
+    
+    
+    mdc-button--unelevated
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  "
+              data-testid="donate-button"
+            >
+              <span
+                class="
+    
+    mdc-button__label
+    
+    
+    
+    
+    
+  "
+              >
+                Donate $5 for a coffee to go with my cookies
+              </span>
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+     
     <footer />
   </div>
 </body>

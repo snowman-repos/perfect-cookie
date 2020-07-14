@@ -24,7 +24,7 @@ class LocalStorageMock {
   }
 }
 
-describe('ingredients component', () => {
+describe('feedback component', () => {
   afterEach(() => {
     cleanup()
   })

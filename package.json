@@ -22,6 +22,7 @@
     "test:unit"
   ],
   "dependencies": {
+    "@stripe/stripe-js": "^1.8.0",
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^0.4.0"
@@ -43,6 +44,7 @@
     "@smui/data-table": "^1.0.0-beta.20",
     "@smui/form-field": "^1.0.0-beta.20",
     "@smui/icon-button": "^1.0.0-beta.20",
+    "@smui/linear-progress": "^1.0.0-beta.21",
     "@smui/list": "^1.0.0-beta.20",
     "@smui/slider": "^1.0.0-beta.20",
     "@smui/textfield": "^1.0.0-beta.20",

@@ -10,7 +10,7 @@ recipe.subscribe((recipeDetails) => {
   actualRecipe = recipeDetails
 })
 
-describe('recipe component', () => {
+describe('method component', () => {
   afterEach(() => {
     cleanup()
   })

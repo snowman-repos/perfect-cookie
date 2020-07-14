@@ -30,12 +30,17 @@
   <Feedback />
 </section>
 
+<section class="mdc-layout-grid u-padding-bottom--zero">
+  <Donate />
+</section>
+
 
 <footer />
 
 <script>
   import { setContext } from 'svelte'
   import { properties } from '../store.js'
+  import Donate from '../components/Donate.svelte'
   import Feedback from '../components/Feedback.svelte'
   import Ingredients from '../components/Ingredients.svelte'
   import Method from '../components/Method.svelte'
