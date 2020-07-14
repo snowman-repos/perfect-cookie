@@ -33,7 +33,7 @@
 
     // pk_live_51H3yG1G5CVuXPf5nDFHMS2xXZTKH8dF0gRTcYNSwnsvWQUgs6qgbuWF4WELehvmFNfJBAkZJPaKsuwy6dggbaPUS00ETkYcySr
     // pk_test_51H3yG1G5CVuXPf5nTr7292dZTK3XPcdLpwgjmAEm7ojIoHbNCAKZgO6jVGf67zqbctuosTloWW06ecNue4OhIBj500uMuGm7nV
-    const stripe = await loadStripe('k_live_51H3yG1G5CVuXPf5nDFHMS2xXZTKH8dF0gRTcYNSwnsvWQUgs6qgbuWF4WELehvmFNfJBAkZJPaKsuwy6dggbaPUS00ETkYcySr')
+    const stripe = await loadStripe('pk_live_51H3yG1G5CVuXPf5nDFHMS2xXZTKH8dF0gRTcYNSwnsvWQUgs6qgbuWF4WELehvmFNfJBAkZJPaKsuwy6dggbaPUS00ETkYcySr')
 
     // price_1H45W3G5CVuXPf5nx5yfRpcV
     // price_1H45vfG5CVuXPf5nWQJLbsCO
