@@ -86,8 +86,16 @@
     justify-content: center;
     min-height: 25vh;
     position: relative;
-    padding: 2rem;
+    padding: calc(2rem + 48px) 2rem 2rem 2rem;
     position: relative;
+  }
+
+  @media (min-width: 960px) {
+
+    .hero {
+      padding: 2rem;
+    }
+
   }
 
   .hero::before {

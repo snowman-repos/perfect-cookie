@@ -1,4 +1,4 @@
-<div class="mdc-layout-grid u-padding-bottom--zero">
+<div class="mdc-layout-grid u-padding--zero">
   <div class="grid mdc-layout-grid__inner">
     <div class="first-column mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
     </div>

@@ -476,7 +476,7 @@ exports[`index page it should render the page title 1`] = `
         class="ingredients"
       >
         <div
-          class="mdc-layout-grid u-layout--centered"
+          class="mdc-layout-grid u-layout--centered o-ingredients-container"
         >
           <div
             class="mdc-data-table"
@@ -507,7 +507,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -584,7 +584,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -661,7 +661,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -737,7 +737,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -813,7 +813,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -889,7 +889,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -966,7 +966,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -1043,7 +1043,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -1120,7 +1120,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -1196,7 +1196,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -1272,7 +1272,7 @@ exports[`index page it should render the page title 1`] = `
                   </td>
                    
                   <td
-                    class="mdc-data-table__cell"
+                    class="mdc-data-table__cell o-checkbox-column"
                   >
                     <div
                       class="
@@ -1346,7 +1346,7 @@ exports[`index page it should render the page title 1`] = `
       </h2>
        
       <div
-        class="mdc-layout-grid u-padding-bottom--zero"
+        class="mdc-layout-grid u-padding--zero"
       >
         <div
           class="grid mdc-layout-grid__inner"

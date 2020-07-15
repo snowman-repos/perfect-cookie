@@ -25,7 +25,7 @@
   let donating = false
   let donated = false
   if (typeof window !== 'undefined') {
-    donated = (new URL(window.location.href)).searchParams.get('donated')
+    donated = document.referrer.indexOf("checkout.stripe.com") !== -1
   }
 
   async function donate() {
