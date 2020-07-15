@@ -4,6 +4,9 @@
 
 <section class="hero">
   <h1 class="title u-centered mdc-typography--headline2">The Cookie Website</h1>
+  <Button class="about-button" data-testid="navigation" on:click={() => { window.location.href = '/about'; }} variant="outlined">
+    <Label>About</Label>
+  </Button>
 </section>
 
 <section class="controls mdc-layout-grid">
@@ -40,13 +43,14 @@
 <script>
   import { setContext } from 'svelte'
   import { properties } from '../store.js'
+  import Button, { Label } from '@smui/button/bare.js'
+  import '@smui/button/bare.css'
   import Donate from '../components/Donate.svelte'
   import Feedback from '../components/Feedback.svelte'
   import Ingredients from '../components/Ingredients.svelte'
   import Method from '../components/Method.svelte'
   import Slider from '../components/Slider.svelte'
   import YieldController from '../components/YieldController.svelte'
-  import '../theme/_smui-theme.scss'
   import { addRichData, getUpdateRecipeFunction, setRecipe } from '../utilities.js'
 
   const updateRecipe = getUpdateRecipeFunction()
@@ -90,10 +94,22 @@
     position: relative;
   }
 
+  * :global(.about-button) {
+    background-color: rgba(0,0,0,.25);
+    border-radius: 999px;
+    position: absolute;
+    right: 1em;
+    top: calc(1rem + 48px);
+  }
+
   @media (min-width: 960px) {
 
     .hero {
       padding: 2rem;
+    }
+
+    * :global(.about-button) {
+      top: 1rem;
     }
 
   }

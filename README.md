@@ -15,7 +15,7 @@ Like many people, during the Covid-19 lockdown I did a lot of baking. I tried ma
 
 I also wanted to play around with Svelte and Sapper, so this seemed like a nice little app I could throw together as a learning project.
 
-I gathered lots of recipes (below) and read some articles about how the properties are impacted by the methods and ingredients. I scored each recipe from 0-100 on each of the 5 properties and then plotted charts with linear trend lines for how each property is impacted by certain ingredients. This gave me basic formulae for calculating ingredient amounts based on the slider values.
+I trialed _lots_ of recipes (some listed below) and read some articles about how the properties are impacted by the methods and ingredients. I scored each recipe from 0-100 on each of the 5 properties and then plotted charts with linear trend lines for how each property is impacted by certain ingredients. This gave me basic formulae for calculating ingredient amounts based on the slider values.
 
 ## How it Works
 
@@ -103,13 +103,4 @@ If there are any Math geniuses who want to help out, right now I'm just using li
 
 - [ ] Either remove SMUI or fix it so that events can be tested (See [https://github.com/hperrin/svelte-material-ui/issues/110](issue))
 - [ ] Fix tests with Timeouts for waiting for the store to be updated
-- [ ] Add a feedback form
-- [ ] Add open graph data
-- [ ] Share buttons
-- [ ] Add rich data (schema.org)
-- [ ] Print styles and print buttons
-- [ ] Tips & insights on how the ingredients and method affect the cookie properties
-- [ ] Donate button (buymeacoffee)
-- [ ] About page
-- [ ] Rip out Cypress (unused)
-- [ ] Image for the header
+- [ ] Fix janky sliders

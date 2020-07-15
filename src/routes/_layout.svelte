@@ -12,6 +12,7 @@
 <script>
   import '@material/layout-grid/dist/mdc.layout-grid.min.css'
   import '@material/typography/dist/mdc.typography.min.css'
+  import '../theme/_smui-theme.scss'
   export let segment
 </script>
 

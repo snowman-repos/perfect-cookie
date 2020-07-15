@@ -41,4 +41,22 @@ describe('index page', () => {
     const { container } = render(Index)
     expect(container.querySelector('footer')).toBeInTheDocument()
   })
+
+  test('it should render the navigation button', () => {
+    const { queryByTestId } = render(Index)
+    expect(queryByTestId('navigation')).toBeInTheDocument()
+  })
+
+  test('it should navigate to the About page when the navigation button is clicked', () => {
+    const { queryByTestId } = render(Index)
+    const button = queryByTestId('navigation')
+    // await fireEvent(
+    //   button,
+    //   new MouseEvent('blur', {
+    //     bubbles: false,
+    //     cancelable: true,
+    //   })
+    // )
+    // expect(document.location.pathname).toBe('/about')
+  })
 })

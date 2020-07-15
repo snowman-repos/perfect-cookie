@@ -10,6 +10,6 @@ module.exports = {
   testPathIgnorePatterns: ['node_modules'],
   bail: false,
   verbose: true,
-  transformIgnorePatterns: ['/node_modules/(?!@smui|@material).+\\.js$'],
+  transformIgnorePatterns: ['/node_modules/(?!@smui|@material|@sapper).+\\.js$'],
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 }
