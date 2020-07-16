@@ -57,7 +57,7 @@
 ✔ fix 401 error - regenerate keys? @done(2020-07-15 00:16)
 ✔ document.referrer contains https://checkout.stripe.com @done(2020-07-15 07:52)
 ✔ responsiveness, including margin at the top; @done(2020-07-15 21:25)
-☐ About / Credits / How To page
+✔ About / Credits / How To page @done(2020-07-16 19:41)
 ☐ Tips
 ☐ Print buttons & print styles
 ☐ Donate button
