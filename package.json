@@ -38,7 +38,6 @@
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^7.0.0",
     "@rollup/plugin-replace": "^2.2.0",
-    "@sapper/app": "link:./src/node_modules/@sapper/app",
     "@smui/button": "^1.0.0-beta.20",
     "@smui/card": "^1.0.0-beta.21",
     "@smui/checkbox": "^1.0.0-beta.20",
