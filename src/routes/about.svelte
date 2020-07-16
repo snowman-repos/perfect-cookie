@@ -4,7 +4,7 @@
 
 <div class="mdc-layout-grid">
 
-  <Button class="home-button" data-testid="navigation" on:click={() => { window.location.href = '/'; }} variant="outlined">
+  <Button class="home-button" data-testid="navigation" on:click={() => { goto('/'); }} variant="outlined">
     <Label>Back</Label>
   </Button>
 
@@ -175,6 +175,7 @@
 <script>
   import Button, { Label } from '@smui/button/bare.js'
   import '@smui/button/bare.css'
+  import { goto } from '@sapper/app'
 </script>
 
 <style>

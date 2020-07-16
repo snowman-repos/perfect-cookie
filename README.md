@@ -103,4 +103,5 @@ If there are any Math geniuses who want to help out, right now I'm just using li
 
 - [ ] Either remove SMUI or fix it so that events can be tested (See [https://github.com/hperrin/svelte-material-ui/issues/110](issue))
 - [ ] Fix tests with Timeouts for waiting for the store to be updated
+- [ ] Fix tests for Index and About pages where we import @sapper/app, which Jest can't find
 - [ ] Fix janky sliders

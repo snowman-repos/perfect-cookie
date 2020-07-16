@@ -4,7 +4,7 @@
 
 <section class="hero">
   <h1 class="title u-centered mdc-typography--headline2">The Cookie Website</h1>
-  <Button class="about-button" data-testid="navigation" on:click={() => { window.location.href = '/about'; }} variant="outlined">
+  <Button class="about-button" data-testid="navigation" on:click={() => { goto('about'); }} variant="outlined">
     <Label>About</Label>
   </Button>
 </section>
@@ -47,6 +47,7 @@
   import '@smui/button/bare.css'
   import Donate from '../components/Donate.svelte'
   import Feedback from '../components/Feedback.svelte'
+  import { goto } from '@sapper/app'
   import Ingredients from '../components/Ingredients.svelte'
   import Method from '../components/Method.svelte'
   import Slider from '../components/Slider.svelte'
@@ -94,8 +95,8 @@
     position: relative;
   }
 
-  * :global(.about-button) {
-    background-color: rgba(0,0,0,.25);
+  * :global(.about-button:not(:disabled)) {
+    background-color: rgba(0,0,0,0.25);
     border-radius: 999px;
     position: absolute;
     right: 1em;
@@ -108,7 +109,7 @@
       padding: 2rem;
     }
 
-    * :global(.about-button) {
+    * :global(.about-button:not(:disabled)) {
       top: 1rem;
     }
 
