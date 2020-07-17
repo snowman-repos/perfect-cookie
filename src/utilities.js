@@ -751,6 +751,7 @@ export const addRichData = () => {
       '@type': 'Person',
       name: 'Darryl Snow',
     },
+    image: 'https://thecookie.website/cookies.jpg',
     recipeCuisine: 'American',
     datePublished: getDate(),
     description: getDescription(),
