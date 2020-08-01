@@ -3,6 +3,36 @@ import { recipe, method } from './store.js'
 // ------UTILITY FUNCTIONS------
 
 /**
+ * Converts degrees to American temperatures.
+ * @param  {Number} degrees The temperature to be converted
+ * @return {Number}         The American temperature
+ */
+export const convertDegreesToAmerican = (degrees) => {
+  return roundToTwo(degrees * (9 / 5) + 32)
+}
+
+/**
+ * Converts standard measures to American. Unfortunately, different ingredients have different volumes.
+ * @param  {Object} ingredient A collection of properties about the ingredient for which the amount is to be converted
+ * @return {String}            The ingredient amount and units
+ */
+export const convertAmountToAmerican = (ingredient, number) => {
+  const name = ingredient.name.toLowerCase()
+  const amount = ingredient.amount * number
+  if (name.includes('sugar')) return `${roundToTwo(amount / 200)} cups`
+  if (name.includes('bread flour')) return `${roundToTwo(amount / 150)} cups`
+  if (name.includes('plain flour')) return `${roundToTwo(amount / 150)} cups`
+  if (name.includes('cake flour')) return `${roundToTwo(amount / 130)} cups`
+  if (name.includes('chocolate')) return `${roundToTwo(amount / 175)} cups`
+  if (name.includes('butter')) return `${roundToTwo(amount / 225)} cups`
+  if (name.includes('oil')) return `${roundToTwo(amount / 28)} fl oz`
+  if (name.includes('cornstarch')) return `${roundToTwo(amount / 28.35)} oz`
+  if (name.includes('syrup')) return `${roundToTwo(amount / 28)} fl oz`
+  if (name.includes('egg yolk')) return `${roundToTwo(amount / 28.35)} oz`
+  if (name.includes('egg')) return `${roundToTwo(amount / 28.35)} oz`
+}
+
+/**
  * Debounces a function call to avoid taxing the browser.
  * @param  {Function} callback          The function to be debounced
  * @param  {Number}   wait              The wait time before the function can be called again
@@ -461,7 +491,7 @@ export const getUpdateRecipeFunction = () => {
   // Return the function to update the recipe
   // This creates a recipe (ingredients + method) for making a single cookie that has the desired properties
   return (property) => {
-    const { properties } = currentRecipe
+    const { properties, useStandardUnits } = currentRecipe
     const { color, mouthfeel, surface, texture, thickness } = properties
 
     let newProperties = properties
@@ -635,10 +665,23 @@ export const getUpdateRecipeFunction = () => {
     // time needed for the entire recipe
     let time = bakingTime
 
+    const cookieWeight = useStandardUnits ? '60g' : '2.11oz'
+
+    const diameter = useStandardUnits ? '3.5cm' : '1.38"'
+
+    const distance = useStandardUnits ? '10cm' : '3.94"'
+
+    const temperatureToDisplay = useStandardUnits
+      ? `${bakingTemperature} degrees`
+      : `${convertDegreesToAmerican(bakingTemperature)} Fahrenheits`
+
     // this is for replacing any placeholders in the method instructions
     const mappedValues = {
+      '{DIAMETER}': diameter,
+      '{DISTANCE}': distance,
+      '{SINGLE_COOKIE_WEIGHT}': cookieWeight,
       '{TIME}': bakingTime,
-      '{TEMPERATURE}': bakingTemperature,
+      '{TEMPERATURE}': temperatureToDisplay,
     }
 
     // review the criteria for each potential step against the updated ingredients and properties

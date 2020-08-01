@@ -122,4 +122,19 @@ describe('ingredients component', () => {
       })
     }, 1000)
   })
+
+  test('it should show American units in the ingredients list when American units are selected', () => {
+    recipe.set(
+      Object.assign(actualRecipe, {
+        useStandardUnits: false,
+      })
+    )
+    const { container } = render(Ingredients)
+
+    setTimeout(() => {
+      expect(container).toContainHTML('cups')
+      expect(container).toContainHTML('oz')
+      expect(container).not.toContainHTML(' g')
+    }, 1000)
+  })
 })

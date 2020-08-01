@@ -19,6 +19,7 @@
 <section class="mdc-layout-grid u-padding-bottom--zero">
   <h2 class="mdc-typography--headline3 u-centered">Ingredients</h2>
   <YieldController />
+  <UnitsSwitcher />
   <div class="ingredients">
     <Ingredients />
   </div>
@@ -51,6 +52,7 @@
   import Ingredients from '../components/Ingredients.svelte'
   import Method from '../components/Method.svelte'
   import Slider from '../components/Slider.svelte'
+  import UnitsSwitcher from '../components/UnitsSwitcher.svelte'
   import YieldController from '../components/YieldController.svelte'
   import { addRichData, getUpdateRecipeFunction, setRecipe } from '../utilities.js'
 

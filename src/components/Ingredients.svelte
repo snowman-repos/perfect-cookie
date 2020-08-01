@@ -7,7 +7,7 @@
           {#if ingredient.amount !== 0}
             <tr class=" mdc-data-table__row" aria-selected="false">
               {#if ingredient.unit !== 'tsp'}
-                <td class="mdc-data-table__cell">{Math.round(ingredient.amount * number)} {ingredient.unit}</td>
+                <td class="mdc-data-table__cell">{getIngredientAmount(ingredient)}</td>
               {:else}
                 <td class="mdc-data-table__cell">{parseFloat(ingredient.amount * number).toPrecision(2)} {ingredient.unit}</td>
               {/if}
@@ -56,6 +56,7 @@
   import Checkbox from '@smui/checkbox'
   import FormField from '@smui/form-field/bare.js'
   import { recipe } from '../store.js'
+  import { convertAmountToAmerican } from '../utilities.js'
 
   let number
   let ingredientsList = []
@@ -66,6 +67,14 @@
     ingredientsList = actualRecipe.ingredients
     number = actualRecipe.numberOfCookies
   })
+
+  const getIngredientAmount = (ingredient) => {
+    if (currentRecipe.useStandardUnits) {
+      return `${Math.round(ingredient.amount * number)} ${ingredient.unit}`
+    } else {
+      return convertAmountToAmerican(ingredient, number)
+    }
+  }
 
   const updateRecipe = () => {
     if (typeof localStorage !== 'undefined') {

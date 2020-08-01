@@ -1,6 +1,8 @@
 import { JSDOM } from 'jsdom'
 import {
   debounce,
+  convertAmountToAmerican,
+  convertDegreesToAmerican,
   replaceAll,
   roundToTwo,
   getAdditionalEggYolk,
@@ -63,6 +65,125 @@ class LocalStorageMock {
 global.localStorage = new LocalStorageMock()
 
 describe('utility functions', () => {
+  test('convertAmountToAmerican', () => {
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Granulated Sugar',
+          amount: 200,
+        },
+        1
+      )
+    ).toEqual('1 cups')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Brown Sugar',
+          amount: 200,
+        },
+        1
+      )
+    ).toEqual('1 cups')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Corn Syrup',
+          amount: 28,
+        },
+        1
+      )
+    ).toEqual('1 fl oz')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Bread Flour',
+          amount: 150,
+        },
+        1
+      )
+    ).toEqual('1 cups')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Plain Flour',
+          amount: 150,
+        },
+        1
+      )
+    ).toEqual('1 cups')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Cake Flour',
+          amount: 130,
+        },
+        1
+      )
+    ).toEqual('1 cups')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Chopped Dark Chocolate',
+          amount: 175,
+        },
+        1
+      )
+    ).toEqual('1 cups')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Butter',
+          amount: 225,
+        },
+        1
+      )
+    ).toEqual('1 cups')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Vegetable Oil',
+          amount: 28,
+        },
+        1
+      )
+    ).toEqual('1 fl oz')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Cornstarch',
+          amount: 28.35,
+        },
+        1
+      )
+    ).toEqual('1 oz')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Egg',
+          amount: 28.35,
+        },
+        1
+      )
+    ).toEqual('1 oz')
+    expect(
+      convertAmountToAmerican(
+        {
+          name: 'Additional Egg Yolk',
+          amount: 28.35,
+        },
+        1
+      )
+    ).toEqual('1 oz')
+  })
+
+  test('convertDegreesToAmerican', () => {
+    expect(convertDegreesToAmerican(0)).toBe(32)
+    expect(convertDegreesToAmerican(100)).toBe(212)
+    expect(convertDegreesToAmerican(150)).toBe(302)
+    expect(convertDegreesToAmerican(180)).toBe(356)
+    expect(convertDegreesToAmerican(250)).toBe(482)
+  })
+
   test('debounce', () => {
     const mockFunction = jest.fn(() => {})
     const waitTime = 250

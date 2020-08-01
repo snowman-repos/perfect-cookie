@@ -59,4 +59,24 @@ describe('method component', () => {
   })
 
   test('it should update the method when the attributes change', () => {})
+
+  test('it should show American units in the method when American units are selected', () => {
+    recipe.set(
+      Object.assign(actualRecipe, {
+        useStandardUnits: false,
+      })
+    )
+    const { container } = render(Method)
+
+    setTimeout(() => {
+      expect(container).toContainHTML('Fahrenheits')
+      expect(container).toContainHTML('1.38"')
+      expect(container).toContainHTML('2.11oz')
+      expect(container).toContainHTML('3.94"')
+      expect(container).not.toContainHTML('degrees')
+      expect(container).not.toContainHTML('3.5cm')
+      expect(container).not.toContainHTML('60g')
+      expect(container).not.toContainHTML('10cm')
+    }, 1000)
+  })
 })

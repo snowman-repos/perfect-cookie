@@ -1,5 +1,6 @@
 import { readable, writable } from 'svelte/store'
 
+// seed a default recipe
 export const recipe = writable({
   bakingConditions: {
     temperature: 0,
@@ -89,6 +90,7 @@ export const recipe = writable({
     texture: 30,
     thickness: 40,
   },
+  useStandardUnits: true,
 })
 
 export const method = readable([
@@ -633,7 +635,7 @@ export const method = readable([
       },
       thickness: {
         min: 50,
-        max: 100,
+        max: 80,
       },
     },
   },
@@ -660,7 +662,7 @@ export const method = readable([
       },
       thickness: {
         min: 50,
-        max: 100,
+        max: 70,
       },
     },
   },
@@ -693,7 +695,7 @@ export const method = readable([
   },
   {
     ingredientsNeeded: [],
-    instruction: 'Shape your dough into small balls, about 3.5cm in diameter.',
+    instruction: 'Shape your dough into small balls, about {DIAMETER} in diameter, about {SINGLE_COOKIE_WEIGHT} each.',
     timeNeeded: 5,
     thresholds: {
       color: {
@@ -714,6 +716,33 @@ export const method = readable([
       },
       thickness: {
         min: 0,
+        max: 100,
+      },
+    },
+  },
+  {
+    ingredientsNeeded: [],
+    instruction: 'Freeze the dough balls before baking.',
+    timeNeeded: 30,
+    thresholds: {
+      color: {
+        min: 0,
+        max: 100,
+      },
+      mouthfeel: {
+        min: 0,
+        max: 100,
+      },
+      surface: {
+        min: 0,
+        max: 100,
+      },
+      texture: {
+        min: 0,
+        max: 100,
+      },
+      thickness: {
+        min: 80,
         max: 100,
       },
     },
@@ -775,7 +804,7 @@ export const method = readable([
   },
   {
     ingredientsNeeded: [],
-    instruction: 'Place the cookies at least 10cm apart on a lined baking sheet.',
+    instruction: 'Place the cookies at least {DISTANCE} apart on a lined baking sheet.',
     timeNeeded: 2,
     thresholds: {
       color: {
@@ -802,7 +831,7 @@ export const method = readable([
   },
   {
     ingredientsNeeded: [],
-    instruction: 'Bake at {TEMPERATURE} degrees for {TIME} minutes.',
+    instruction: 'Bake at {TEMPERATURE} for {TIME} minutes.',
     timeNeeded: 0,
     thresholds: {
       color: {
