@@ -75,9 +75,13 @@
   pointer-events: none;
 }
 
-.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+.mdc-text-field--focused:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) .mdc-floating-label {
   color: var(--mdc-theme-primary);
 }
+
+// .mdc-text-field--invalid .mdc-floating-label {
+//   color: var(--mdc-theme-error, #b00020);
+// }
 
 /* cyrillic-ext */
 @font-face {

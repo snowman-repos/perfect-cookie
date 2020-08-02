@@ -34,7 +34,7 @@
 
                 {#if negativeFeedback}
                   <div class="u-margin--bottom">
-                    <Textfield bind:value={whatWentWrong} data-testid="what-went-wrong" fullwidth label="What was wrong with them?" lineRipple={false}  input$aria-controls="helper-text-fullwidth" input$aria-describedby="helper-text-fullwidth" textarea />
+                    <Textfield bind:value={whatWentWrong} bind:invalid={showError} data-testid="what-went-wrong" fullwidth label="What was wrong with them?" lineRipple={false}  input$aria-controls="helper-text-fullwidth" input$aria-describedby="helper-text-fullwidth" required textarea />
                     <HelperText id="helper-text-fullwidth">Please describe the color, mouthfeel, surface quality, texture, and thickness of the cookies that you made and why they weren't as you expected.</HelperText>
                   </div>
                   <div class="u-margin--bottom">
@@ -71,6 +71,7 @@
   let positiveFeedback = false
   let whatWentWrong = ""
   let feedbackSent = false
+  let showError = false
 
   if (typeof localStorage !== 'undefined') {
     try {
@@ -89,23 +90,32 @@
   const submitForm = (e) => {
     e.preventDefault()
 
-    feedback = positiveFeedback ? 'positive' : 'negative'
+    if (whatWentWrong) {
 
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "feedback",
-          feedback,
-          whatWentWrong,
-          recipe
+      feedback = positiveFeedback ? 'positive' : 'negative'
+
+      fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({
+            "form-name": "feedback",
+            feedback,
+            whatWentWrong,
+            recipe
+          })
         })
-      })
-        .then(() => console.info('Feedback sent!'))
-        .catch(error => console.error(error));
+          .then(() => console.info('Feedback sent!'))
+          .catch(error => console.error(error));
 
-    negativeFeedback = false
-    positiveFeedback = false
-    feedbackSent = true
+      negativeFeedback = false
+      positiveFeedback = false
+      feedbackSent = true
+      showError = false
+
+    } else {
+      showError = true
+    }
+
+
   }
 </script>
