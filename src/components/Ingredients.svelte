@@ -27,8 +27,6 @@
 
 </div>
 
-<iframe title="advertisement" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=darrylsnow-20&marketplace=amazon&region=US&placement=B0885Q6S45&asins=B0885Q6S45&linkId=dacb96cf42f491ec2976514206ed22ca&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=028f8d&bg_color=ffffff"></iframe>
-
 <style>
   .o-checkbox-column {
     display: none;
