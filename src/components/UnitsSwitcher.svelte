@@ -13,7 +13,7 @@
         <Card padded>
           ⚠️
           <br>
-          American units are imprecise and possibly unreliable. A proper kitchen scale is small and worthy investment when it comes to baking.
+          American units are imprecise and possibly unreliable. A proper <a target="_blank" href="https://www.amazon.com/gp/product/B0885Q6S45/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0885Q6S45&linkCode=as2&tag=darrylsnow-20&linkId=179c581af018cd97e5cdd2bfb9b7211f" style="display: contents;">kitchen scale</a> is small and worthy investment when it comes to baking.
         </Card>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
