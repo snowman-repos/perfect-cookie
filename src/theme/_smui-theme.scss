@@ -79,9 +79,10 @@
   color: var(--mdc-theme-primary);
 }
 
-// .mdc-text-field--invalid .mdc-floating-label {
-//   color: var(--mdc-theme-error, #b00020);
-// }
+.c-advertisement {
+  display: flex;
+  justify-content: center;
+}
 
 /* cyrillic-ext */
 @font-face {
