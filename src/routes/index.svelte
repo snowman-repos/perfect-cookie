@@ -16,7 +16,7 @@
   {/each}
 </section>
 
-<section class="c-advertisement">
+<section class="c-advertisement u-margin--top">
   <iframe title="advertisement" src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=42&l=ur1&category=kitchen&banner=09RE3AASKRA6TA2H9K82&f=ifr&linkID=50347e3d3b44c35880a9e374d58ae15a&t=darrylsnow-20&tracking_id=darrylsnow-20" width="234" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 </section>
 
@@ -44,8 +44,12 @@
   <Feedback />
 </section>
 
-<section class="mdc-layout-grid u-padding-bottom--zero">
+<section class="mdc-layout-grid">
   <Donate />
+</section>
+
+<section class="c-advertisement u-margin--bottom">
+  <div id="amzn-assoc-ad-991972e5-57a3-4c53-9844-b0ce0c1c29d8"></div>
 </section>
 
 
