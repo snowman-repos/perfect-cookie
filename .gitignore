@@ -80,3 +80,5 @@ cypress/screenshots/
 
 *.todo
 /*.html
+
+cookies.md

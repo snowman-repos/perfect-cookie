@@ -2,6 +2,8 @@
   <title>The Cookie Website</title>
 </svelte:head>
 
+<div class={recipeIsInitialized ? '' : 'overlay'}></div>
+
 <section class="hero">
   <h1 class="title u-centered mdc-typography--headline2">The Cookie Website</h1>
   <Button class="about-button" data-testid="navigation" on:click={() => { goto('about'); }} variant="outlined">
@@ -68,25 +70,47 @@
   import Slider from '../components/Slider.svelte'
   import UnitsSwitcher from '../components/UnitsSwitcher.svelte'
   import YieldController from '../components/YieldController.svelte'
-  import { addRichData, getUpdateRecipeFunction, setRecipe } from '../utilities.js'
+  import {
+    addRichData,
+    getPropertiesFromCode,
+    getUpdateRecipeFunction,
+    propertiesAreValid,
+    setRecipe
+  } from '../utilities.js'
+  import { stores } from '@sapper/app';
+  const { page } = stores();
 
   const updateRecipe = getUpdateRecipeFunction()
+  let recipeIsInitialized = false
+
+  const initializeRecipe = async () => {
+    let code = $page.query.c
+    let localStorageRecipe
+    if (typeof localStorage !== 'undefined') {
+      localStorageRecipe = localStorage.getItem('recipe')
+    }
+
+    if (code != null) {
+      let properties = await getPropertiesFromCode(code)
+      if (propertiesAreValid(properties)) {
+        setRecipe({ properties })
+        return true
+      }
+    }
+
+    if (localStorageRecipe) {
+      setRecipe(localStorageRecipe)
+      return true
+    }
+
+    updateRecipe()
+    return true
+  }
+
+  recipeIsInitialized = initializeRecipe()
 
   // ensure the update recipe function can be shared throughout the app
   setContext('updateRecipe', updateRecipe)
-
-  // use the same recipe as last time if it exists in local storage
-  if (typeof localStorage !== 'undefined') {
-    try {
-      if (localStorage.getItem('recipe') === null) {
-        updateRecipe()
-      } else {
-        setRecipe()
-      }
-    } catch (e) {
-      //
-    }
-  } else updateRecipe()
 
   // add rich data to the page
   if(process.browser === true)
@@ -112,7 +136,7 @@
   }
 
   * :global(.about-button:not(:disabled)) {
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0,0,0,.25);
     border-radius: 999px;
     position: absolute;
     right: 1em;
@@ -154,5 +178,15 @@
   .ingredients {
     display: flex;
     justify-content: center;
+  }
+
+  .overlay {
+    background-color: var(--mdc-theme-background);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
   }
 </style>

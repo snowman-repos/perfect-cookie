@@ -65,20 +65,20 @@
 ✔ Freeze cookies to just minimize spread @done(2020-07-31 22:54)
 ✔ Units switcher @done(2020-08-01 01:30)
 ✔ make feedback mandatory @done(2020-08-02 19:23)
-☐ Recipe hash in shareable url
+✔ add properties validation function @done(2020-08-07 22:15)
+✔ update setRecipe function to check if properties are provided @done(2020-08-10 23:02)
+☐ show an overlay and hide it when the recipe is initalized
+✔ Recipe hash in shareable url @done(2020-08-23 19:19)
 ☐ Recommended Products section with affiliate links
-☐ Tips
+☐ Tips:
+  https://medium.com/javascript-in-plain-english/build-your-own-twitter-bot-with-google-sheets-d9a8ef955fa1
+  http://www.zachwhalen.net/posts/how-to-make-a-twitter-bot-with-google-spreadsheets-version-04/
 ☐ Print buttons & print styles
-☐ Ads
+☐ GDPR notice
+✔ Ads @done(2020-08-03 13:35)
 ✔ Affiliate links @done(2020-08-02 21:40)
 
-1330 8th
-water up to 1130
-3 hours b4 take medicine - 1030
-whatsapp number on instruction for surgery - send pregnancy test result
 
-
-☐ 6 AUGUST - check rent was paid
 ☐ 27 August - check salary was paid into DBS
 ☐ check on supplementary card application
 ☐ if rent is paid and have supplementary card, then delete scb...

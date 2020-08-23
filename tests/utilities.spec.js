@@ -1,8 +1,11 @@
 import { JSDOM } from 'jsdom'
 import {
-  debounce,
   convertAmountToAmerican,
   convertDegreesToAmerican,
+  debounce,
+  getCodeFromProperties,
+  getPropertiesFromCode,
+  propertiesAreValid,
   replaceAll,
   roundToTwo,
   getAdditionalEggYolk,
@@ -193,6 +196,40 @@ describe('utility functions', () => {
       expect(mockFunction).toHaveBeenCalled()
     }, waitTime)
   })
+
+  test('getPropertiesFromCode', async () => {
+    const testCode =
+      'U2FsdGVkX18xHWFJpiMBa7ml5Vu5wztEFGW5hiJlPS1uzdCBjvpG/NXy6EaxyiMO5Nxuytsqn7Jfq/3QEYMwxVcJrSMON9lzA242h2w5Nf9N3rFMAHkjfpkGYTvgh4WVP4tCzWK/SVnr40ZSkqhZ5Q='
+    const testProperties = { properties: { color: 80, mouthfeel: 60, surface: 50, texture: 70, thickness: 50 } }
+    let properties = await getPropertiesFromCode(testCode)
+    expect(properties).toMatchObject(testProperties)
+  })
+
+  test('getCodeFromProperties', async () => {
+    const testProperties = { properties: { color: 80, mouthfeel: 60, surface: 50, texture: 70, thickness: 50 } }
+    let code = await getCodeFromProperties(testProperties)
+    expect(typeof code).toBe('string')
+    expect(code.length).toBe(152)
+  })
+
+  test('getCodeFromURLParameter', () => {})
+
+  test('propertiesAreValid', () => {
+    expect(propertiesAreValid({})).toBe(false)
+    expect(propertiesAreValid({ key: 'value' })).toBe(false)
+    expect(propertiesAreValid({ color: 60 })).toBe(false)
+    expect(
+      propertiesAreValid({
+        color: 60,
+        mouthfeel: 80,
+        surface: 90,
+        texture: 30,
+        thickness: 40,
+      })
+    ).toBe(true)
+  })
+
+  test('setURLParameter', () => {})
 
   test('replaceAll', () => {
     const testString = 'a cookie a day keeps the cookie monster away'

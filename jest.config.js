@@ -1,9 +1,9 @@
 module.exports = {
   transform: {
-    '^.+\\.svelte$': 'jest-transform-svelte',
+    '^.+\\.svelte$': 'svelte-jester',
     '^.+\\.js$': 'babel-jest',
   },
-  moduleFileExtensions: ['js', 'svelte'],
+  moduleFileExtensions: ['js', 'svelte', 'node'],
   moduleNameMapper: {
     '^.+\\.(css|less|scss)$': 'babel-jest',
   },

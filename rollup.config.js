@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import svelte from 'rollup-plugin-svelte'
 import postcss from 'rollup-plugin-postcss'
 import babel from 'rollup-plugin-babel'
+import json from '@rollup/plugin-json'
 import { terser } from 'rollup-plugin-terser'
 import config from 'sapper/config/rollup.js'
 import pkg from './package.json'
@@ -98,6 +99,7 @@ export default {
       resolve({
         dedupe: ['svelte'],
       }),
+      json(),
       commonjs(),
 
       postcss(postcssOptions()),

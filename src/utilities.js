@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { recipe, method } from './store.js'
 
 // ------UTILITY FUNCTIONS------
@@ -56,6 +57,80 @@ export const debounce = (callback, wait, immediate = false) => {
 }
 
 /**
+ * Calls the API to convert cookie properties to an encoded string.
+ * @param  {Object}  properties The cookie properties to be encoded
+ * @return {String}            The encoded string
+ */
+export const getCodeFromProperties = (properties) => {
+  return axios
+    .post('.netlify/functions/get-code', JSON.stringify(properties))
+    .then((response) => {
+      return response.data
+    })
+    .catch(function (error) {
+      console.error(error)
+      return null
+    })
+}
+
+/**
+ * Gets encoded cookie properties from the URL.
+ * @return {String} The encoded cookie properties
+ */
+export const getCodeFromURLParameter = () => {
+  if (typeof window !== 'undefined') {
+    let url = new URL(window.location.href)
+    return decodeURIComponent(url.searchParams.get('c'))
+  }
+}
+
+/**
+ * Calls the API to convert an encoded string to a set of cookie properties.
+ * @param  {String} code The encoded string
+ * @return {Object}      The decoded cookie properties
+ */
+export const getPropertiesFromCode = (code) => {
+  if (code == null) return null
+  return axios
+    .post('.netlify/functions/get-properties', code)
+    .then((response) => {
+      try {
+        return JSON.parse(response.data.slice(1, -1))
+      } catch (error) {
+        // console.error(error)
+        return null
+      }
+    })
+    .catch(function (error) {
+      // console.error(error)
+      return null
+    })
+}
+
+/**
+ * Validates that an object is a valid set of properties.
+ * @param  {Object} obj The object to be validated
+ * @return {Boolean}    The object's validity
+ */
+export const propertiesAreValid = (obj) => {
+  if (obj == null) return false
+
+  if (typeof obj !== 'object') return false
+
+  if (Object.keys(obj).length !== 5) return false
+
+  if (!obj.color || !obj.mouthfeel || !obj.surface || !obj.texture || !obj.thickness) return false
+
+  for (const key in obj) {
+    if (typeof obj[key] !== 'number') return false
+
+    if (obj[key] < 0 || obj[key] > 100) return false
+  }
+
+  return true
+}
+
+/**
  * Replaces all occurrences of multiple placeholders in a string with a given set of values.
  * @param  {String} str    The input containing the placeholders
  * @param  {Object} mapObj An object that maps placeholders to the actual values
@@ -76,6 +151,18 @@ export const replaceAll = (str, mapObj) => {
  */
 export const roundToTwo = (number) => {
   return +(Math.round(number + 'e+2') + 'e-2')
+}
+
+/**
+ * Sets a URL parameter with encoded cookie properties.
+ * @param {String} code The encoded cookie properties
+ */
+export const setURLParameter = (code) => {
+  if (typeof window !== 'undefined') {
+    let url = new URL(window.location.origin)
+    window.history.pushState(null, null, `${url}?c=${encodeURIComponent(code)}`)
+  }
+  return null
 }
 
 // ------CALCULATE RECIPE------
@@ -490,7 +577,7 @@ export const getUpdateRecipeFunction = () => {
 
   // Return the function to update the recipe
   // This creates a recipe (ingredients + method) for making a single cookie that has the desired properties
-  return (property) => {
+  return async (property) => {
     const { properties, useStandardUnits } = currentRecipe
     const { color, mouthfeel, surface, texture, thickness } = properties
 
@@ -695,18 +782,18 @@ export const getUpdateRecipeFunction = () => {
 
     // --UPDATE THE STORE--
 
-    recipe.set(
-      Object.assign(currentRecipe, {
-        bakingConditions: {
-          temperature: bakingTemperature,
-          time: bakingTime,
-        },
-        ingredients: newIngredients,
-        method: newMethod,
-        preparationTime: time,
-        properties: newProperties,
-      })
-    )
+    let newRecipe = {
+      bakingConditions: {
+        temperature: bakingTemperature,
+        time: bakingTime,
+      },
+      ingredients: newIngredients,
+      method: newMethod,
+      preparationTime: time,
+      properties: newProperties,
+    }
+
+    recipe.set(Object.assign(currentRecipe, newRecipe))
 
     // --UPDATE LOCAL STORAGE--
 
@@ -717,6 +804,11 @@ export const getUpdateRecipeFunction = () => {
         return false
       }
     }
+
+    // --UDPATE THE URL--
+
+    const code = await getCodeFromProperties(newProperties)
+    setURLParameter(code)
   }
 }
 
