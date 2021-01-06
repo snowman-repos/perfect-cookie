@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "@stripe/stripe-js": "^1.8.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "compression": "^1.7.1",
     "crypto-js": "^4.0.0",
     "http-proxy-middleware": "^1.0.5",
