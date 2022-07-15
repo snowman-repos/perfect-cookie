@@ -79,7 +79,7 @@
     "stylelint-config-airbnb": "0.0.0",
     "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.16.0",
-    "svelte": "^3.0.0",
+    "svelte": "^3.49.0",
     "svelte-jester": "^1.1.2"
   }
 }
